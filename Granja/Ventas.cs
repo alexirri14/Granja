@@ -1,8 +1,18 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
 namespace Granja
 {
-    public partial class Form1 : Form
+    public partial class Ventas : Form
     {
-        public Form1()
+        public Ventas()
         {
             InitializeComponent();
             PopulateData();
@@ -10,25 +20,16 @@ namespace Granja
 
         private void PopulateData()
         {
-            dgvProduccion.Columns.Add("Galpon", "Galpón");
-            dgvProduccion.Columns.Add("Fecha", "Fecha");
-            dgvProduccion.Columns.Add("Huevos", "Huevos");
+            dgvVentas.Columns.Add("Fecha", "Fecha");
+            dgvVentas.Columns.Add("Cliente", "Cliente");
+            dgvVentas.Columns.Add("Cantidad", "Cantidad");
+            dgvVentas.Columns.Add("Precio", "Precio");
+            dgvVentas.Columns.Add("Total", "Total");
 
-            dgvProduccion.Rows.Add("A", "8/4/2026", "300");
-            dgvProduccion.Rows.Add("B", "8/4/2026", "250");
-            dgvProduccion.Rows.Add("C", "7/4/2026", "280");
-            dgvProduccion.Rows.Add("A", "7/4/2026", "290");
-
-            dgvInsumos.Columns.Add("Insumo", "Insumo");
-            dgvInsumos.Columns.Add("StockActual", "Stock Actual");
-            dgvInsumos.Columns.Add("StockMinimo", "Stock Mínimo");
-            dgvInsumos.Columns.Add("Estado", "Estado");
-
-            dgvInsumos.Rows.Add("Maíz", "2500.00 KG", "500.00 KG", "Normal");
-            dgvInsumos.Rows.Add("Torta de Soya", "1200.00 KG", "300.00 KG", "Normal");
-            dgvInsumos.Rows.Add("Soya Integral", "800.00 KG", "200.00 KG", "Normal");
-            dgvInsumos.Rows.Add("Afrechillo", "600.00 KG", "150.00 KG", "Normal");
-            dgvInsumos.Rows.Add("Sal Industrial", "400.00 KG", "100.00 KG", "Normal");
+            dgvVentas.Rows.Add("8/4/2026", "Juan Pérez", "200", "S/ 7.50", "S/ 1500.00");
+            dgvVentas.Rows.Add("8/4/2026", "María García", "150", "S/ 7.50", "S/ 1125.00");
+            dgvVentas.Rows.Add("7/4/2026", "Pedro López", "300", "S/ 7.50", "S/ 2250.00");
+            dgvVentas.Rows.Add("7/4/2026", "Ana Torres", "100", "S/ 7.50", "S/ 750.00");
         }
 
         private void btnDashboard_Click(object sender, EventArgs e)
@@ -86,7 +87,6 @@ namespace Granja
             ins.Show();
             this.Hide();
         }
-
 
 
     }

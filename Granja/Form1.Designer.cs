@@ -1,4 +1,4 @@
-﻿namespace Granja
+namespace Granja
 {
     partial class Form1
     {
@@ -33,12 +33,16 @@
             panelNav = new Panel();
             btnReportes = new Button();
             btnMolino = new Button();
+            btnInsumos = new Button();
             btnAlimento = new Button();
             btnVentas = new Button();
             btnAlmacen = new Button();
             btnProduccion = new Button();
             btnDashboard = new Button();
             panelMain = new Panel();
+            panelInsumos = new Panel();
+            dgvInsumos = new DataGridView();
+            lblInsumosTitle = new Label();
             panelProduction = new Panel();
             dgvProduccion = new DataGridView();
             lblProductionReciente = new Label();
@@ -67,6 +71,8 @@
             panelHeader.SuspendLayout();
             panelNav.SuspendLayout();
             panelMain.SuspendLayout();
+            panelInsumos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvInsumos).BeginInit();
             panelProduction.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvProduccion).BeginInit();
             panelAlerts.SuspendLayout();
@@ -105,6 +111,7 @@
             panelNav.BackColor = Color.White;
             panelNav.Controls.Add(btnReportes);
             panelNav.Controls.Add(btnMolino);
+            panelNav.Controls.Add(btnInsumos);
             panelNav.Controls.Add(btnAlimento);
             panelNav.Controls.Add(btnVentas);
             panelNav.Controls.Add(btnAlmacen);
@@ -122,26 +129,42 @@
             btnReportes.FlatAppearance.BorderSize = 0;
             btnReportes.FlatStyle = FlatStyle.Flat;
             btnReportes.Font = new Font("Segoe UI", 10F);
-            btnReportes.Location = new Point(834, 0);
+            btnReportes.Location = new Point(971, 0);
             btnReportes.Margin = new Padding(3, 4, 3, 4);
             btnReportes.Name = "btnReportes";
             btnReportes.Size = new Size(137, 67);
-            btnReportes.TabIndex = 6;
+            btnReportes.TabIndex = 7;
             btnReportes.Text = " Reportes";
             btnReportes.UseVisualStyleBackColor = true;
+            btnReportes.Click += btnReportes_Click;
             // 
             // btnMolino
             // 
             btnMolino.FlatAppearance.BorderSize = 0;
             btnMolino.FlatStyle = FlatStyle.Flat;
             btnMolino.Font = new Font("Segoe UI", 10F);
-            btnMolino.Location = new Point(697, 0);
+            btnMolino.Location = new Point(834, 0);
             btnMolino.Margin = new Padding(3, 4, 3, 4);
             btnMolino.Name = "btnMolino";
             btnMolino.Size = new Size(137, 67);
-            btnMolino.TabIndex = 5;
+            btnMolino.TabIndex = 6;
             btnMolino.Text = " Molino";
             btnMolino.UseVisualStyleBackColor = true;
+            btnMolino.Click += btnMolino_Click;
+            // 
+            // btnInsumos
+            // 
+            btnInsumos.FlatAppearance.BorderSize = 0;
+            btnInsumos.FlatStyle = FlatStyle.Flat;
+            btnInsumos.Font = new Font("Segoe UI", 10F);
+            btnInsumos.Location = new Point(697, 0);
+            btnInsumos.Margin = new Padding(3, 4, 3, 4);
+            btnInsumos.Name = "btnInsumos";
+            btnInsumos.Size = new Size(137, 67);
+            btnInsumos.TabIndex = 5;
+            btnInsumos.Text = " Insumos";
+            btnInsumos.UseVisualStyleBackColor = true;
+            btnInsumos.Click += btnInsumos_Click;
             // 
             // btnAlimento
             // 
@@ -155,6 +178,7 @@
             btnAlimento.TabIndex = 4;
             btnAlimento.Text = " Alimento";
             btnAlimento.UseVisualStyleBackColor = true;
+            btnAlimento.Click += btnAlimento_Click;
             // 
             // btnVentas
             // 
@@ -168,6 +192,7 @@
             btnVentas.TabIndex = 3;
             btnVentas.Text = " Ventas";
             btnVentas.UseVisualStyleBackColor = true;
+            btnVentas.Click += btnVentas_Click;
             // 
             // btnAlmacen
             // 
@@ -181,6 +206,7 @@
             btnAlmacen.TabIndex = 2;
             btnAlmacen.Text = " Almacén";
             btnAlmacen.UseVisualStyleBackColor = true;
+            btnAlmacen.Click += btnAlmacen_Click;
             // 
             // btnProduccion
             // 
@@ -194,6 +220,7 @@
             btnProduccion.TabIndex = 1;
             btnProduccion.Text = " Producción";
             btnProduccion.UseVisualStyleBackColor = true;
+            btnProduccion.Click += btnProduccion_Click;
             // 
             // btnDashboard
             // 
@@ -208,11 +235,13 @@
             btnDashboard.TabIndex = 0;
             btnDashboard.Text = " Dashboard";
             btnDashboard.UseVisualStyleBackColor = true;
+            btnDashboard.Click += btnDashboard_Click;
             // 
             // panelMain
             // 
             panelMain.AutoScroll = true;
             panelMain.BackColor = Color.FromArgb(248, 249, 250);
+            panelMain.Controls.Add(panelInsumos);
             panelMain.Controls.Add(panelProduction);
             panelMain.Controls.Add(panelAlerts);
             panelMain.Controls.Add(panelCardsContainer);
@@ -224,6 +253,44 @@
             panelMain.Padding = new Padding(34, 40, 34, 40);
             panelMain.Size = new Size(1257, 780);
             panelMain.TabIndex = 2;
+            // 
+            // panelInsumos
+            // 
+            panelInsumos.BackColor = Color.White;
+            panelInsumos.Controls.Add(dgvInsumos);
+            panelInsumos.Controls.Add(lblInsumosTitle);
+            panelInsumos.Location = new Point(34, 793);
+            panelInsumos.Margin = new Padding(3, 4, 3, 4);
+            panelInsumos.Name = "panelInsumos";
+            panelInsumos.Padding = new Padding(30);
+            panelInsumos.Size = new Size(1189, 360);
+            panelInsumos.TabIndex = 4;
+            // 
+            // dgvInsumos
+            // 
+            dgvInsumos.AllowUserToAddRows = false;
+            dgvInsumos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvInsumos.BackgroundColor = Color.White;
+            dgvInsumos.BorderStyle = BorderStyle.None;
+            dgvInsumos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvInsumos.Location = new Point(30, 53);
+            dgvInsumos.Margin = new Padding(3, 4, 3, 4);
+            dgvInsumos.Name = "dgvInsumos";
+            dgvInsumos.RowHeadersVisible = false;
+            dgvInsumos.RowHeadersWidth = 51;
+            dgvInsumos.Size = new Size(1129, 280);
+            dgvInsumos.TabIndex = 1;
+            // 
+            // lblInsumosTitle
+            // 
+            lblInsumosTitle.AutoSize = true;
+            lblInsumosTitle.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
+            lblInsumosTitle.ForeColor = Color.FromArgb(26, 32, 44);
+            lblInsumosTitle.Location = new Point(0, 0);
+            lblInsumosTitle.Name = "lblInsumosTitle";
+            lblInsumosTitle.Size = new Size(307, 32);
+            lblInsumosTitle.TabIndex = 0;
+            lblInsumosTitle.Text = "Stock de Insumos Críticos";
             // 
             // panelProduction
             // 
@@ -298,7 +365,7 @@
             lblAlertas.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             lblAlertas.Location = new Point(0, 13);
             lblAlertas.Name = "lblAlertas";
-            lblAlertas.Size = new Size(130, 28);
+            lblAlertas.Size = new Size(128, 28);
             lblAlertas.TabIndex = 0;
             lblAlertas.Text = "🔔 ALERTAS";
             // 
@@ -493,7 +560,7 @@
             lblResumenTitle.ForeColor = Color.FromArgb(44, 62, 80);
             lblResumenTitle.Location = new Point(34, 27);
             lblResumenTitle.Name = "lblResumenTitle";
-            lblResumenTitle.Size = new Size(283, 32);
+            lblResumenTitle.Size = new Size(281, 32);
             lblResumenTitle.TabIndex = 0;
             lblResumenTitle.Text = "📊 RESUMEN GENERAL";
             // 
@@ -514,6 +581,9 @@
             panelNav.ResumeLayout(false);
             panelMain.ResumeLayout(false);
             panelMain.PerformLayout();
+            panelInsumos.ResumeLayout(false);
+            panelInsumos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvInsumos).EndInit();
             panelProduction.ResumeLayout(false);
             panelProduction.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvProduccion).EndInit();
@@ -544,6 +614,7 @@
         private System.Windows.Forms.Button btnAlmacen;
         private System.Windows.Forms.Button btnVentas;
         private System.Windows.Forms.Button btnAlimento;
+        private System.Windows.Forms.Button btnInsumos;
         private System.Windows.Forms.Button btnMolino;
         private System.Windows.Forms.Button btnReportes;
         private System.Windows.Forms.Panel panelMain;
@@ -572,6 +643,9 @@
         private System.Windows.Forms.Panel cardStock;
         private System.Windows.Forms.Panel cardVentas;
         private System.Windows.Forms.Panel cardAlimentoStock;
+        private System.Windows.Forms.Panel panelInsumos;
+        private System.Windows.Forms.Label lblInsumosTitle;
+        private System.Windows.Forms.DataGridView dgvInsumos;
 
         #endregion
     }
