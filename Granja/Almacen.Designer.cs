@@ -378,7 +378,7 @@ namespace Granja
             cmbTipo.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbTipo.Font = new Font("Segoe UI", 12F);
             cmbTipo.FormattingEnabled = true;
-            cmbTipo.Items.AddRange(new object[] { "Entrada", "Venta", "Pérdida" });
+            cmbTipo.Items.AddRange(new object[] { "Pérdida" });
             cmbTipo.Location = new Point(30, 100);
             cmbTipo.Name = "cmbTipo";
             cmbTipo.Size = new Size(1129, 36);

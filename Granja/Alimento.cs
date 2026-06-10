@@ -15,95 +15,76 @@ namespace Granja
         public Alimento()
         {
             InitializeComponent();
-            panelNuevoIngreso.Visible = false;
-            panelNuevoConsumo.Visible = false;
             PopulateData();
         }
 
         private void PopulateData()
         {
+            // Cargar datos iniciales si no existen
+            if (!GlobalData.MovimientosAlimento.Any())
+            {
+                GlobalData.MovimientosAlimento.Add(new MovimientoAlimento { Fecha = DateTime.Now.AddDays(-1), Tipo = "Ingreso (Molino)", CantidadSacos = 50, Observaciones = "Producción inicial" });
+                GlobalData.MovimientosAlimento.Add(new MovimientoAlimento { Fecha = DateTime.Now.AddDays(-2), Tipo = "Consumo (Producción)", CantidadSacos = 20, Observaciones = "Consumo de producción" });
+            }
+            ActualizarUI();
+        }
+
+        private void ActualizarUI()
+        {
+            // Actualizar stock total
+            lblStockTotal.Text = $"{GlobalData.StockAlimentoSacos:F2} sacos";
+
+            // Cargar movimientos
+            dgvMovimientos.Columns.Clear();
             dgvMovimientos.Columns.Add("Fecha", "Fecha");
             dgvMovimientos.Columns.Add("Tipo", "Tipo");
             dgvMovimientos.Columns.Add("Cantidad", "Cantidad");
+            dgvMovimientos.Columns.Add("Observaciones", "Observaciones");
 
-            dgvMovimientos.Rows.Add("8/4/2026", "Ingreso", "+50 sacos");
-            dgvMovimientos.Rows.Add("8/4/2026", "Consumo", "-20 sacos");
-            dgvMovimientos.Rows.Add("7/4/2026", "Consumo", "-25 sacos");
-            dgvMovimientos.Rows.Add("6/4/2026", "Ingreso", "+100 sacos");
+            foreach (var mov in GlobalData.MovimientosAlimento.OrderByDescending(m => m.Fecha))
+            {
+                string cantidadFormateada = mov.CantidadSacos >= 0 ? $"+{mov.CantidadSacos:F2}" : $"{mov.CantidadSacos:F2}";
+                dgvMovimientos.Rows.Add(mov.Fecha.ToString("dd/MM/yyyy"), mov.Tipo, cantidadFormateada, mov.Observaciones);
+            }
         }
 
-        private void btnRegistrarIngreso_Click(object sender, EventArgs e)
+        private void btnRegistrarPerdida_Click(object sender, EventArgs e)
         {
-            panelNuevoIngreso.Visible = true;
-            panelNuevoConsumo.Visible = false;
+            panelNuevoPerdida.Visible = true;
             panelMovimientos.Location = new Point(34, 480);
         }
 
-        private void btnCancelarIngreso_Click(object sender, EventArgs e)
+        private void btnCancelarPerdida_Click(object sender, EventArgs e)
         {
-            panelNuevoIngreso.Visible = false;
+            panelNuevoPerdida.Visible = false;
             panelMovimientos.Location = new Point(34, 180);
-            LimpiarCamposIngreso();
+            txtCantidadPerdida.Clear();
         }
 
-        private void btnRegistrarIngreso2_Click(object sender, EventArgs e)
+        private void btnRegistrarPerdida2_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtCantidadIngreso.Text) || !int.TryParse(txtCantidadIngreso.Text, out _))
+            if (!int.TryParse(txtCantidadPerdida.Text, out int cantidad) || cantidad <= 0)
             {
-                MessageBox.Show("Por favor ingrese una cantidad válida de sacos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ingrese una cantidad válida de sacos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            string fecha = dtpFechaIngreso.Value.ToString("d/M/yyyy");
-            string cantidad = "+" + txtCantidadIngreso.Text + " sacos";
-
-            dgvMovimientos.Rows.Insert(0, fecha, "Ingreso", cantidad);
-
-            panelNuevoIngreso.Visible = false;
-            panelMovimientos.Location = new Point(34, 180);
-            LimpiarCamposIngreso();
-        }
-
-        private void btnRegistrarConsumo_Click(object sender, EventArgs e)
-        {
-            panelNuevoConsumo.Visible = true;
-            panelNuevoIngreso.Visible = false;
-            panelMovimientos.Location = new Point(34, 480);
-        }
-
-        private void btnCancelarConsumo_Click(object sender, EventArgs e)
-        {
-            panelNuevoConsumo.Visible = false;
-            panelMovimientos.Location = new Point(34, 180);
-            LimpiarCamposConsumo();
-        }
-
-        private void btnRegistrarConsumo2_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(txtCantidadConsumo.Text) || !int.TryParse(txtCantidadConsumo.Text, out _))
+            // Registrar pérdida
+            GlobalData.StockAlimentoSacos -= cantidad;
+            GlobalData.MovimientosAlimento.Add(new MovimientoAlimento
             {
-                MessageBox.Show("Por favor ingrese una cantidad válida de sacos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+                Fecha = dtpFechaPerdida.Value,
+                Tipo = "Pérdida",
+                CantidadSacos = -cantidad,
+                Observaciones = "Registro manual de pérdida"
+            });
 
-            string fecha = dtpFechaConsumo.Value.ToString("d/M/yyyy");
-            string cantidad = "-" + txtCantidadConsumo.Text + " sacos";
-
-            dgvMovimientos.Rows.Insert(0, fecha, "Consumo", cantidad);
-
-            panelNuevoConsumo.Visible = false;
+            // Actualizar UI
+            ActualizarUI();
+            panelNuevoPerdida.Visible = false;
             panelMovimientos.Location = new Point(34, 180);
-            LimpiarCamposConsumo();
-        }
-
-        private void LimpiarCamposIngreso()
-        {
-            txtCantidadIngreso.Text = "";
-        }
-
-        private void LimpiarCamposConsumo()
-        {
-            txtCantidadConsumo.Text = "";
+            txtCantidadPerdida.Clear();
+            MessageBox.Show("Pérdida registrada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnDashboard_Click(object sender, EventArgs e)
@@ -161,7 +142,5 @@ namespace Granja
             ins.Show();
             this.Hide();
         }
-
-
     }
 }

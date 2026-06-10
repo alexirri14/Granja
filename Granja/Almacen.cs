@@ -15,25 +15,40 @@ namespace Granja
         public Almacen()
         {
             InitializeComponent();
-            // Ocultar el panel de nuevo movimiento por defecto
             panelNuevoMovimiento.Visible = false;
             PopulateData();
         }
 
         private void PopulateData()
         {
+            // Agregar datos de ejemplo si no hay
+            if (!GlobalData.MovimientosHuevos.Any())
+            {
+                GlobalData.MovimientosHuevos.Add(new MovimientoHuevo { Fecha = new DateTime(2026, 4, 8), Tipo = "Entrada", Detalle = "Producción", Cantidad = 500 });
+                GlobalData.MovimientosHuevos.Add(new MovimientoHuevo { Fecha = new DateTime(2026, 4, 8), Tipo = "Venta", Detalle = "Cliente A", Cantidad = -200 });
+                GlobalData.MovimientosHuevos.Add(new MovimientoHuevo { Fecha = new DateTime(2026, 4, 8), Tipo = "Pérdida", Detalle = "Rotura", Cantidad = -35 });
+            }
+
+            ActualizarUI();
+        }
+
+        private void ActualizarUI()
+        {
+            // Actualizar stock
+            lblStockTotal.Text = GlobalData.StockHuevos + " huevos";
+
+            // Cargar movimientos
+            dgvMovimientos.Columns.Clear();
             dgvMovimientos.Columns.Add("Fecha", "Fecha");
             dgvMovimientos.Columns.Add("Tipo", "Tipo");
             dgvMovimientos.Columns.Add("Detalle", "Detalle");
             dgvMovimientos.Columns.Add("Cantidad", "Cantidad");
 
-            dgvMovimientos.Rows.Add("8/4/2026", "Entrada", "-", "+500");
-            dgvMovimientos.Rows.Add("8/4/2026", "Venta", "-", "-200");
-            dgvMovimientos.Rows.Add("8/4/2026", "Pérdida", "Rotura", "-35");
-            dgvMovimientos.Rows.Add("7/4/2026", "Entrada", "-", "+450");
-            dgvMovimientos.Rows.Add("7/4/2026", "Venta", "-", "-300");
-            dgvMovimientos.Rows.Add("7/4/2026", "Pérdida", "Mal estado", "-25");
-            dgvMovimientos.Rows.Add("6/4/2026", "Pérdida", "Rotura en manipulación", "-40");
+            foreach (var mov in GlobalData.MovimientosHuevos.OrderByDescending(m => m.Fecha))
+            {
+                string cantidadFormateada = mov.Cantidad >= 0 ? "+" + mov.Cantidad : mov.Cantidad.ToString();
+                dgvMovimientos.Rows.Add(mov.Fecha.ToString("dd/MM/yyyy"), mov.Tipo, mov.Detalle, cantidadFormateada);
+            }
         }
 
         private void btnRegistrarMovimiento_Click(object sender, EventArgs e)
@@ -51,33 +66,30 @@ namespace Granja
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            // Validar que la cantidad sea un numero
-            if (string.IsNullOrWhiteSpace(txtCantidad.Text) || !int.TryParse(txtCantidad.Text, out _))
+            // Validar
+            if (string.IsNullOrWhiteSpace(txtCantidad.Text) || !int.TryParse(txtCantidad.Text, out int cantidad) || cantidad <= 0)
             {
-                MessageBox.Show("Por favor ingrese una cantidad válida de huevos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Por favor ingrese una cantidad válida.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            // Obtener valores
-            string fecha = dtpFecha.Value.ToString("d/M/yyyy");
-            string tipo = cmbTipo.SelectedItem?.ToString() ?? "";
-            string detalle = "-";
-            int cantidad = int.Parse(txtCantidad.Text);
+            // Registrar pérdida
+            GlobalData.MovimientosHuevos.Add(new MovimientoHuevo
+            {
+                Fecha = dtpFecha.Value,
+                Tipo = "Pérdida",
+                Detalle = "Registro manual",
+                Cantidad = -cantidad
+            });
+            GlobalData.StockHuevos -= cantidad;
 
-            // Formatear la cantidad
-            string cantidadFormateada = "";
-            if (tipo == "Entrada")
-                cantidadFormateada = "+" + cantidad;
-            else
-                cantidadFormateada = "-" + cantidad;
-
-            // Agregar a la lista
-            dgvMovimientos.Rows.Insert(0, fecha, tipo, detalle, cantidadFormateada);
-
-            // Ocultar panel y limpiar campos
+            // Actualizar UI
+            ActualizarUI();
             panelNuevoMovimiento.Visible = false;
             panelMovimientos.Location = new Point(34, 180);
             LimpiarCampos();
+
+            MessageBox.Show("Pérdida registrada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void LimpiarCampos()
@@ -86,6 +98,7 @@ namespace Granja
             txtCantidad.Text = "";
         }
 
+        // Métodos de navegación
         private void btnDashboard_Click(object sender, EventArgs e)
         {
             Form1 dashboard = new Form1();

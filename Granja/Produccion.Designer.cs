@@ -1,4 +1,4 @@
-﻿namespace Granja
+namespace Granja
 {
     partial class Produccion
     {
@@ -269,7 +269,7 @@
             txtCantidad.Font = new Font("Segoe UI", 12F);
             txtCantidad.Location = new Point(27, 201);
             txtCantidad.Name = "txtCantidad";
-            txtCantidad.PlaceholderText = "Número de huevos";
+            txtCantidad.PlaceholderText = "Número de javas";
             txtCantidad.Size = new Size(1129, 34);
             txtCantidad.TabIndex = 6;
             // 
