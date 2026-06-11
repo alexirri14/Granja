@@ -8,8 +8,8 @@ namespace Granja
     {
         public string Galpon { get; set; }
         public DateTime Fecha { get; set; }
-        public int Javas { get; set; }
-        public int Huevos => Javas * GlobalData.HuevosPorJava;
+        public int jabas { get; set; }
+        public int Huevos => jabas * GlobalData.HuevosPorJava;
     }
 
     // Clase para representar un Movimiento de Huevos

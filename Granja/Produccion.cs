@@ -35,14 +35,14 @@ namespace Granja
                 return;
             }
 
-            if (!int.TryParse(txtCantidad.Text, out int javas) || javas <= 0)
+            if (!int.TryParse(txtCantidad.Text, out int jabas) || jabas <= 0)
             {
-                MessageBox.Show("Ingresa un número de javas válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ingresa un número de jabas válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             // Calcular consumo de alimento (ejemplo: 0.25 kg por java, y cada saco es 50 kg)
-            double kgAlimento = javas * GlobalData.KgAlimentoPorJava;
+            double kgAlimento = jabas * GlobalData.KgAlimentoPorJava;
             double sacosAlimento = kgAlimento / 50; // Asumiendo sacos de 50 kg
 
             if (GlobalData.StockAlimentoSacos < sacosAlimento)
@@ -52,14 +52,14 @@ namespace Granja
             }
 
             // Calcular huevos producidos
-            int huevos = javas * GlobalData.HuevosPorJava;
+            int huevos = jabas * GlobalData.HuevosPorJava;
 
             // Registrar producción
             GlobalData.Producciones.Add(new ProduccionItem
             {
                 Galpon = cmbGalpon.SelectedItem.ToString(),
                 Fecha = dtpFecha.Value,
-                Javas = javas
+                jabas = jabas
             });
 
             // Actualizar stock de alimento
@@ -69,7 +69,7 @@ namespace Granja
                 Fecha = DateTime.Now,
                 Tipo = "Consumo (Producción)",
                 CantidadSacos = sacosAlimento,
-                Observaciones = $"Producción de {javas} javas en galpón {cmbGalpon.SelectedItem}"
+                Observaciones = $"Producción de {jabas} jabas en galpón {cmbGalpon.SelectedItem}"
             });
 
             // Actualizar stock de huevos (almacén)
@@ -96,9 +96,9 @@ namespace Granja
             // Agregar datos de ejemplo
             if (!GlobalData.Producciones.Any())
             {
-                GlobalData.Producciones.Add(new ProduccionItem { Galpon = "A", Fecha = new DateTime(2026, 4, 8), Javas = 1 }); // 360 huevos
-                GlobalData.Producciones.Add(new ProduccionItem { Galpon = "B", Fecha = new DateTime(2026, 4, 8), Javas = 1 }); // 360 huevos
-                GlobalData.Producciones.Add(new ProduccionItem { Galpon = "C", Fecha = new DateTime(2026, 4, 7), Javas = 1 }); // 360 huevos
+                GlobalData.Producciones.Add(new ProduccionItem { Galpon = "A", Fecha = new DateTime(2026, 4, 8), jabas = 1 }); // 360 huevos
+                GlobalData.Producciones.Add(new ProduccionItem { Galpon = "B", Fecha = new DateTime(2026, 4, 8), jabas = 1 }); // 360 huevos
+                GlobalData.Producciones.Add(new ProduccionItem { Galpon = "C", Fecha = new DateTime(2026, 4, 7), jabas = 1 }); // 360 huevos
             }
         }
 
@@ -107,7 +107,7 @@ namespace Granja
             dgvProduccionList.Columns.Clear();
             dgvProduccionList.Columns.Add("Galpon", "Galpón");
             dgvProduccionList.Columns.Add("Fecha", "Fecha");
-            dgvProduccionList.Columns.Add("Javas", "Javas");
+            dgvProduccionList.Columns.Add("jabas", "jabas");
             dgvProduccionList.Columns.Add("Huevos", "Huevos");
 
             foreach (var item in GlobalData.Producciones.OrderByDescending(p => p.Fecha))
@@ -115,7 +115,7 @@ namespace Granja
                 dgvProduccionList.Rows.Add(
                     item.Galpon,
                     item.Fecha.ToString("dd/MM/yyyy"),
-                    item.Javas,
+                    item.jabas,
                     item.Huevos
                 );
             }

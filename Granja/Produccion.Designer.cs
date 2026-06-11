@@ -269,7 +269,7 @@ namespace Granja
             txtCantidad.Font = new Font("Segoe UI", 12F);
             txtCantidad.Location = new Point(27, 201);
             txtCantidad.Name = "txtCantidad";
-            txtCantidad.PlaceholderText = "Número de javas";
+            txtCantidad.PlaceholderText = "Número de jabas";
             txtCantidad.Size = new Size(1129, 34);
             txtCantidad.TabIndex = 6;
             // 
