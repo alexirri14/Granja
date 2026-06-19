@@ -93,10 +93,10 @@ namespace Granja
         }
 
         private void LimpiarCampos()
-        {
-            cmbTipo.SelectedIndex = -1;
-            txtCantidad.Text = "";
-        }
+{
+    cmbTipo.SelectedIndex = -1;
+    txtCantidad.Text = null;
+}
 
         // Métodos de navegación
         private void btnDashboard_Click(object sender, EventArgs e)
