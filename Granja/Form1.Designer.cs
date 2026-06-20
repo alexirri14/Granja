@@ -49,10 +49,6 @@ namespace Granja
             lblStock = new Label();
             lblStockValor = new Label();
             accStock = new Panel();
-            cardVentas = new Panel();
-            lblVentasHoy = new Label();
-            lblVentasValor = new Label();
-            accVentas = new Panel();
             cardAlimentoStock = new Panel();
             lblAlimentoStock = new Label();
             lblAlimentoValor = new Label();
@@ -67,7 +63,6 @@ namespace Granja
             panelAlertBox.SuspendLayout();
             panelCardsContainer.SuspendLayout();
             cardStock.SuspendLayout();
-            cardVentas.SuspendLayout();
             cardAlimentoStock.SuspendLayout();
             SuspendLayout();
             // 
@@ -278,7 +273,6 @@ namespace Granja
             // panelCardsContainer
             // 
             panelCardsContainer.Controls.Add(cardStock);
-            panelCardsContainer.Controls.Add(cardVentas);
             panelCardsContainer.Controls.Add(cardAlimentoStock);
             panelCardsContainer.Location = new Point(34, 80);
             panelCardsContainer.Margin = new Padding(3, 4, 3, 4);
@@ -329,56 +323,13 @@ namespace Granja
             accStock.Size = new Size(5, 160);
             accStock.TabIndex = 2;
             // 
-            // cardVentas
-            // 
-            cardVentas.BackColor = Color.White;
-            cardVentas.Controls.Add(lblVentasHoy);
-            cardVentas.Controls.Add(lblVentasValor);
-            cardVentas.Controls.Add(accVentas);
-            cardVentas.Location = new Point(286, 0);
-            cardVentas.Margin = new Padding(0, 0, 23, 0);
-            cardVentas.Name = "cardVentas";
-            cardVentas.Size = new Size(263, 160);
-            cardVentas.TabIndex = 2;
-            // 
-            // lblVentasHoy
-            // 
-            lblVentasHoy.AutoSize = true;
-            lblVentasHoy.Font = new Font("Segoe UI", 9F);
-            lblVentasHoy.ForeColor = Color.Gray;
-            lblVentasHoy.Location = new Point(17, 20);
-            lblVentasHoy.Name = "lblVentasHoy";
-            lblVentasHoy.Size = new Size(80, 20);
-            lblVentasHoy.TabIndex = 0;
-            lblVentasHoy.Text = "Ventas hoy";
-            // 
-            // lblVentasValor
-            // 
-            lblVentasValor.AutoSize = true;
-            lblVentasValor.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
-            lblVentasValor.Location = new Point(17, 60);
-            lblVentasValor.Name = "lblVentasValor";
-            lblVentasValor.Size = new Size(132, 46);
-            lblVentasValor.TabIndex = 1;
-            lblVentasValor.Text = "S/ 0.00";
-            // 
-            // accVentas
-            // 
-            accVentas.BackColor = Color.FromArgb(255, 193, 7);
-            accVentas.Dock = DockStyle.Left;
-            accVentas.Location = new Point(0, 0);
-            accVentas.Margin = new Padding(3, 4, 3, 4);
-            accVentas.Name = "accVentas";
-            accVentas.Size = new Size(5, 160);
-            accVentas.TabIndex = 2;
-            // 
             // cardAlimentoStock
             // 
             cardAlimentoStock.BackColor = Color.White;
             cardAlimentoStock.Controls.Add(lblAlimentoStock);
             cardAlimentoStock.Controls.Add(lblAlimentoValor);
             cardAlimentoStock.Controls.Add(accAlimento);
-            cardAlimentoStock.Location = new Point(572, 0);
+            cardAlimentoStock.Location = new Point(286, 0);
             cardAlimentoStock.Margin = new Padding(0, 0, 23, 0);
             cardAlimentoStock.Name = "cardAlimentoStock";
             cardAlimentoStock.Size = new Size(263, 160);
@@ -453,8 +404,6 @@ namespace Granja
             panelCardsContainer.ResumeLayout(false);
             cardStock.ResumeLayout(false);
             cardStock.PerformLayout();
-            cardVentas.ResumeLayout(false);
-            cardVentas.PerformLayout();
             cardAlimentoStock.ResumeLayout(false);
             cardAlimentoStock.PerformLayout();
             ResumeLayout(false);
@@ -481,14 +430,10 @@ namespace Granja
         private System.Windows.Forms.Label lblStock;
         private System.Windows.Forms.Label lblStockValor;
         private System.Windows.Forms.Panel accStock;
-        private System.Windows.Forms.Label lblVentasHoy;
-        private System.Windows.Forms.Label lblVentasValor;
-        private System.Windows.Forms.Panel accVentas;
         private System.Windows.Forms.Label lblAlimentoStock;
         private System.Windows.Forms.Label lblAlimentoValor;
         private System.Windows.Forms.Panel accAlimento;
         private System.Windows.Forms.Panel cardStock;
-        private System.Windows.Forms.Panel cardVentas;
         private System.Windows.Forms.Panel cardAlimentoStock;
         private System.Windows.Forms.Panel panelInsumos;
         private System.Windows.Forms.Label lblInsumosTitle;

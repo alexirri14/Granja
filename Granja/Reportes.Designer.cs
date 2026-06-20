@@ -29,8 +29,6 @@ namespace Granja
             lblReportesTitle = new Label();
             panelTabs = new Panel();
             btnStockActual = new Button();
-            btnVentasDiarias = new Button();
-            btnFlujoHuevos = new Button();
             btnProduccionGalpon = new Button();
             panelContenido = new Panel();
             panelHeader.SuspendLayout();
@@ -177,8 +175,6 @@ namespace Granja
             // 
             panelTabs.BackColor = Color.White;
             panelTabs.Controls.Add(btnStockActual);
-            panelTabs.Controls.Add(btnVentasDiarias);
-            panelTabs.Controls.Add(btnFlujoHuevos);
             panelTabs.Controls.Add(btnProduccionGalpon);
             panelTabs.Location = new Point(34, 100);
             panelTabs.Margin = new Padding(3, 4, 3, 4);
@@ -194,40 +190,12 @@ namespace Granja
             btnStockActual.FlatStyle = FlatStyle.Flat;
             btnStockActual.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             btnStockActual.ForeColor = Color.FromArgb(44, 62, 80);
-            btnStockActual.Location = new Point(880, 20);
+            btnStockActual.Location = new Point(306, 20);
             btnStockActual.Name = "btnStockActual";
             btnStockActual.Size = new Size(280, 50);
             btnStockActual.TabIndex = 3;
             btnStockActual.Text = "Stock actual";
             btnStockActual.UseVisualStyleBackColor = false;
-            // 
-            // btnVentasDiarias
-            // 
-            btnVentasDiarias.BackColor = Color.FromArgb(230, 230, 230);
-            btnVentasDiarias.FlatAppearance.BorderSize = 0;
-            btnVentasDiarias.FlatStyle = FlatStyle.Flat;
-            btnVentasDiarias.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            btnVentasDiarias.ForeColor = Color.FromArgb(44, 62, 80);
-            btnVentasDiarias.Location = new Point(590, 20);
-            btnVentasDiarias.Name = "btnVentasDiarias";
-            btnVentasDiarias.Size = new Size(280, 50);
-            btnVentasDiarias.TabIndex = 2;
-            btnVentasDiarias.Text = "Ventas diarias";
-            btnVentasDiarias.UseVisualStyleBackColor = false;
-            // 
-            // btnFlujoHuevos
-            // 
-            btnFlujoHuevos.BackColor = Color.FromArgb(230, 230, 230);
-            btnFlujoHuevos.FlatAppearance.BorderSize = 0;
-            btnFlujoHuevos.FlatStyle = FlatStyle.Flat;
-            btnFlujoHuevos.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            btnFlujoHuevos.ForeColor = Color.FromArgb(44, 62, 80);
-            btnFlujoHuevos.Location = new Point(300, 20);
-            btnFlujoHuevos.Name = "btnFlujoHuevos";
-            btnFlujoHuevos.Size = new Size(280, 50);
-            btnFlujoHuevos.TabIndex = 1;
-            btnFlujoHuevos.Text = "Flujo de Huevos";
-            btnFlujoHuevos.UseVisualStyleBackColor = false;
             // 
             // btnProduccionGalpon
             // 
@@ -240,7 +208,7 @@ namespace Granja
             btnProduccionGalpon.Name = "btnProduccionGalpon";
             btnProduccionGalpon.Size = new Size(280, 50);
             btnProduccionGalpon.TabIndex = 0;
-            btnProduccionGalpon.Text = "Producción por galpón";
+            btnProduccionGalpon.Text = "[Cambiar de nombre]";
             btnProduccionGalpon.UseVisualStyleBackColor = false;
             // 
             // panelContenido
@@ -284,10 +252,8 @@ namespace Granja
         private System.Windows.Forms.Panel panelMain;
         private System.Windows.Forms.Label lblReportesTitle;
         private System.Windows.Forms.Panel panelTabs;
-        private System.Windows.Forms.Button btnProduccionGalpon;
-        private System.Windows.Forms.Button btnFlujoHuevos;
-        private System.Windows.Forms.Button btnVentasDiarias;
         private System.Windows.Forms.Button btnStockActual;
         private System.Windows.Forms.Panel panelContenido;
+        private Button btnProduccionGalpon;
     }
 }
