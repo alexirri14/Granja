@@ -2,15 +2,6 @@
 
 namespace Granja
 {
-    // Clase para representar una Producción
-    public class ProduccionItem
-    {
-        public string Galpon { get; set; }
-        public DateTime Fecha { get; set; }
-        public int jabas { get; set; }
-        public int Huevos => jabas * GlobalData.HuevosPorJava;
-    }
-
     // Clase para representar un Movimiento de Huevos
     public class MovimientoHuevo
     {
@@ -83,9 +74,6 @@ namespace Granja
         public static int StockHuevos { get; set; } = 8500;
         public static List<MovimientoHuevo> MovimientosHuevos { get; set; } = new List<MovimientoHuevo>();
 
-        // Producción
-        public static List<ProduccionItem> Producciones { get; set; } = new List<ProduccionItem>();
-
         // Insumos
         public static List<Insumo> Insumos { get; set; } = new List<Insumo>
         {
@@ -153,9 +141,5 @@ namespace Granja
         // Alimento (Stock en Sacos y Movimientos)
         public static double StockAlimentoSacos { get; set; } = 300;
         public static List<MovimientoAlimento> MovimientosAlimento { get; set; } = new List<MovimientoAlimento>();
-
-        // Constantes
-        public const int HuevosPorJava = 360;
-        public const double KgAlimentoPorJava = 0.25; // Ejemplo: 0.25 kg de alimento por java
     }
 }

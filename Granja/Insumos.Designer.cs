@@ -17,849 +17,834 @@ namespace Granja
 
         private void InitializeComponent()
         {
-            this.panelHeader = new System.Windows.Forms.Panel();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.panelNav = new System.Windows.Forms.Panel();
-            this.btnReportes = new System.Windows.Forms.Button();
-            this.btnMolino = new System.Windows.Forms.Button();
-            this.btnInsumos = new System.Windows.Forms.Button();
-            this.btnAlimento = new System.Windows.Forms.Button();
-            this.btnVentas = new System.Windows.Forms.Button();
-            this.btnAlmacen = new System.Windows.Forms.Button();
-            this.btnProduccion = new System.Windows.Forms.Button();
-            this.btnDashboard = new System.Windows.Forms.Button();
-            this.panelMain = new System.Windows.Forms.Panel();
-            this.lblInsumosTitle = new System.Windows.Forms.Label();
-            this.panelResumen = new System.Windows.Forms.Panel();
-            this.cardConsumos = new System.Windows.Forms.Panel();
-            this.lblConsumosValor = new System.Windows.Forms.Label();
-            this.lblConsumosTitulo = new System.Windows.Forms.Label();
-            this.cardEntradas = new System.Windows.Forms.Panel();
-            this.lblEntradasValor = new System.Windows.Forms.Label();
-            this.lblEntradasTitulo = new System.Windows.Forms.Label();
-            this.cardCritico = new System.Windows.Forms.Panel();
-            this.lblCriticoValor = new System.Windows.Forms.Label();
-            this.lblCriticoTitulo = new System.Windows.Forms.Label();
-            this.cardTotal = new System.Windows.Forms.Panel();
-            this.lblTotalValor = new System.Windows.Forms.Label();
-            this.lblTotalTitulo = new System.Windows.Forms.Label();
-            this.panelBotones = new System.Windows.Forms.Panel();
-            this.btnVerRecetas = new System.Windows.Forms.Button();
-            this.btnRegistrarMovimiento = new System.Windows.Forms.Button();
-            this.panelInventario = new System.Windows.Forms.Panel();
-            this.dgvInventario = new System.Windows.Forms.DataGridView();
-            this.lblInventarioTitulo = new System.Windows.Forms.Label();
-            this.panelHistorial = new System.Windows.Forms.Panel();
-            this.dgvHistorial = new System.Windows.Forms.DataGridView();
-            this.lblHistorialTitulo = new System.Windows.Forms.Label();
-            this.panelNuevoMovimiento = new System.Windows.Forms.Panel();
-            this.btnCancelarMovimiento = new System.Windows.Forms.Button();
-            this.btnRegistrarMovimientoConfirmar = new System.Windows.Forms.Button();
-            this.txtObservaciones = new System.Windows.Forms.TextBox();
-            this.lblObservaciones = new System.Windows.Forms.Label();
-            this.txtCantidadMovimiento = new System.Windows.Forms.TextBox();
-            this.lblCantidadMovimiento = new System.Windows.Forms.Label();
-            this.cmbTipoMovimiento = new System.Windows.Forms.ComboBox();
-            this.lblTipoMovimiento = new System.Windows.Forms.Label();
-            this.cmbInsumoMovimiento = new System.Windows.Forms.ComboBox();
-            this.lblInsumoMovimiento = new System.Windows.Forms.Label();
-            this.lblNuevoMovimientoTitulo = new System.Windows.Forms.Label();
-            this.panelRecetas = new System.Windows.Forms.Panel();
-            this.lblRecetasTitulo = new System.Windows.Forms.Label();
-            this.panelRecetaGalpon4 = new System.Windows.Forms.Panel();
-            this.lblRecetaGalpon4Titulo = new System.Windows.Forms.Label();
-            this.dgvRecetaGalpon4 = new System.Windows.Forms.DataGridView();
-            this.panelRecetaGalpon687 = new System.Windows.Forms.Panel();
-            this.lblRecetaGalpon687Titulo = new System.Windows.Forms.Label();
-            this.dgvRecetaGalpon687 = new System.Windows.Forms.DataGridView();
-            this.panelRecetaGalpon358 = new System.Windows.Forms.Panel();
-            this.lblRecetaGalpon358Titulo = new System.Windows.Forms.Label();
-            this.dgvRecetaGalpon358 = new System.Windows.Forms.DataGridView();
-            this.btnCerrarRecetas = new System.Windows.Forms.Button();
-            this.panelHeader.SuspendLayout();
-            this.panelNav.SuspendLayout();
-            this.panelMain.SuspendLayout();
-            this.panelResumen.SuspendLayout();
-            this.cardConsumos.SuspendLayout();
-            this.cardEntradas.SuspendLayout();
-            this.cardCritico.SuspendLayout();
-            this.cardTotal.SuspendLayout();
-            this.panelBotones.SuspendLayout();
-            this.panelInventario.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).BeginInit();
-            this.panelHistorial.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHistorial)).BeginInit();
-            this.panelNuevoMovimiento.SuspendLayout();
-            this.panelRecetas.SuspendLayout();
-            this.panelRecetaGalpon4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRecetaGalpon4)).BeginInit();
-            this.panelRecetaGalpon687.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRecetaGalpon687)).BeginInit();
-            this.panelRecetaGalpon358.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRecetaGalpon358)).BeginInit();
-            this.SuspendLayout();
+            panelHeader = new Panel();
+            lblTitle = new Label();
+            panelNav = new Panel();
+            btnReportes = new Button();
+            btnMolino = new Button();
+            btnInsumos = new Button();
+            btnAlimento = new Button();
+            btnVentas = new Button();
+            btnAlmacen = new Button();
+            btnDashboard = new Button();
+            panelMain = new Panel();
+            panelRecetas = new Panel();
+            btnCerrarRecetas = new Button();
+            panelRecetaGalpon358 = new Panel();
+            dgvRecetaGalpon358 = new DataGridView();
+            lblRecetaGalpon358Titulo = new Label();
+            panelRecetaGalpon687 = new Panel();
+            dgvRecetaGalpon687 = new DataGridView();
+            lblRecetaGalpon687Titulo = new Label();
+            panelRecetaGalpon4 = new Panel();
+            dgvRecetaGalpon4 = new DataGridView();
+            lblRecetaGalpon4Titulo = new Label();
+            lblRecetasTitulo = new Label();
+            panelNuevoMovimiento = new Panel();
+            btnCancelarMovimiento = new Button();
+            btnRegistrarMovimientoConfirmar = new Button();
+            txtObservaciones = new TextBox();
+            lblObservaciones = new Label();
+            txtCantidadMovimiento = new TextBox();
+            lblCantidadMovimiento = new Label();
+            cmbTipoMovimiento = new ComboBox();
+            lblTipoMovimiento = new Label();
+            cmbInsumoMovimiento = new ComboBox();
+            lblInsumoMovimiento = new Label();
+            lblNuevoMovimientoTitulo = new Label();
+            panelHistorial = new Panel();
+            dgvHistorial = new DataGridView();
+            lblHistorialTitulo = new Label();
+            panelInventario = new Panel();
+            dgvInventario = new DataGridView();
+            lblInventarioTitulo = new Label();
+            panelBotones = new Panel();
+            btnVerRecetas = new Button();
+            btnRegistrarMovimiento = new Button();
+            panelResumen = new Panel();
+            cardConsumos = new Panel();
+            lblConsumosValor = new Label();
+            lblConsumosTitulo = new Label();
+            cardEntradas = new Panel();
+            lblEntradasValor = new Label();
+            lblEntradasTitulo = new Label();
+            cardCritico = new Panel();
+            lblCriticoValor = new Label();
+            lblCriticoTitulo = new Label();
+            cardTotal = new Panel();
+            lblTotalValor = new Label();
+            lblTotalTitulo = new Label();
+            lblInsumosTitle = new Label();
+            panelHeader.SuspendLayout();
+            panelNav.SuspendLayout();
+            panelMain.SuspendLayout();
+            panelRecetas.SuspendLayout();
+            panelRecetaGalpon358.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvRecetaGalpon358).BeginInit();
+            panelRecetaGalpon687.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvRecetaGalpon687).BeginInit();
+            panelRecetaGalpon4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvRecetaGalpon4).BeginInit();
+            panelNuevoMovimiento.SuspendLayout();
+            panelHistorial.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvHistorial).BeginInit();
+            panelInventario.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvInventario).BeginInit();
+            panelBotones.SuspendLayout();
+            panelResumen.SuspendLayout();
+            cardConsumos.SuspendLayout();
+            cardEntradas.SuspendLayout();
+            cardCritico.SuspendLayout();
+            cardTotal.SuspendLayout();
+            SuspendLayout();
             // 
             // panelHeader
             // 
-            this.panelHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(62)))));
-            this.panelHeader.Controls.Add(this.lblTitle);
-            this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelHeader.Location = new System.Drawing.Point(0, 0);
-            this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Size = new System.Drawing.Size(1257, 80);
-            this.panelHeader.TabIndex = 0;
+            panelHeader.BackColor = Color.FromArgb(0, 125, 62);
+            panelHeader.Controls.Add(lblTitle);
+            panelHeader.Dock = DockStyle.Top;
+            panelHeader.Location = new Point(0, 0);
+            panelHeader.Name = "panelHeader";
+            panelHeader.Size = new Size(1257, 80);
+            panelHeader.TabIndex = 0;
             // 
             // lblTitle
             // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
-            this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(23, 20);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(575, 37);
-            this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "Sistema Avícola - El Rancho del Buen Pastor";
+            lblTitle.AutoSize = true;
+            lblTitle.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
+            lblTitle.ForeColor = Color.White;
+            lblTitle.Location = new Point(23, 20);
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(575, 37);
+            lblTitle.TabIndex = 0;
+            lblTitle.Text = "Sistema Avícola - El Rancho del Buen Pastor";
             // 
             // panelNav
             // 
-            this.panelNav.BackColor = System.Drawing.Color.White;
-            this.panelNav.Controls.Add(this.btnReportes);
-            this.panelNav.Controls.Add(this.btnMolino);
-            this.panelNav.Controls.Add(this.btnInsumos);
-            this.panelNav.Controls.Add(this.btnAlimento);
-            this.panelNav.Controls.Add(this.btnVentas);
-            this.panelNav.Controls.Add(this.btnAlmacen);
-            this.panelNav.Controls.Add(this.btnProduccion);
-            this.panelNav.Controls.Add(this.btnDashboard);
-            this.panelNav.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelNav.Location = new System.Drawing.Point(0, 80);
-            this.panelNav.Name = "panelNav";
-            this.panelNav.Size = new System.Drawing.Size(1257, 73);
-            this.panelNav.TabIndex = 1;
+            panelNav.BackColor = Color.White;
+            panelNav.Controls.Add(btnReportes);
+            panelNav.Controls.Add(btnMolino);
+            panelNav.Controls.Add(btnInsumos);
+            panelNav.Controls.Add(btnAlimento);
+            panelNav.Controls.Add(btnVentas);
+            panelNav.Controls.Add(btnAlmacen);
+            panelNav.Controls.Add(btnDashboard);
+            panelNav.Dock = DockStyle.Top;
+            panelNav.Location = new Point(0, 80);
+            panelNav.Name = "panelNav";
+            panelNav.Size = new Size(1257, 73);
+            panelNav.TabIndex = 1;
             // 
             // btnReportes
             // 
-            this.btnReportes.FlatAppearance.BorderSize = 0;
-            this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReportes.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnReportes.Location = new System.Drawing.Point(943, 2);
-            this.btnReportes.Name = "btnReportes";
-            this.btnReportes.Size = new System.Drawing.Size(137, 67);
-            this.btnReportes.TabIndex = 7;
-            this.btnReportes.Text = "Reportes";
-            this.btnReportes.UseVisualStyleBackColor = true;
-            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
+            btnReportes.FlatAppearance.BorderSize = 0;
+            btnReportes.FlatStyle = FlatStyle.Flat;
+            btnReportes.Font = new Font("Segoe UI", 10F);
+            btnReportes.Location = new Point(834, 2);
+            btnReportes.Name = "btnReportes";
+            btnReportes.Size = new Size(137, 67);
+            btnReportes.TabIndex = 7;
+            btnReportes.Text = "Reportes";
+            btnReportes.UseVisualStyleBackColor = true;
+            btnReportes.Click += btnReportes_Click;
             // 
             // btnMolino
             // 
-            this.btnMolino.FlatAppearance.BorderSize = 0;
-            this.btnMolino.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMolino.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnMolino.Location = new System.Drawing.Point(806, 2);
-            this.btnMolino.Name = "btnMolino";
-            this.btnMolino.Size = new System.Drawing.Size(137, 67);
-            this.btnMolino.TabIndex = 6;
-            this.btnMolino.Text = "Molino";
-            this.btnMolino.UseVisualStyleBackColor = true;
-            this.btnMolino.Click += new System.EventHandler(this.btnMolino_Click);
+            btnMolino.FlatAppearance.BorderSize = 0;
+            btnMolino.FlatStyle = FlatStyle.Flat;
+            btnMolino.Font = new Font("Segoe UI", 10F);
+            btnMolino.Location = new Point(681, 2);
+            btnMolino.Name = "btnMolino";
+            btnMolino.Size = new Size(137, 67);
+            btnMolino.TabIndex = 6;
+            btnMolino.Text = "Molino";
+            btnMolino.UseVisualStyleBackColor = true;
+            btnMolino.Click += btnMolino_Click;
             // 
             // btnInsumos
             // 
-            this.btnInsumos.FlatAppearance.BorderSize = 0;
-            this.btnInsumos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInsumos.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnInsumos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(62)))));
-            this.btnInsumos.Location = new System.Drawing.Point(681, 2);
-            this.btnInsumos.Name = "btnInsumos";
-            this.btnInsumos.Size = new System.Drawing.Size(137, 67);
-            this.btnInsumos.TabIndex = 5;
-            this.btnInsumos.Text = "Insumos";
-            this.btnInsumos.UseVisualStyleBackColor = true;
+            btnInsumos.FlatAppearance.BorderSize = 0;
+            btnInsumos.FlatStyle = FlatStyle.Flat;
+            btnInsumos.Font = new Font("Segoe UI", 10F);
+            btnInsumos.ForeColor = Color.FromArgb(0, 125, 62);
+            btnInsumos.Location = new Point(548, 2);
+            btnInsumos.Name = "btnInsumos";
+            btnInsumos.Size = new Size(137, 67);
+            btnInsumos.TabIndex = 5;
+            btnInsumos.Text = "Insumos";
+            btnInsumos.UseVisualStyleBackColor = true;
             // 
             // btnAlimento
             // 
-            this.btnAlimento.FlatAppearance.BorderSize = 0;
-            this.btnAlimento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAlimento.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnAlimento.Location = new System.Drawing.Point(538, 2);
-            this.btnAlimento.Name = "btnAlimento";
-            this.btnAlimento.Size = new System.Drawing.Size(137, 67);
-            this.btnAlimento.TabIndex = 4;
-            this.btnAlimento.Text = "Alimento";
-            this.btnAlimento.UseVisualStyleBackColor = true;
-            this.btnAlimento.Click += new System.EventHandler(this.btnAlimento_Click);
+            btnAlimento.FlatAppearance.BorderSize = 0;
+            btnAlimento.FlatStyle = FlatStyle.Flat;
+            btnAlimento.Font = new Font("Segoe UI", 10F);
+            btnAlimento.Location = new Point(414, 2);
+            btnAlimento.Name = "btnAlimento";
+            btnAlimento.Size = new Size(137, 67);
+            btnAlimento.TabIndex = 4;
+            btnAlimento.Text = "Alimento";
+            btnAlimento.UseVisualStyleBackColor = true;
+            btnAlimento.Click += btnAlimento_Click;
             // 
             // btnVentas
             // 
-            this.btnVentas.FlatAppearance.BorderSize = 0;
-            this.btnVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVentas.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnVentas.Location = new System.Drawing.Point(409, 2);
-            this.btnVentas.Name = "btnVentas";
-            this.btnVentas.Size = new System.Drawing.Size(137, 67);
-            this.btnVentas.TabIndex = 3;
-            this.btnVentas.Text = "Ventas";
-            this.btnVentas.UseVisualStyleBackColor = true;
-            this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
+            btnVentas.FlatAppearance.BorderSize = 0;
+            btnVentas.FlatStyle = FlatStyle.Flat;
+            btnVentas.Font = new Font("Segoe UI", 10F);
+            btnVentas.Location = new Point(281, 2);
+            btnVentas.Name = "btnVentas";
+            btnVentas.Size = new Size(137, 67);
+            btnVentas.TabIndex = 3;
+            btnVentas.Text = "Ventas";
+            btnVentas.UseVisualStyleBackColor = true;
+            btnVentas.Click += btnVentas_Click;
             // 
             // btnAlmacen
             // 
-            this.btnAlmacen.FlatAppearance.BorderSize = 0;
-            this.btnAlmacen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAlmacen.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnAlmacen.Location = new System.Drawing.Point(280, 2);
-            this.btnAlmacen.Name = "btnAlmacen";
-            this.btnAlmacen.Size = new System.Drawing.Size(137, 67);
-            this.btnAlmacen.TabIndex = 2;
-            this.btnAlmacen.Text = "Almacén";
-            this.btnAlmacen.UseVisualStyleBackColor = true;
-            this.btnAlmacen.Click += new System.EventHandler(this.btnAlmacen_Click);
-            // 
-            // btnProduccion
-            // 
-            this.btnProduccion.FlatAppearance.BorderSize = 0;
-            this.btnProduccion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProduccion.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnProduccion.Location = new System.Drawing.Point(137, 2);
-            this.btnProduccion.Name = "btnProduccion";
-            this.btnProduccion.Size = new System.Drawing.Size(137, 67);
-            this.btnProduccion.TabIndex = 1;
-            this.btnProduccion.Text = "Producción";
-            this.btnProduccion.UseVisualStyleBackColor = true;
-            this.btnProduccion.Click += new System.EventHandler(this.btnProduccion_Click);
+            btnAlmacen.FlatAppearance.BorderSize = 0;
+            btnAlmacen.FlatStyle = FlatStyle.Flat;
+            btnAlmacen.Font = new Font("Segoe UI", 10F);
+            btnAlmacen.Location = new Point(150, 2);
+            btnAlmacen.Name = "btnAlmacen";
+            btnAlmacen.Size = new Size(137, 67);
+            btnAlmacen.TabIndex = 2;
+            btnAlmacen.Text = "Almacén";
+            btnAlmacen.UseVisualStyleBackColor = true;
+            btnAlmacen.Click += btnAlmacen_Click;
             // 
             // btnDashboard
             // 
-            this.btnDashboard.FlatAppearance.BorderSize = 0;
-            this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDashboard.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnDashboard.Location = new System.Drawing.Point(3, 2);
-            this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Size = new System.Drawing.Size(137, 67);
-            this.btnDashboard.TabIndex = 0;
-            this.btnDashboard.Text = "Dashboard";
-            this.btnDashboard.UseVisualStyleBackColor = true;
-            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
+            btnDashboard.FlatAppearance.BorderSize = 0;
+            btnDashboard.FlatStyle = FlatStyle.Flat;
+            btnDashboard.Font = new Font("Segoe UI", 10F);
+            btnDashboard.Location = new Point(3, 2);
+            btnDashboard.Name = "btnDashboard";
+            btnDashboard.Size = new Size(137, 67);
+            btnDashboard.TabIndex = 0;
+            btnDashboard.Text = "Dashboard";
+            btnDashboard.UseVisualStyleBackColor = true;
+            btnDashboard.Click += btnDashboard_Click;
             // 
             // panelMain
             // 
-            this.panelMain.AutoScroll = true;
-            this.panelMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.panelMain.Controls.Add(this.panelRecetas);
-            this.panelMain.Controls.Add(this.panelNuevoMovimiento);
-            this.panelMain.Controls.Add(this.panelHistorial);
-            this.panelMain.Controls.Add(this.panelInventario);
-            this.panelMain.Controls.Add(this.panelBotones);
-            this.panelMain.Controls.Add(this.panelResumen);
-            this.panelMain.Controls.Add(this.lblInsumosTitle);
-            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMain.Location = new System.Drawing.Point(0, 153);
-            this.panelMain.Name = "panelMain";
-            this.panelMain.Padding = new System.Windows.Forms.Padding(34, 40, 34, 40);
-            this.panelMain.Size = new System.Drawing.Size(1257, 780);
-            this.panelMain.TabIndex = 2;
-            // 
-            // lblInsumosTitle
-            // 
-            this.lblInsumosTitle.AutoSize = true;
-            this.lblInsumosTitle.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
-            this.lblInsumosTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(44)))));
-            this.lblInsumosTitle.Location = new System.Drawing.Point(34, 20);
-            this.lblInsumosTitle.Name = "lblInsumosTitle";
-            this.lblInsumosTitle.Size = new System.Drawing.Size(244, 41);
-            this.lblInsumosTitle.TabIndex = 0;
-            this.lblInsumosTitle.Text = "Control de Insumos";
-            // 
-            // panelResumen
-            // 
-            this.panelResumen.Controls.Add(this.cardConsumos);
-            this.panelResumen.Controls.Add(this.cardEntradas);
-            this.panelResumen.Controls.Add(this.cardCritico);
-            this.panelResumen.Controls.Add(this.cardTotal);
-            this.panelResumen.Location = new System.Drawing.Point(34, 80);
-            this.panelResumen.Name = "panelResumen";
-            this.panelResumen.Size = new System.Drawing.Size(1189, 120);
-            this.panelResumen.TabIndex = 1;
-            // 
-            // cardConsumos
-            // 
-            this.cardConsumos.BackColor = System.Drawing.Color.White;
-            this.cardConsumos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cardConsumos.Controls.Add(this.lblConsumosValor);
-            this.cardConsumos.Controls.Add(this.lblConsumosTitulo);
-            this.cardConsumos.Location = new System.Drawing.Point(900, 10);
-            this.cardConsumos.Name = "cardConsumos";
-            this.cardConsumos.Size = new System.Drawing.Size(280, 100);
-            this.cardConsumos.TabIndex = 3;
-            // 
-            // lblConsumosValor
-            // 
-            this.lblConsumosValor.AutoSize = true;
-            this.lblConsumosValor.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold);
-            this.lblConsumosValor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.lblConsumosValor.Location = new System.Drawing.Point(20, 40);
-            this.lblConsumosValor.Name = "lblConsumosValor";
-            this.lblConsumosValor.Size = new System.Drawing.Size(65, 54);
-            this.lblConsumosValor.TabIndex = 1;
-            this.lblConsumosValor.Text = "0";
-            // 
-            // lblConsumosTitulo
-            // 
-            this.lblConsumosTitulo.AutoSize = true;
-            this.lblConsumosTitulo.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.lblConsumosTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.lblConsumosTitulo.Location = new System.Drawing.Point(20, 10);
-            this.lblConsumosTitulo.Name = "lblConsumosTitulo";
-            this.lblConsumosTitulo.Size = new System.Drawing.Size(99, 23);
-            this.lblConsumosTitulo.TabIndex = 0;
-            this.lblConsumosTitulo.Text = "Consumos";
-            // 
-            // cardEntradas
-            // 
-            this.cardEntradas.BackColor = System.Drawing.Color.White;
-            this.cardEntradas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cardEntradas.Controls.Add(this.lblEntradasValor);
-            this.cardEntradas.Controls.Add(this.lblEntradasTitulo);
-            this.cardEntradas.Location = new System.Drawing.Point(600, 10);
-            this.cardEntradas.Name = "cardEntradas";
-            this.cardEntradas.Size = new System.Drawing.Size(280, 100);
-            this.cardEntradas.TabIndex = 2;
-            // 
-            // lblEntradasValor
-            // 
-            this.lblEntradasValor.AutoSize = true;
-            this.lblEntradasValor.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold);
-            this.lblEntradasValor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(62)))));
-            this.lblEntradasValor.Location = new System.Drawing.Point(20, 40);
-            this.lblEntradasValor.Name = "lblEntradasValor";
-            this.lblEntradasValor.Size = new System.Drawing.Size(65, 54);
-            this.lblEntradasValor.TabIndex = 1;
-            this.lblEntradasValor.Text = "0";
-            // 
-            // lblEntradasTitulo
-            // 
-            this.lblEntradasTitulo.AutoSize = true;
-            this.lblEntradasTitulo.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.lblEntradasTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.lblEntradasTitulo.Location = new System.Drawing.Point(20, 10);
-            this.lblEntradasTitulo.Name = "lblEntradasTitulo";
-            this.lblEntradasTitulo.Size = new System.Drawing.Size(86, 23);
-            this.lblEntradasTitulo.TabIndex = 0;
-            this.lblEntradasTitulo.Text = "Entradas";
-            // 
-            // cardCritico
-            // 
-            this.cardCritico.BackColor = System.Drawing.Color.White;
-            this.cardCritico.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cardCritico.Controls.Add(this.lblCriticoValor);
-            this.cardCritico.Controls.Add(this.lblCriticoTitulo);
-            this.cardCritico.Location = new System.Drawing.Point(300, 10);
-            this.cardCritico.Name = "cardCritico";
-            this.cardCritico.Size = new System.Drawing.Size(280, 100);
-            this.cardCritico.TabIndex = 1;
-            // 
-            // lblCriticoValor
-            // 
-            this.lblCriticoValor.AutoSize = true;
-            this.lblCriticoValor.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold);
-            this.lblCriticoValor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(158)))), ((int)(((byte)(11)))));
-            this.lblCriticoValor.Location = new System.Drawing.Point(20, 40);
-            this.lblCriticoValor.Name = "lblCriticoValor";
-            this.lblCriticoValor.Size = new System.Drawing.Size(65, 54);
-            this.lblCriticoValor.TabIndex = 1;
-            this.lblCriticoValor.Text = "0";
-            // 
-            // lblCriticoTitulo
-            // 
-            this.lblCriticoTitulo.AutoSize = true;
-            this.lblCriticoTitulo.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.lblCriticoTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.lblCriticoTitulo.Location = new System.Drawing.Point(20, 10);
-            this.lblCriticoTitulo.Name = "lblCriticoTitulo";
-            this.lblCriticoTitulo.Size = new System.Drawing.Size(129, 23);
-            this.lblCriticoTitulo.TabIndex = 0;
-            this.lblCriticoTitulo.Text = "Stock Crítico";
-            // 
-            // cardTotal
-            // 
-            this.cardTotal.BackColor = System.Drawing.Color.White;
-            this.cardTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cardTotal.Controls.Add(this.lblTotalValor);
-            this.cardTotal.Controls.Add(this.lblTotalTitulo);
-            this.cardTotal.Location = new System.Drawing.Point(0, 10);
-            this.cardTotal.Name = "cardTotal";
-            this.cardTotal.Size = new System.Drawing.Size(280, 100);
-            this.cardTotal.TabIndex = 0;
-            // 
-            // lblTotalValor
-            // 
-            this.lblTotalValor.AutoSize = true;
-            this.lblTotalValor.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold);
-            this.lblTotalValor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(99)))), ((int)(((byte)(235)))));
-            this.lblTotalValor.Location = new System.Drawing.Point(20, 40);
-            this.lblTotalValor.Name = "lblTotalValor";
-            this.lblTotalValor.Size = new System.Drawing.Size(65, 54);
-            this.lblTotalValor.TabIndex = 1;
-            this.lblTotalValor.Text = "0";
-            // 
-            // lblTotalTitulo
-            // 
-            this.lblTotalTitulo.AutoSize = true;
-            this.lblTotalTitulo.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.lblTotalTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.lblTotalTitulo.Location = new System.Drawing.Point(20, 10);
-            this.lblTotalTitulo.Name = "lblTotalTitulo";
-            this.lblTotalTitulo.Size = new System.Drawing.Size(138, 23);
-            this.lblTotalTitulo.TabIndex = 0;
-            this.lblTotalTitulo.Text = "Total Insumos";
-            // 
-            // panelBotones
-            // 
-            this.panelBotones.Controls.Add(this.btnVerRecetas);
-            this.panelBotones.Controls.Add(this.btnRegistrarMovimiento);
-            this.panelBotones.Location = new System.Drawing.Point(34, 210);
-            this.panelBotones.Name = "panelBotones";
-            this.panelBotones.Size = new System.Drawing.Size(1189, 60);
-            this.panelBotones.TabIndex = 2;
-            // 
-            // btnVerRecetas
-            // 
-            this.btnVerRecetas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(92)))), ((int)(((byte)(246)))));
-            this.btnVerRecetas.FlatAppearance.BorderSize = 0;
-            this.btnVerRecetas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVerRecetas.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.btnVerRecetas.ForeColor = System.Drawing.Color.White;
-            this.btnVerRecetas.Location = new System.Drawing.Point(260, 5);
-            this.btnVerRecetas.Name = "btnVerRecetas";
-            this.btnVerRecetas.Size = new System.Drawing.Size(230, 50);
-            this.btnVerRecetas.TabIndex = 1;
-            this.btnVerRecetas.Text = "📋 Ver Recetas";
-            this.btnVerRecetas.UseVisualStyleBackColor = false;
-            this.btnVerRecetas.Click += new System.EventHandler(this.btnVerRecetas_Click);
-            // 
-            // btnRegistrarMovimiento
-            // 
-            this.btnRegistrarMovimiento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(62)))));
-            this.btnRegistrarMovimiento.FlatAppearance.BorderSize = 0;
-            this.btnRegistrarMovimiento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistrarMovimiento.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.btnRegistrarMovimiento.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrarMovimiento.Location = new System.Drawing.Point(0, 5);
-            this.btnRegistrarMovimiento.Name = "btnRegistrarMovimiento";
-            this.btnRegistrarMovimiento.Size = new System.Drawing.Size(250, 50);
-            this.btnRegistrarMovimiento.TabIndex = 0;
-            this.btnRegistrarMovimiento.Text = "+ Registrar Movimiento";
-            this.btnRegistrarMovimiento.UseVisualStyleBackColor = false;
-            this.btnRegistrarMovimiento.Click += new System.EventHandler(this.btnRegistrarMovimiento_Click);
-            // 
-            // panelInventario
-            // 
-            this.panelInventario.BackColor = System.Drawing.Color.White;
-            this.panelInventario.Controls.Add(this.dgvInventario);
-            this.panelInventario.Controls.Add(this.lblInventarioTitulo);
-            this.panelInventario.Location = new System.Drawing.Point(34, 280);
-            this.panelInventario.Name = "panelInventario";
-            this.panelInventario.Padding = new System.Windows.Forms.Padding(30);
-            this.panelInventario.Size = new System.Drawing.Size(1189, 280);
-            this.panelInventario.TabIndex = 3;
-            // 
-            // dgvInventario
-            // 
-            this.dgvInventario.AllowUserToAddRows = false;
-            this.dgvInventario.AllowUserToDeleteRows = false;
-            this.dgvInventario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvInventario.BackgroundColor = System.Drawing.Color.White;
-            this.dgvInventario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvInventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvInventario.Location = new System.Drawing.Point(30, 70);
-            this.dgvInventario.Name = "dgvInventario";
-            this.dgvInventario.ReadOnly = true;
-            this.dgvInventario.RowHeadersVisible = false;
-            this.dgvInventario.RowHeadersWidth = 51;
-            this.dgvInventario.Size = new System.Drawing.Size(1129, 180);
-            this.dgvInventario.TabIndex = 1;
-            // 
-            // lblInventarioTitulo
-            // 
-            this.lblInventarioTitulo.AutoSize = true;
-            this.lblInventarioTitulo.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.lblInventarioTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(44)))));
-            this.lblInventarioTitulo.Location = new System.Drawing.Point(0, 0);
-            this.lblInventarioTitulo.Name = "lblInventarioTitulo";
-            this.lblInventarioTitulo.Size = new System.Drawing.Size(210, 32);
-            this.lblInventarioTitulo.TabIndex = 0;
-            this.lblInventarioTitulo.Text = "Inventario de Insumos";
-            // 
-            // panelHistorial
-            // 
-            this.panelHistorial.BackColor = System.Drawing.Color.White;
-            this.panelHistorial.Controls.Add(this.dgvHistorial);
-            this.panelHistorial.Controls.Add(this.lblHistorialTitulo);
-            this.panelHistorial.Location = new System.Drawing.Point(34, 570);
-            this.panelHistorial.Name = "panelHistorial";
-            this.panelHistorial.Padding = new System.Windows.Forms.Padding(30);
-            this.panelHistorial.Size = new System.Drawing.Size(1189, 280);
-            this.panelHistorial.TabIndex = 4;
-            // 
-            // dgvHistorial
-            // 
-            this.dgvHistorial.AllowUserToAddRows = false;
-            this.dgvHistorial.AllowUserToDeleteRows = false;
-            this.dgvHistorial.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvHistorial.BackgroundColor = System.Drawing.Color.White;
-            this.dgvHistorial.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvHistorial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHistorial.Location = new System.Drawing.Point(30, 70);
-            this.dgvHistorial.Name = "dgvHistorial";
-            this.dgvHistorial.ReadOnly = true;
-            this.dgvHistorial.RowHeadersVisible = false;
-            this.dgvHistorial.RowHeadersWidth = 51;
-            this.dgvHistorial.Size = new System.Drawing.Size(1129, 180);
-            this.dgvHistorial.TabIndex = 1;
-            // 
-            // lblHistorialTitulo
-            // 
-            this.lblHistorialTitulo.AutoSize = true;
-            this.lblHistorialTitulo.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.lblHistorialTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(44)))));
-            this.lblHistorialTitulo.Location = new System.Drawing.Point(0, 0);
-            this.lblHistorialTitulo.Name = "lblHistorialTitulo";
-            this.lblHistorialTitulo.Size = new System.Drawing.Size(239, 32);
-            this.lblHistorialTitulo.TabIndex = 0;
-            this.lblHistorialTitulo.Text = "Historial de Movimientos";
-            // 
-            // panelNuevoMovimiento
-            // 
-            this.panelNuevoMovimiento.BackColor = System.Drawing.Color.White;
-            this.panelNuevoMovimiento.Controls.Add(this.btnCancelarMovimiento);
-            this.panelNuevoMovimiento.Controls.Add(this.btnRegistrarMovimientoConfirmar);
-            this.panelNuevoMovimiento.Controls.Add(this.txtObservaciones);
-            this.panelNuevoMovimiento.Controls.Add(this.lblObservaciones);
-            this.panelNuevoMovimiento.Controls.Add(this.txtCantidadMovimiento);
-            this.panelNuevoMovimiento.Controls.Add(this.lblCantidadMovimiento);
-            this.panelNuevoMovimiento.Controls.Add(this.cmbTipoMovimiento);
-            this.panelNuevoMovimiento.Controls.Add(this.lblTipoMovimiento);
-            this.panelNuevoMovimiento.Controls.Add(this.cmbInsumoMovimiento);
-            this.panelNuevoMovimiento.Controls.Add(this.lblInsumoMovimiento);
-            this.panelNuevoMovimiento.Controls.Add(this.lblNuevoMovimientoTitulo);
-            this.panelNuevoMovimiento.Location = new System.Drawing.Point(34, 280);
-            this.panelNuevoMovimiento.Name = "panelNuevoMovimiento";
-            this.panelNuevoMovimiento.Padding = new System.Windows.Forms.Padding(30);
-            this.panelNuevoMovimiento.Size = new System.Drawing.Size(1189, 300);
-            this.panelNuevoMovimiento.TabIndex = 5;
-            this.panelNuevoMovimiento.Visible = false;
-            // 
-            // btnCancelarMovimiento
-            // 
-            this.btnCancelarMovimiento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(117)))), ((int)(((byte)(125)))));
-            this.btnCancelarMovimiento.FlatAppearance.BorderSize = 0;
-            this.btnCancelarMovimiento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelarMovimiento.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.btnCancelarMovimiento.ForeColor = System.Drawing.Color.White;
-            this.btnCancelarMovimiento.Location = new System.Drawing.Point(170, 230);
-            this.btnCancelarMovimiento.Name = "btnCancelarMovimiento";
-            this.btnCancelarMovimiento.Size = new System.Drawing.Size(150, 45);
-            this.btnCancelarMovimiento.TabIndex = 10;
-            this.btnCancelarMovimiento.Text = "Cancelar";
-            this.btnCancelarMovimiento.UseVisualStyleBackColor = false;
-            this.btnCancelarMovimiento.Click += new System.EventHandler(this.btnCancelarMovimiento_Click);
-            // 
-            // btnRegistrarMovimientoConfirmar
-            // 
-            this.btnRegistrarMovimientoConfirmar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(62)))));
-            this.btnRegistrarMovimientoConfirmar.FlatAppearance.BorderSize = 0;
-            this.btnRegistrarMovimientoConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistrarMovimientoConfirmar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.btnRegistrarMovimientoConfirmar.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrarMovimientoConfirmar.Location = new System.Drawing.Point(30, 230);
-            this.btnRegistrarMovimientoConfirmar.Name = "btnRegistrarMovimientoConfirmar";
-            this.btnRegistrarMovimientoConfirmar.Size = new System.Drawing.Size(130, 45);
-            this.btnRegistrarMovimientoConfirmar.TabIndex = 9;
-            this.btnRegistrarMovimientoConfirmar.Text = "Registrar";
-            this.btnRegistrarMovimientoConfirmar.UseVisualStyleBackColor = false;
-            this.btnRegistrarMovimientoConfirmar.Click += new System.EventHandler(this.btnRegistrarMovimientoConfirmar_Click);
-            // 
-            // txtObservaciones
-            // 
-            this.txtObservaciones.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtObservaciones.Location = new System.Drawing.Point(30, 170);
-            this.txtObservaciones.Multiline = true;
-            this.txtObservaciones.Name = "txtObservaciones";
-            this.txtObservaciones.PlaceholderText = "Observaciones (opcional)";
-            this.txtObservaciones.Size = new System.Drawing.Size(1129, 50);
-            this.txtObservaciones.TabIndex = 8;
-            // 
-            // lblObservaciones
-            // 
-            this.lblObservaciones.AutoSize = true;
-            this.lblObservaciones.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.lblObservaciones.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.lblObservaciones.Location = new System.Drawing.Point(30, 140);
-            this.lblObservaciones.Name = "lblObservaciones";
-            this.lblObservaciones.Size = new System.Drawing.Size(128, 23);
-            this.lblObservaciones.TabIndex = 7;
-            this.lblObservaciones.Text = "Observaciones";
-            // 
-            // txtCantidadMovimiento
-            // 
-            this.txtCantidadMovimiento.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtCantidadMovimiento.Location = new System.Drawing.Point(630, 100);
-            this.txtCantidadMovimiento.Name = "txtCantidadMovimiento";
-            this.txtCantidadMovimiento.PlaceholderText = "Cantidad";
-            this.txtCantidadMovimiento.Size = new System.Drawing.Size(529, 34);
-            this.txtCantidadMovimiento.TabIndex = 6;
-            // 
-            // lblCantidadMovimiento
-            // 
-            this.lblCantidadMovimiento.AutoSize = true;
-            this.lblCantidadMovimiento.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.lblCantidadMovimiento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.lblCantidadMovimiento.Location = new System.Drawing.Point(630, 70);
-            this.lblCantidadMovimiento.Name = "lblCantidadMovimiento";
-            this.lblCantidadMovimiento.Size = new System.Drawing.Size(83, 23);
-            this.lblCantidadMovimiento.TabIndex = 5;
-            this.lblCantidadMovimiento.Text = "Cantidad";
-            // 
-            // cmbTipoMovimiento
-            // 
-            this.cmbTipoMovimiento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbTipoMovimiento.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.cmbTipoMovimiento.FormattingEnabled = true;
-            this.cmbTipoMovimiento.Items.AddRange(new object[] {
-            "Entrada",
-            "Consumo"});
-            this.cmbTipoMovimiento.Location = new System.Drawing.Point(30, 100);
-            this.cmbTipoMovimiento.Name = "cmbTipoMovimiento";
-            this.cmbTipoMovimiento.Size = new System.Drawing.Size(574, 36);
-            this.cmbTipoMovimiento.TabIndex = 4;
-            // 
-            // lblTipoMovimiento
-            // 
-            this.lblTipoMovimiento.AutoSize = true;
-            this.lblTipoMovimiento.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.lblTipoMovimiento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.lblTipoMovimiento.Location = new System.Drawing.Point(30, 70);
-            this.lblTipoMovimiento.Name = "lblTipoMovimiento";
-            this.lblTipoMovimiento.Size = new System.Drawing.Size(151, 23);
-            this.lblTipoMovimiento.TabIndex = 3;
-            this.lblTipoMovimiento.Text = "Tipo de Movimiento";
-            // 
-            // cmbInsumoMovimiento
-            // 
-            this.cmbInsumoMovimiento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbInsumoMovimiento.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.cmbInsumoMovimiento.FormattingEnabled = true;
-            this.cmbInsumoMovimiento.Location = new System.Drawing.Point(30, 40);
-            this.cmbInsumoMovimiento.Name = "cmbInsumoMovimiento";
-            this.cmbInsumoMovimiento.Size = new System.Drawing.Size(1129, 36);
-            this.cmbInsumoMovimiento.TabIndex = 2;
-            // 
-            // lblInsumoMovimiento
-            // 
-            this.lblInsumoMovimiento.AutoSize = true;
-            this.lblInsumoMovimiento.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.lblInsumoMovimiento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.lblInsumoMovimiento.Location = new System.Drawing.Point(30, 10);
-            this.lblInsumoMovimiento.Name = "lblInsumoMovimiento";
-            this.lblInsumoMovimiento.Size = new System.Drawing.Size(67, 23);
-            this.lblInsumoMovimiento.TabIndex = 1;
-            this.lblInsumoMovimiento.Text = "Insumo";
-            // 
-            // lblNuevoMovimientoTitulo
-            // 
-            this.lblNuevoMovimientoTitulo.AutoSize = true;
-            this.lblNuevoMovimientoTitulo.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.lblNuevoMovimientoTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(44)))));
-            this.lblNuevoMovimientoTitulo.Location = new System.Drawing.Point(0, -20);
-            this.lblNuevoMovimientoTitulo.Name = "lblNuevoMovimientoTitulo";
-            this.lblNuevoMovimientoTitulo.Size = new System.Drawing.Size(272, 32);
-            this.lblNuevoMovimientoTitulo.TabIndex = 0;
-            this.lblNuevoMovimientoTitulo.Text = "Registrar Movimiento";
+            panelMain.AutoScroll = true;
+            panelMain.BackColor = Color.FromArgb(248, 249, 250);
+            panelMain.Controls.Add(panelRecetas);
+            panelMain.Controls.Add(panelNuevoMovimiento);
+            panelMain.Controls.Add(panelHistorial);
+            panelMain.Controls.Add(panelInventario);
+            panelMain.Controls.Add(panelBotones);
+            panelMain.Controls.Add(panelResumen);
+            panelMain.Controls.Add(lblInsumosTitle);
+            panelMain.Dock = DockStyle.Fill;
+            panelMain.Location = new Point(0, 153);
+            panelMain.Name = "panelMain";
+            panelMain.Padding = new Padding(34, 40, 34, 40);
+            panelMain.Size = new Size(1257, 780);
+            panelMain.TabIndex = 2;
             // 
             // panelRecetas
             // 
-            this.panelRecetas.BackColor = System.Drawing.Color.White;
-            this.panelRecetas.Controls.Add(this.btnCerrarRecetas);
-            this.panelRecetas.Controls.Add(this.panelRecetaGalpon358);
-            this.panelRecetas.Controls.Add(this.panelRecetaGalpon687);
-            this.panelRecetas.Controls.Add(this.panelRecetaGalpon4);
-            this.panelRecetas.Controls.Add(this.lblRecetasTitulo);
-            this.panelRecetas.Location = new System.Drawing.Point(34, 280);
-            this.panelRecetas.Name = "panelRecetas";
-            this.panelRecetas.Padding = new System.Windows.Forms.Padding(30);
-            this.panelRecetas.Size = new System.Drawing.Size(1189, 570);
-            this.panelRecetas.TabIndex = 6;
-            this.panelRecetas.Visible = false;
-            // 
-            // lblRecetasTitulo
-            // 
-            this.lblRecetasTitulo.AutoSize = true;
-            this.lblRecetasTitulo.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.lblRecetasTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(44)))));
-            this.lblRecetasTitulo.Location = new System.Drawing.Point(0, 0);
-            this.lblRecetasTitulo.Name = "lblRecetasTitulo";
-            this.lblRecetasTitulo.Size = new System.Drawing.Size(204, 32);
-            this.lblRecetasTitulo.TabIndex = 0;
-            this.lblRecetasTitulo.Text = "Recetas por Galpón";
-            // 
-            // panelRecetaGalpon4
-            // 
-            this.panelRecetaGalpon4.Controls.Add(this.dgvRecetaGalpon4);
-            this.panelRecetaGalpon4.Controls.Add(this.lblRecetaGalpon4Titulo);
-            this.panelRecetaGalpon4.Location = new System.Drawing.Point(30, 50);
-            this.panelRecetaGalpon4.Name = "panelRecetaGalpon4";
-            this.panelRecetaGalpon4.Size = new System.Drawing.Size(350, 480);
-            this.panelRecetaGalpon4.TabIndex = 1;
-            // 
-            // lblRecetaGalpon4Titulo
-            // 
-            this.lblRecetaGalpon4Titulo.AutoSize = true;
-            this.lblRecetaGalpon4Titulo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lblRecetaGalpon4Titulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(44)))));
-            this.lblRecetaGalpon4Titulo.Location = new System.Drawing.Point(0, 0);
-            this.lblRecetaGalpon4Titulo.Name = "lblRecetaGalpon4Titulo";
-            this.lblRecetaGalpon4Titulo.Size = new System.Drawing.Size(114, 28);
-            this.lblRecetaGalpon4Titulo.TabIndex = 0;
-            this.lblRecetaGalpon4Titulo.Text = "Galpón 4";
-            // 
-            // dgvRecetaGalpon4
-            // 
-            this.dgvRecetaGalpon4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvRecetaGalpon4.BackgroundColor = System.Drawing.Color.White;
-            this.dgvRecetaGalpon4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvRecetaGalpon4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRecetaGalpon4.Location = new System.Drawing.Point(0, 40);
-            this.dgvRecetaGalpon4.Name = "dgvRecetaGalpon4";
-            this.dgvRecetaGalpon4.RowHeadersVisible = false;
-            this.dgvRecetaGalpon4.RowHeadersWidth = 51;
-            this.dgvRecetaGalpon4.Size = new System.Drawing.Size(350, 440);
-            this.dgvRecetaGalpon4.TabIndex = 1;
-            // 
-            // panelRecetaGalpon687
-            // 
-            this.panelRecetaGalpon687.Controls.Add(this.dgvRecetaGalpon687);
-            this.panelRecetaGalpon687.Controls.Add(this.lblRecetaGalpon687Titulo);
-            this.panelRecetaGalpon687.Location = new System.Drawing.Point(410, 50);
-            this.panelRecetaGalpon687.Name = "panelRecetaGalpon687";
-            this.panelRecetaGalpon687.Size = new System.Drawing.Size(350, 480);
-            this.panelRecetaGalpon687.TabIndex = 2;
-            // 
-            // lblRecetaGalpon687Titulo
-            // 
-            this.lblRecetaGalpon687Titulo.AutoSize = true;
-            this.lblRecetaGalpon687Titulo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lblRecetaGalpon687Titulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(44)))));
-            this.lblRecetaGalpon687Titulo.Location = new System.Drawing.Point(0, 0);
-            this.lblRecetaGalpon687Titulo.Name = "lblRecetaGalpon687Titulo";
-            this.lblRecetaGalpon687Titulo.Size = new System.Drawing.Size(143, 28);
-            this.lblRecetaGalpon687Titulo.Text = "Galpón 6-8-7";
-            // 
-            // dgvRecetaGalpon687
-            // 
-            this.dgvRecetaGalpon687.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvRecetaGalpon687.BackgroundColor = System.Drawing.Color.White;
-            this.dgvRecetaGalpon687.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvRecetaGalpon687.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRecetaGalpon687.Location = new System.Drawing.Point(0, 40);
-            this.dgvRecetaGalpon687.Name = "dgvRecetaGalpon687";
-            this.dgvRecetaGalpon687.RowHeadersVisible = false;
-            this.dgvRecetaGalpon687.RowHeadersWidth = 51;
-            this.dgvRecetaGalpon687.Size = new System.Drawing.Size(350, 440);
-            this.dgvRecetaGalpon687.TabIndex = 1;
-            // 
-            // panelRecetaGalpon358
-            // 
-            this.panelRecetaGalpon358.Controls.Add(this.dgvRecetaGalpon358);
-            this.panelRecetaGalpon358.Controls.Add(this.lblRecetaGalpon358Titulo);
-            this.panelRecetaGalpon358.Location = new System.Drawing.Point(790, 50);
-            this.panelRecetaGalpon358.Name = "panelRecetaGalpon358";
-            this.panelRecetaGalpon358.Size = new System.Drawing.Size(350, 480);
-            this.panelRecetaGalpon358.TabIndex = 3;
-            // 
-            // lblRecetaGalpon358Titulo
-            // 
-            this.lblRecetaGalpon358Titulo.AutoSize = true;
-            this.lblRecetaGalpon358Titulo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lblRecetaGalpon358Titulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(44)))));
-            this.lblRecetaGalpon358Titulo.Location = new System.Drawing.Point(0, 0);
-            this.lblRecetaGalpon358Titulo.Name = "lblRecetaGalpon358Titulo";
-            this.lblRecetaGalpon358Titulo.Size = new System.Drawing.Size(143, 28);
-            this.lblRecetaGalpon358Titulo.Text = "Galpón 3-5-8";
-            // 
-            // dgvRecetaGalpon358
-            // 
-            this.dgvRecetaGalpon358.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvRecetaGalpon358.BackgroundColor = System.Drawing.Color.White;
-            this.dgvRecetaGalpon358.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvRecetaGalpon358.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRecetaGalpon358.Location = new System.Drawing.Point(0, 40);
-            this.dgvRecetaGalpon358.Name = "dgvRecetaGalpon358";
-            this.dgvRecetaGalpon358.RowHeadersVisible = false;
-            this.dgvRecetaGalpon358.RowHeadersWidth = 51;
-            this.dgvRecetaGalpon358.Size = new System.Drawing.Size(350, 440);
-            this.dgvRecetaGalpon358.TabIndex = 1;
+            panelRecetas.BackColor = Color.White;
+            panelRecetas.Controls.Add(btnCerrarRecetas);
+            panelRecetas.Controls.Add(panelRecetaGalpon358);
+            panelRecetas.Controls.Add(panelRecetaGalpon687);
+            panelRecetas.Controls.Add(panelRecetaGalpon4);
+            panelRecetas.Controls.Add(lblRecetasTitulo);
+            panelRecetas.Location = new Point(34, 280);
+            panelRecetas.Name = "panelRecetas";
+            panelRecetas.Padding = new Padding(30);
+            panelRecetas.Size = new Size(1189, 570);
+            panelRecetas.TabIndex = 6;
+            panelRecetas.Visible = false;
             // 
             // btnCerrarRecetas
             // 
-            this.btnCerrarRecetas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(117)))), ((int)(((byte)(125)))));
-            this.btnCerrarRecetas.FlatAppearance.BorderSize = 0;
-            this.btnCerrarRecetas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarRecetas.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.btnCerrarRecetas.ForeColor = System.Drawing.Color.White;
-            this.btnCerrarRecetas.Location = new System.Drawing.Point(1029, 0);
-            this.btnCerrarRecetas.Name = "btnCerrarRecetas";
-            this.btnCerrarRecetas.Size = new System.Drawing.Size(130, 40);
-            this.btnCerrarRecetas.TabIndex = 4;
-            this.btnCerrarRecetas.Text = "Cerrar";
-            this.btnCerrarRecetas.UseVisualStyleBackColor = false;
-            this.btnCerrarRecetas.Click += new System.EventHandler(this.btnCerrarRecetas_Click);
+            btnCerrarRecetas.BackColor = Color.FromArgb(108, 117, 125);
+            btnCerrarRecetas.FlatAppearance.BorderSize = 0;
+            btnCerrarRecetas.FlatStyle = FlatStyle.Flat;
+            btnCerrarRecetas.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            btnCerrarRecetas.ForeColor = Color.White;
+            btnCerrarRecetas.Location = new Point(1029, 0);
+            btnCerrarRecetas.Name = "btnCerrarRecetas";
+            btnCerrarRecetas.Size = new Size(130, 40);
+            btnCerrarRecetas.TabIndex = 4;
+            btnCerrarRecetas.Text = "Cerrar";
+            btnCerrarRecetas.UseVisualStyleBackColor = false;
+            btnCerrarRecetas.Click += btnCerrarRecetas_Click;
+            // 
+            // panelRecetaGalpon358
+            // 
+            panelRecetaGalpon358.Controls.Add(dgvRecetaGalpon358);
+            panelRecetaGalpon358.Controls.Add(lblRecetaGalpon358Titulo);
+            panelRecetaGalpon358.Location = new Point(790, 50);
+            panelRecetaGalpon358.Name = "panelRecetaGalpon358";
+            panelRecetaGalpon358.Size = new Size(350, 480);
+            panelRecetaGalpon358.TabIndex = 3;
+            // 
+            // dgvRecetaGalpon358
+            // 
+            dgvRecetaGalpon358.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvRecetaGalpon358.BackgroundColor = Color.White;
+            dgvRecetaGalpon358.BorderStyle = BorderStyle.None;
+            dgvRecetaGalpon358.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvRecetaGalpon358.Location = new Point(0, 40);
+            dgvRecetaGalpon358.Name = "dgvRecetaGalpon358";
+            dgvRecetaGalpon358.RowHeadersVisible = false;
+            dgvRecetaGalpon358.RowHeadersWidth = 51;
+            dgvRecetaGalpon358.Size = new Size(350, 440);
+            dgvRecetaGalpon358.TabIndex = 1;
+            // 
+            // lblRecetaGalpon358Titulo
+            // 
+            lblRecetaGalpon358Titulo.AutoSize = true;
+            lblRecetaGalpon358Titulo.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            lblRecetaGalpon358Titulo.ForeColor = Color.FromArgb(26, 32, 44);
+            lblRecetaGalpon358Titulo.Location = new Point(0, 0);
+            lblRecetaGalpon358Titulo.Name = "lblRecetaGalpon358Titulo";
+            lblRecetaGalpon358Titulo.Size = new Size(137, 28);
+            lblRecetaGalpon358Titulo.TabIndex = 2;
+            lblRecetaGalpon358Titulo.Text = "Galpón 3-5-8";
+            // 
+            // panelRecetaGalpon687
+            // 
+            panelRecetaGalpon687.Controls.Add(dgvRecetaGalpon687);
+            panelRecetaGalpon687.Controls.Add(lblRecetaGalpon687Titulo);
+            panelRecetaGalpon687.Location = new Point(410, 50);
+            panelRecetaGalpon687.Name = "panelRecetaGalpon687";
+            panelRecetaGalpon687.Size = new Size(350, 480);
+            panelRecetaGalpon687.TabIndex = 2;
+            // 
+            // dgvRecetaGalpon687
+            // 
+            dgvRecetaGalpon687.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvRecetaGalpon687.BackgroundColor = Color.White;
+            dgvRecetaGalpon687.BorderStyle = BorderStyle.None;
+            dgvRecetaGalpon687.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvRecetaGalpon687.Location = new Point(0, 40);
+            dgvRecetaGalpon687.Name = "dgvRecetaGalpon687";
+            dgvRecetaGalpon687.RowHeadersVisible = false;
+            dgvRecetaGalpon687.RowHeadersWidth = 51;
+            dgvRecetaGalpon687.Size = new Size(350, 440);
+            dgvRecetaGalpon687.TabIndex = 1;
+            // 
+            // lblRecetaGalpon687Titulo
+            // 
+            lblRecetaGalpon687Titulo.AutoSize = true;
+            lblRecetaGalpon687Titulo.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            lblRecetaGalpon687Titulo.ForeColor = Color.FromArgb(26, 32, 44);
+            lblRecetaGalpon687Titulo.Location = new Point(0, 0);
+            lblRecetaGalpon687Titulo.Name = "lblRecetaGalpon687Titulo";
+            lblRecetaGalpon687Titulo.Size = new Size(137, 28);
+            lblRecetaGalpon687Titulo.TabIndex = 2;
+            lblRecetaGalpon687Titulo.Text = "Galpón 6-8-7";
+            // 
+            // panelRecetaGalpon4
+            // 
+            panelRecetaGalpon4.Controls.Add(dgvRecetaGalpon4);
+            panelRecetaGalpon4.Controls.Add(lblRecetaGalpon4Titulo);
+            panelRecetaGalpon4.Location = new Point(30, 50);
+            panelRecetaGalpon4.Name = "panelRecetaGalpon4";
+            panelRecetaGalpon4.Size = new Size(350, 480);
+            panelRecetaGalpon4.TabIndex = 1;
+            // 
+            // dgvRecetaGalpon4
+            // 
+            dgvRecetaGalpon4.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvRecetaGalpon4.BackgroundColor = Color.White;
+            dgvRecetaGalpon4.BorderStyle = BorderStyle.None;
+            dgvRecetaGalpon4.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvRecetaGalpon4.Location = new Point(0, 40);
+            dgvRecetaGalpon4.Name = "dgvRecetaGalpon4";
+            dgvRecetaGalpon4.RowHeadersVisible = false;
+            dgvRecetaGalpon4.RowHeadersWidth = 51;
+            dgvRecetaGalpon4.Size = new Size(350, 440);
+            dgvRecetaGalpon4.TabIndex = 1;
+            // 
+            // lblRecetaGalpon4Titulo
+            // 
+            lblRecetaGalpon4Titulo.AutoSize = true;
+            lblRecetaGalpon4Titulo.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            lblRecetaGalpon4Titulo.ForeColor = Color.FromArgb(26, 32, 44);
+            lblRecetaGalpon4Titulo.Location = new Point(0, 0);
+            lblRecetaGalpon4Titulo.Name = "lblRecetaGalpon4Titulo";
+            lblRecetaGalpon4Titulo.Size = new Size(97, 28);
+            lblRecetaGalpon4Titulo.TabIndex = 0;
+            lblRecetaGalpon4Titulo.Text = "Galpón 4";
+            // 
+            // lblRecetasTitulo
+            // 
+            lblRecetasTitulo.AutoSize = true;
+            lblRecetasTitulo.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
+            lblRecetasTitulo.ForeColor = Color.FromArgb(26, 32, 44);
+            lblRecetasTitulo.Location = new Point(0, 0);
+            lblRecetasTitulo.Name = "lblRecetasTitulo";
+            lblRecetasTitulo.Size = new Size(236, 32);
+            lblRecetasTitulo.TabIndex = 0;
+            lblRecetasTitulo.Text = "Recetas por Galpón";
+            // 
+            // panelNuevoMovimiento
+            // 
+            panelNuevoMovimiento.BackColor = Color.White;
+            panelNuevoMovimiento.Controls.Add(btnCancelarMovimiento);
+            panelNuevoMovimiento.Controls.Add(btnRegistrarMovimientoConfirmar);
+            panelNuevoMovimiento.Controls.Add(txtObservaciones);
+            panelNuevoMovimiento.Controls.Add(lblObservaciones);
+            panelNuevoMovimiento.Controls.Add(txtCantidadMovimiento);
+            panelNuevoMovimiento.Controls.Add(lblCantidadMovimiento);
+            panelNuevoMovimiento.Controls.Add(cmbTipoMovimiento);
+            panelNuevoMovimiento.Controls.Add(lblTipoMovimiento);
+            panelNuevoMovimiento.Controls.Add(cmbInsumoMovimiento);
+            panelNuevoMovimiento.Controls.Add(lblInsumoMovimiento);
+            panelNuevoMovimiento.Controls.Add(lblNuevoMovimientoTitulo);
+            panelNuevoMovimiento.Location = new Point(34, 280);
+            panelNuevoMovimiento.Name = "panelNuevoMovimiento";
+            panelNuevoMovimiento.Padding = new Padding(30);
+            panelNuevoMovimiento.Size = new Size(1189, 300);
+            panelNuevoMovimiento.TabIndex = 5;
+            panelNuevoMovimiento.Visible = false;
+            // 
+            // btnCancelarMovimiento
+            // 
+            btnCancelarMovimiento.BackColor = Color.FromArgb(108, 117, 125);
+            btnCancelarMovimiento.FlatAppearance.BorderSize = 0;
+            btnCancelarMovimiento.FlatStyle = FlatStyle.Flat;
+            btnCancelarMovimiento.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            btnCancelarMovimiento.ForeColor = Color.White;
+            btnCancelarMovimiento.Location = new Point(170, 230);
+            btnCancelarMovimiento.Name = "btnCancelarMovimiento";
+            btnCancelarMovimiento.Size = new Size(150, 45);
+            btnCancelarMovimiento.TabIndex = 10;
+            btnCancelarMovimiento.Text = "Cancelar";
+            btnCancelarMovimiento.UseVisualStyleBackColor = false;
+            btnCancelarMovimiento.Click += btnCancelarMovimiento_Click;
+            // 
+            // btnRegistrarMovimientoConfirmar
+            // 
+            btnRegistrarMovimientoConfirmar.BackColor = Color.FromArgb(0, 125, 62);
+            btnRegistrarMovimientoConfirmar.FlatAppearance.BorderSize = 0;
+            btnRegistrarMovimientoConfirmar.FlatStyle = FlatStyle.Flat;
+            btnRegistrarMovimientoConfirmar.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            btnRegistrarMovimientoConfirmar.ForeColor = Color.White;
+            btnRegistrarMovimientoConfirmar.Location = new Point(30, 230);
+            btnRegistrarMovimientoConfirmar.Name = "btnRegistrarMovimientoConfirmar";
+            btnRegistrarMovimientoConfirmar.Size = new Size(130, 45);
+            btnRegistrarMovimientoConfirmar.TabIndex = 9;
+            btnRegistrarMovimientoConfirmar.Text = "Registrar";
+            btnRegistrarMovimientoConfirmar.UseVisualStyleBackColor = false;
+            btnRegistrarMovimientoConfirmar.Click += btnRegistrarMovimientoConfirmar_Click;
+            // 
+            // txtObservaciones
+            // 
+            txtObservaciones.Font = new Font("Segoe UI", 12F);
+            txtObservaciones.Location = new Point(30, 170);
+            txtObservaciones.Multiline = true;
+            txtObservaciones.Name = "txtObservaciones";
+            txtObservaciones.PlaceholderText = "Observaciones (opcional)";
+            txtObservaciones.Size = new Size(1129, 50);
+            txtObservaciones.TabIndex = 8;
+            // 
+            // lblObservaciones
+            // 
+            lblObservaciones.AutoSize = true;
+            lblObservaciones.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblObservaciones.ForeColor = Color.FromArgb(44, 62, 80);
+            lblObservaciones.Location = new Point(30, 140);
+            lblObservaciones.Name = "lblObservaciones";
+            lblObservaciones.Size = new Size(125, 23);
+            lblObservaciones.TabIndex = 7;
+            lblObservaciones.Text = "Observaciones";
+            // 
+            // txtCantidadMovimiento
+            // 
+            txtCantidadMovimiento.Font = new Font("Segoe UI", 12F);
+            txtCantidadMovimiento.Location = new Point(630, 100);
+            txtCantidadMovimiento.Name = "txtCantidadMovimiento";
+            txtCantidadMovimiento.PlaceholderText = "Cantidad";
+            txtCantidadMovimiento.Size = new Size(529, 34);
+            txtCantidadMovimiento.TabIndex = 6;
+            // 
+            // lblCantidadMovimiento
+            // 
+            lblCantidadMovimiento.AutoSize = true;
+            lblCantidadMovimiento.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblCantidadMovimiento.ForeColor = Color.FromArgb(44, 62, 80);
+            lblCantidadMovimiento.Location = new Point(630, 70);
+            lblCantidadMovimiento.Name = "lblCantidadMovimiento";
+            lblCantidadMovimiento.Size = new Size(83, 23);
+            lblCantidadMovimiento.TabIndex = 5;
+            lblCantidadMovimiento.Text = "Cantidad";
+            // 
+            // cmbTipoMovimiento
+            // 
+            cmbTipoMovimiento.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbTipoMovimiento.Font = new Font("Segoe UI", 12F);
+            cmbTipoMovimiento.FormattingEnabled = true;
+            cmbTipoMovimiento.Items.AddRange(new object[] { "Entrada", "Consumo" });
+            cmbTipoMovimiento.Location = new Point(30, 100);
+            cmbTipoMovimiento.Name = "cmbTipoMovimiento";
+            cmbTipoMovimiento.Size = new Size(574, 36);
+            cmbTipoMovimiento.TabIndex = 4;
+            // 
+            // lblTipoMovimiento
+            // 
+            lblTipoMovimiento.AutoSize = true;
+            lblTipoMovimiento.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblTipoMovimiento.ForeColor = Color.FromArgb(44, 62, 80);
+            lblTipoMovimiento.Location = new Point(30, 70);
+            lblTipoMovimiento.Name = "lblTipoMovimiento";
+            lblTipoMovimiento.Size = new Size(173, 23);
+            lblTipoMovimiento.TabIndex = 3;
+            lblTipoMovimiento.Text = "Tipo de Movimiento";
+            // 
+            // cmbInsumoMovimiento
+            // 
+            cmbInsumoMovimiento.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbInsumoMovimiento.Font = new Font("Segoe UI", 12F);
+            cmbInsumoMovimiento.FormattingEnabled = true;
+            cmbInsumoMovimiento.Location = new Point(30, 40);
+            cmbInsumoMovimiento.Name = "cmbInsumoMovimiento";
+            cmbInsumoMovimiento.Size = new Size(1129, 36);
+            cmbInsumoMovimiento.TabIndex = 2;
+            // 
+            // lblInsumoMovimiento
+            // 
+            lblInsumoMovimiento.AutoSize = true;
+            lblInsumoMovimiento.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblInsumoMovimiento.ForeColor = Color.FromArgb(44, 62, 80);
+            lblInsumoMovimiento.Location = new Point(30, 10);
+            lblInsumoMovimiento.Name = "lblInsumoMovimiento";
+            lblInsumoMovimiento.Size = new Size(68, 23);
+            lblInsumoMovimiento.TabIndex = 1;
+            lblInsumoMovimiento.Text = "Insumo";
+            // 
+            // lblNuevoMovimientoTitulo
+            // 
+            lblNuevoMovimientoTitulo.AutoSize = true;
+            lblNuevoMovimientoTitulo.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
+            lblNuevoMovimientoTitulo.ForeColor = Color.FromArgb(26, 32, 44);
+            lblNuevoMovimientoTitulo.Location = new Point(0, -20);
+            lblNuevoMovimientoTitulo.Name = "lblNuevoMovimientoTitulo";
+            lblNuevoMovimientoTitulo.Size = new Size(263, 32);
+            lblNuevoMovimientoTitulo.TabIndex = 0;
+            lblNuevoMovimientoTitulo.Text = "Registrar Movimiento";
+            // 
+            // panelHistorial
+            // 
+            panelHistorial.BackColor = Color.White;
+            panelHistorial.Controls.Add(dgvHistorial);
+            panelHistorial.Controls.Add(lblHistorialTitulo);
+            panelHistorial.Location = new Point(34, 570);
+            panelHistorial.Name = "panelHistorial";
+            panelHistorial.Padding = new Padding(30);
+            panelHistorial.Size = new Size(1189, 280);
+            panelHistorial.TabIndex = 4;
+            // 
+            // dgvHistorial
+            // 
+            dgvHistorial.AllowUserToAddRows = false;
+            dgvHistorial.AllowUserToDeleteRows = false;
+            dgvHistorial.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvHistorial.BackgroundColor = Color.White;
+            dgvHistorial.BorderStyle = BorderStyle.None;
+            dgvHistorial.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvHistorial.Location = new Point(30, 70);
+            dgvHistorial.Name = "dgvHistorial";
+            dgvHistorial.ReadOnly = true;
+            dgvHistorial.RowHeadersVisible = false;
+            dgvHistorial.RowHeadersWidth = 51;
+            dgvHistorial.Size = new Size(1129, 180);
+            dgvHistorial.TabIndex = 1;
+            // 
+            // lblHistorialTitulo
+            // 
+            lblHistorialTitulo.AutoSize = true;
+            lblHistorialTitulo.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
+            lblHistorialTitulo.ForeColor = Color.FromArgb(26, 32, 44);
+            lblHistorialTitulo.Location = new Point(0, 0);
+            lblHistorialTitulo.Name = "lblHistorialTitulo";
+            lblHistorialTitulo.Size = new Size(303, 32);
+            lblHistorialTitulo.TabIndex = 0;
+            lblHistorialTitulo.Text = "Historial de Movimientos";
+            // 
+            // panelInventario
+            // 
+            panelInventario.BackColor = Color.White;
+            panelInventario.Controls.Add(dgvInventario);
+            panelInventario.Controls.Add(lblInventarioTitulo);
+            panelInventario.Location = new Point(34, 280);
+            panelInventario.Name = "panelInventario";
+            panelInventario.Padding = new Padding(30);
+            panelInventario.Size = new Size(1189, 280);
+            panelInventario.TabIndex = 3;
+            // 
+            // dgvInventario
+            // 
+            dgvInventario.AllowUserToAddRows = false;
+            dgvInventario.AllowUserToDeleteRows = false;
+            dgvInventario.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvInventario.BackgroundColor = Color.White;
+            dgvInventario.BorderStyle = BorderStyle.None;
+            dgvInventario.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvInventario.Location = new Point(30, 70);
+            dgvInventario.Name = "dgvInventario";
+            dgvInventario.ReadOnly = true;
+            dgvInventario.RowHeadersVisible = false;
+            dgvInventario.RowHeadersWidth = 51;
+            dgvInventario.Size = new Size(1129, 180);
+            dgvInventario.TabIndex = 1;
+            // 
+            // lblInventarioTitulo
+            // 
+            lblInventarioTitulo.AutoSize = true;
+            lblInventarioTitulo.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
+            lblInventarioTitulo.ForeColor = Color.FromArgb(26, 32, 44);
+            lblInventarioTitulo.Location = new Point(0, 0);
+            lblInventarioTitulo.Name = "lblInventarioTitulo";
+            lblInventarioTitulo.Size = new Size(271, 32);
+            lblInventarioTitulo.TabIndex = 0;
+            lblInventarioTitulo.Text = "Inventario de Insumos";
+            // 
+            // panelBotones
+            // 
+            panelBotones.Controls.Add(btnVerRecetas);
+            panelBotones.Controls.Add(btnRegistrarMovimiento);
+            panelBotones.Location = new Point(34, 210);
+            panelBotones.Name = "panelBotones";
+            panelBotones.Size = new Size(1189, 60);
+            panelBotones.TabIndex = 2;
+            // 
+            // btnVerRecetas
+            // 
+            btnVerRecetas.BackColor = Color.FromArgb(139, 92, 246);
+            btnVerRecetas.FlatAppearance.BorderSize = 0;
+            btnVerRecetas.FlatStyle = FlatStyle.Flat;
+            btnVerRecetas.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            btnVerRecetas.ForeColor = Color.White;
+            btnVerRecetas.Location = new Point(260, 5);
+            btnVerRecetas.Name = "btnVerRecetas";
+            btnVerRecetas.Size = new Size(230, 50);
+            btnVerRecetas.TabIndex = 1;
+            btnVerRecetas.Text = "📋 Ver Recetas";
+            btnVerRecetas.UseVisualStyleBackColor = false;
+            btnVerRecetas.Click += btnVerRecetas_Click;
+            // 
+            // btnRegistrarMovimiento
+            // 
+            btnRegistrarMovimiento.BackColor = Color.FromArgb(0, 125, 62);
+            btnRegistrarMovimiento.FlatAppearance.BorderSize = 0;
+            btnRegistrarMovimiento.FlatStyle = FlatStyle.Flat;
+            btnRegistrarMovimiento.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            btnRegistrarMovimiento.ForeColor = Color.White;
+            btnRegistrarMovimiento.Location = new Point(0, 5);
+            btnRegistrarMovimiento.Name = "btnRegistrarMovimiento";
+            btnRegistrarMovimiento.Size = new Size(250, 50);
+            btnRegistrarMovimiento.TabIndex = 0;
+            btnRegistrarMovimiento.Text = "+ Registrar Movimiento";
+            btnRegistrarMovimiento.UseVisualStyleBackColor = false;
+            btnRegistrarMovimiento.Click += btnRegistrarMovimiento_Click;
+            // 
+            // panelResumen
+            // 
+            panelResumen.Controls.Add(cardConsumos);
+            panelResumen.Controls.Add(cardEntradas);
+            panelResumen.Controls.Add(cardCritico);
+            panelResumen.Controls.Add(cardTotal);
+            panelResumen.Location = new Point(34, 80);
+            panelResumen.Name = "panelResumen";
+            panelResumen.Size = new Size(1189, 120);
+            panelResumen.TabIndex = 1;
+            // 
+            // cardConsumos
+            // 
+            cardConsumos.BackColor = Color.White;
+            cardConsumos.BorderStyle = BorderStyle.FixedSingle;
+            cardConsumos.Controls.Add(lblConsumosValor);
+            cardConsumos.Controls.Add(lblConsumosTitulo);
+            cardConsumos.Location = new Point(900, 10);
+            cardConsumos.Name = "cardConsumos";
+            cardConsumos.Size = new Size(280, 100);
+            cardConsumos.TabIndex = 3;
+            // 
+            // lblConsumosValor
+            // 
+            lblConsumosValor.AutoSize = true;
+            lblConsumosValor.Font = new Font("Segoe UI", 24F, FontStyle.Bold);
+            lblConsumosValor.ForeColor = Color.FromArgb(220, 38, 38);
+            lblConsumosValor.Location = new Point(20, 40);
+            lblConsumosValor.Name = "lblConsumosValor";
+            lblConsumosValor.Size = new Size(46, 54);
+            lblConsumosValor.TabIndex = 1;
+            lblConsumosValor.Text = "0";
+            // 
+            // lblConsumosTitulo
+            // 
+            lblConsumosTitulo.AutoSize = true;
+            lblConsumosTitulo.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblConsumosTitulo.ForeColor = Color.FromArgb(44, 62, 80);
+            lblConsumosTitulo.Location = new Point(20, 10);
+            lblConsumosTitulo.Name = "lblConsumosTitulo";
+            lblConsumosTitulo.Size = new Size(91, 23);
+            lblConsumosTitulo.TabIndex = 0;
+            lblConsumosTitulo.Text = "Consumos";
+            // 
+            // cardEntradas
+            // 
+            cardEntradas.BackColor = Color.White;
+            cardEntradas.BorderStyle = BorderStyle.FixedSingle;
+            cardEntradas.Controls.Add(lblEntradasValor);
+            cardEntradas.Controls.Add(lblEntradasTitulo);
+            cardEntradas.Location = new Point(600, 10);
+            cardEntradas.Name = "cardEntradas";
+            cardEntradas.Size = new Size(280, 100);
+            cardEntradas.TabIndex = 2;
+            // 
+            // lblEntradasValor
+            // 
+            lblEntradasValor.AutoSize = true;
+            lblEntradasValor.Font = new Font("Segoe UI", 24F, FontStyle.Bold);
+            lblEntradasValor.ForeColor = Color.FromArgb(0, 125, 62);
+            lblEntradasValor.Location = new Point(20, 40);
+            lblEntradasValor.Name = "lblEntradasValor";
+            lblEntradasValor.Size = new Size(46, 54);
+            lblEntradasValor.TabIndex = 1;
+            lblEntradasValor.Text = "0";
+            // 
+            // lblEntradasTitulo
+            // 
+            lblEntradasTitulo.AutoSize = true;
+            lblEntradasTitulo.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblEntradasTitulo.ForeColor = Color.FromArgb(44, 62, 80);
+            lblEntradasTitulo.Location = new Point(20, 10);
+            lblEntradasTitulo.Name = "lblEntradasTitulo";
+            lblEntradasTitulo.Size = new Size(79, 23);
+            lblEntradasTitulo.TabIndex = 0;
+            lblEntradasTitulo.Text = "Entradas";
+            // 
+            // cardCritico
+            // 
+            cardCritico.BackColor = Color.White;
+            cardCritico.BorderStyle = BorderStyle.FixedSingle;
+            cardCritico.Controls.Add(lblCriticoValor);
+            cardCritico.Controls.Add(lblCriticoTitulo);
+            cardCritico.Location = new Point(300, 10);
+            cardCritico.Name = "cardCritico";
+            cardCritico.Size = new Size(280, 100);
+            cardCritico.TabIndex = 1;
+            // 
+            // lblCriticoValor
+            // 
+            lblCriticoValor.AutoSize = true;
+            lblCriticoValor.Font = new Font("Segoe UI", 24F, FontStyle.Bold);
+            lblCriticoValor.ForeColor = Color.FromArgb(245, 158, 11);
+            lblCriticoValor.Location = new Point(20, 40);
+            lblCriticoValor.Name = "lblCriticoValor";
+            lblCriticoValor.Size = new Size(46, 54);
+            lblCriticoValor.TabIndex = 1;
+            lblCriticoValor.Text = "0";
+            // 
+            // lblCriticoTitulo
+            // 
+            lblCriticoTitulo.AutoSize = true;
+            lblCriticoTitulo.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblCriticoTitulo.ForeColor = Color.FromArgb(44, 62, 80);
+            lblCriticoTitulo.Location = new Point(20, 10);
+            lblCriticoTitulo.Name = "lblCriticoTitulo";
+            lblCriticoTitulo.Size = new Size(113, 23);
+            lblCriticoTitulo.TabIndex = 0;
+            lblCriticoTitulo.Text = "Stock Crítico";
+            // 
+            // cardTotal
+            // 
+            cardTotal.BackColor = Color.White;
+            cardTotal.BorderStyle = BorderStyle.FixedSingle;
+            cardTotal.Controls.Add(lblTotalValor);
+            cardTotal.Controls.Add(lblTotalTitulo);
+            cardTotal.Location = new Point(0, 10);
+            cardTotal.Name = "cardTotal";
+            cardTotal.Size = new Size(280, 100);
+            cardTotal.TabIndex = 0;
+            // 
+            // lblTotalValor
+            // 
+            lblTotalValor.AutoSize = true;
+            lblTotalValor.Font = new Font("Segoe UI", 24F, FontStyle.Bold);
+            lblTotalValor.ForeColor = Color.FromArgb(37, 99, 235);
+            lblTotalValor.Location = new Point(20, 40);
+            lblTotalValor.Name = "lblTotalValor";
+            lblTotalValor.Size = new Size(46, 54);
+            lblTotalValor.TabIndex = 1;
+            lblTotalValor.Text = "0";
+            // 
+            // lblTotalTitulo
+            // 
+            lblTotalTitulo.AutoSize = true;
+            lblTotalTitulo.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblTotalTitulo.ForeColor = Color.FromArgb(44, 62, 80);
+            lblTotalTitulo.Location = new Point(20, 10);
+            lblTotalTitulo.Name = "lblTotalTitulo";
+            lblTotalTitulo.Size = new Size(119, 23);
+            lblTotalTitulo.TabIndex = 0;
+            lblTotalTitulo.Text = "Total Insumos";
+            // 
+            // lblInsumosTitle
+            // 
+            lblInsumosTitle.AutoSize = true;
+            lblInsumosTitle.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
+            lblInsumosTitle.ForeColor = Color.FromArgb(26, 32, 44);
+            lblInsumosTitle.Location = new Point(34, 20);
+            lblInsumosTitle.Name = "lblInsumosTitle";
+            lblInsumosTitle.Size = new Size(292, 41);
+            lblInsumosTitle.TabIndex = 0;
+            lblInsumosTitle.Text = "Control de Insumos";
             // 
             // Insumos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1257, 933);
-            this.Controls.Add(this.panelMain);
-            this.Controls.Add(this.panelNav);
-            this.Controls.Add(this.panelHeader);
-            this.Name = "Insumos";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Insumos - Rancho del Buen Pastor";
-            this.panelHeader.ResumeLayout(false);
-            this.panelHeader.PerformLayout();
-            this.panelNav.ResumeLayout(false);
-            this.panelMain.ResumeLayout(false);
-            this.panelMain.PerformLayout();
-            this.panelResumen.ResumeLayout(false);
-            this.cardConsumos.ResumeLayout(false);
-            this.cardConsumos.PerformLayout();
-            this.cardEntradas.ResumeLayout(false);
-            this.cardEntradas.PerformLayout();
-            this.cardCritico.ResumeLayout(false);
-            this.cardCritico.PerformLayout();
-            this.cardTotal.ResumeLayout(false);
-            this.cardTotal.PerformLayout();
-            this.panelBotones.ResumeLayout(false);
-            this.panelInventario.ResumeLayout(false);
-            this.panelInventario.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).EndInit();
-            this.panelHistorial.ResumeLayout(false);
-            this.panelHistorial.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHistorial)).EndInit();
-            this.panelNuevoMovimiento.ResumeLayout(false);
-            this.panelNuevoMovimiento.PerformLayout();
-            this.panelRecetas.ResumeLayout(false);
-            this.panelRecetas.PerformLayout();
-            this.panelRecetaGalpon4.ResumeLayout(false);
-            this.panelRecetaGalpon4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRecetaGalpon4)).EndInit();
-            this.panelRecetaGalpon687.ResumeLayout(false);
-            this.panelRecetaGalpon687.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRecetaGalpon687)).EndInit();
-            this.panelRecetaGalpon358.ResumeLayout(false);
-            this.panelRecetaGalpon358.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRecetaGalpon358)).EndInit();
-            this.ResumeLayout(false);
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1257, 933);
+            Controls.Add(panelMain);
+            Controls.Add(panelNav);
+            Controls.Add(panelHeader);
+            Name = "Insumos";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Insumos - Rancho del Buen Pastor";
+            panelHeader.ResumeLayout(false);
+            panelHeader.PerformLayout();
+            panelNav.ResumeLayout(false);
+            panelMain.ResumeLayout(false);
+            panelMain.PerformLayout();
+            panelRecetas.ResumeLayout(false);
+            panelRecetas.PerformLayout();
+            panelRecetaGalpon358.ResumeLayout(false);
+            panelRecetaGalpon358.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvRecetaGalpon358).EndInit();
+            panelRecetaGalpon687.ResumeLayout(false);
+            panelRecetaGalpon687.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvRecetaGalpon687).EndInit();
+            panelRecetaGalpon4.ResumeLayout(false);
+            panelRecetaGalpon4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvRecetaGalpon4).EndInit();
+            panelNuevoMovimiento.ResumeLayout(false);
+            panelNuevoMovimiento.PerformLayout();
+            panelHistorial.ResumeLayout(false);
+            panelHistorial.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvHistorial).EndInit();
+            panelInventario.ResumeLayout(false);
+            panelInventario.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvInventario).EndInit();
+            panelBotones.ResumeLayout(false);
+            panelResumen.ResumeLayout(false);
+            cardConsumos.ResumeLayout(false);
+            cardConsumos.PerformLayout();
+            cardEntradas.ResumeLayout(false);
+            cardEntradas.PerformLayout();
+            cardCritico.ResumeLayout(false);
+            cardCritico.PerformLayout();
+            cardTotal.ResumeLayout(false);
+            cardTotal.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion

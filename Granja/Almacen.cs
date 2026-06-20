@@ -140,12 +140,5 @@ namespace Granja
             ins.Show();
             this.Hide();
         }
-
-        private void btnProduccion_Click(object sender, EventArgs e)
-        {
-            Produccion produ = new Produccion();
-            produ.Show();
-            this.Hide();
-        }
     }
 }
