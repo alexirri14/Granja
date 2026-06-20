@@ -19,6 +19,8 @@ namespace Granja
             btnRegistrarVenta.Click += BtnRegistrarVenta_Click;
             txtCantidad.TextChanged += ActualizarTotal;
             txtPrecio.TextChanged += ActualizarTotal;
+
+            // Corrección realizada para práctica de control de versiones
         }
 
         private void ActualizarTotal(object sender, EventArgs e)
