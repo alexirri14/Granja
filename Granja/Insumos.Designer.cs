@@ -862,7 +862,9 @@ namespace Granja
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Panel panelNav;
         private System.Windows.Forms.Button btnDashboard;
-        private System.Windows.Forms.Button btnProduccion;
+        private System.Windows.Forms.Button btnProduccion = new();
+        private System.Windows.Forms.Button btnAlmacen = new();
+        private System.Windows.Forms.Button btnVentas = new();
         private System.Windows.Forms.Button btnAlimento;
         private System.Windows.Forms.Button btnMolino;
         private System.Windows.Forms.Button btnReportes;

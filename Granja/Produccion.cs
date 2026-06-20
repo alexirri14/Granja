@@ -248,7 +248,7 @@ namespace Granja
             this.Hide();
         }
 
-        private void BtnCancelar_Click(object sender, EventArgs e)
+        private void BtnCancelar_Click(object? sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(ordenSeleccionada) || cmbEstadoOrden.SelectedItem == null)
             {
@@ -261,7 +261,7 @@ namespace Granja
             MessageBox.Show("Estado de orden actualizado.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void BtnGuardar_Click(object sender, EventArgs e)
+        private void BtnGuardar_Click(object? sender, EventArgs e)
         {
             if (cmbGalpon.SelectedItem == null)
             {

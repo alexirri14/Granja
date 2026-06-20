@@ -544,6 +544,9 @@ namespace Granja
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Panel panelNav;
         private System.Windows.Forms.Button btnDashboard;
+        private System.Windows.Forms.Button btnProduccion = new();
+        private System.Windows.Forms.Button btnAlmacen = new();
+        private System.Windows.Forms.Button btnVentas = new();
         private System.Windows.Forms.Button btnAlimento;
         private System.Windows.Forms.Button btnInsumos;
         private System.Windows.Forms.Button btnMolino;
@@ -551,6 +554,14 @@ namespace Granja
         private System.Windows.Forms.Panel panelMain;
         private System.Windows.Forms.Label lblResumenTitle;
         private System.Windows.Forms.FlowLayoutPanel panelCardsContainer;
+        private System.Windows.Forms.Panel cardHuevos = new();
+        private System.Windows.Forms.Label lblHuevosHoy = new();
+        private System.Windows.Forms.Label lblHuevosValor = new();
+        private System.Windows.Forms.Panel accHuevos = new();
+        private System.Windows.Forms.Panel cardVentas = new();
+        private System.Windows.Forms.Label lblVentasHoy = new();
+        private System.Windows.Forms.Label lblVentasValor = new();
+        private System.Windows.Forms.Panel accVentas = new();
         private System.Windows.Forms.Panel panelAlerts;
         private System.Windows.Forms.Label lblAlertas;
         private System.Windows.Forms.Panel panelAlertBox;

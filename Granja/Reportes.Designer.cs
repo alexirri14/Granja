@@ -315,6 +315,9 @@ namespace Granja
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Panel panelNav;
         private System.Windows.Forms.Button btnDashboard;
+        private System.Windows.Forms.Button btnProduccion = new();
+        private System.Windows.Forms.Button btnAlmacen = new();
+        private System.Windows.Forms.Button btnVentas = new();
         private System.Windows.Forms.Button btnAlimento;
         private System.Windows.Forms.Button btnInsumos;
         private System.Windows.Forms.Button btnMolino;
@@ -322,9 +325,11 @@ namespace Granja
         private System.Windows.Forms.Panel panelMain;
         private System.Windows.Forms.Label lblReportesTitle;
         private System.Windows.Forms.Panel panelTabs;
+        private System.Windows.Forms.Button btnFlujoHuevos = new();
+        private System.Windows.Forms.Button btnVentasDiarias = new();
         private System.Windows.Forms.Button btnStockActual;
         private System.Windows.Forms.Panel panelContenido;
-        private Button btnProduccionGalpon;
+        private System.Windows.Forms.Button btnProduccionGalpon;
     }
 }
 
