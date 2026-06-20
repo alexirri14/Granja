@@ -40,18 +40,11 @@ namespace Granja
             panelInsumos = new Panel();
             dgvInsumos = new DataGridView();
             lblInsumosTitle = new Label();
-            panelProduction = new Panel();
-            dgvProduccion = new DataGridView();
-            lblProductionReciente = new Label();
             panelAlerts = new Panel();
             panelAlertBox = new Panel();
             lblAlerta = new Label();
             lblAlertas = new Label();
             panelCardsContainer = new FlowLayoutPanel();
-            cardHuevos = new Panel();
-            lblHuevosHoy = new Label();
-            lblHuevosValor = new Label();
-            accHuevos = new Panel();
             cardStock = new Panel();
             lblStock = new Label();
             lblStockValor = new Label();
@@ -70,12 +63,9 @@ namespace Granja
             panelMain.SuspendLayout();
             panelInsumos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvInsumos).BeginInit();
-            panelProduction.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvProduccion).BeginInit();
             panelAlerts.SuspendLayout();
             panelAlertBox.SuspendLayout();
             panelCardsContainer.SuspendLayout();
-            cardHuevos.SuspendLayout();
             cardStock.SuspendLayout();
             cardVentas.SuspendLayout();
             cardAlimentoStock.SuspendLayout();
@@ -194,7 +184,6 @@ namespace Granja
             panelMain.AutoScroll = true;
             panelMain.BackColor = Color.FromArgb(248, 249, 250);
             panelMain.Controls.Add(panelInsumos);
-            panelMain.Controls.Add(panelProduction);
             panelMain.Controls.Add(panelAlerts);
             panelMain.Controls.Add(panelCardsContainer);
             panelMain.Controls.Add(lblResumenTitle);
@@ -211,7 +200,7 @@ namespace Granja
             panelInsumos.BackColor = Color.White;
             panelInsumos.Controls.Add(dgvInsumos);
             panelInsumos.Controls.Add(lblInsumosTitle);
-            panelInsumos.Location = new Point(34, 793);
+            panelInsumos.Location = new Point(33, 457);
             panelInsumos.Margin = new Padding(3, 4, 3, 4);
             panelInsumos.Name = "panelInsumos";
             panelInsumos.Padding = new Padding(30);
@@ -243,41 +232,6 @@ namespace Granja
             lblInsumosTitle.Size = new Size(307, 32);
             lblInsumosTitle.TabIndex = 0;
             lblInsumosTitle.Text = "Stock de Insumos Críticos";
-            // 
-            // panelProduction
-            // 
-            panelProduction.Controls.Add(dgvProduccion);
-            panelProduction.Controls.Add(lblProductionReciente);
-            panelProduction.Location = new Point(34, 453);
-            panelProduction.Margin = new Padding(3, 4, 3, 4);
-            panelProduction.Name = "panelProduction";
-            panelProduction.Size = new Size(1189, 320);
-            panelProduction.TabIndex = 3;
-            // 
-            // dgvProduccion
-            // 
-            dgvProduccion.AllowUserToAddRows = false;
-            dgvProduccion.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvProduccion.BackgroundColor = Color.White;
-            dgvProduccion.BorderStyle = BorderStyle.None;
-            dgvProduccion.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvProduccion.Location = new Point(0, 53);
-            dgvProduccion.Margin = new Padding(3, 4, 3, 4);
-            dgvProduccion.Name = "dgvProduccion";
-            dgvProduccion.RowHeadersVisible = false;
-            dgvProduccion.RowHeadersWidth = 51;
-            dgvProduccion.Size = new Size(1189, 240);
-            dgvProduccion.TabIndex = 1;
-            // 
-            // lblProductionReciente
-            // 
-            lblProductionReciente.AutoSize = true;
-            lblProductionReciente.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            lblProductionReciente.Location = new Point(0, 13);
-            lblProductionReciente.Name = "lblProductionReciente";
-            lblProductionReciente.Size = new Size(206, 28);
-            lblProductionReciente.TabIndex = 0;
-            lblProductionReciente.Text = "Producción Reciente";
             // 
             // panelAlerts
             // 
@@ -323,7 +277,6 @@ namespace Granja
             // 
             // panelCardsContainer
             // 
-            panelCardsContainer.Controls.Add(cardHuevos);
             panelCardsContainer.Controls.Add(cardStock);
             panelCardsContainer.Controls.Add(cardVentas);
             panelCardsContainer.Controls.Add(cardAlimentoStock);
@@ -333,56 +286,13 @@ namespace Granja
             panelCardsContainer.Size = new Size(1189, 200);
             panelCardsContainer.TabIndex = 1;
             // 
-            // cardHuevos
-            // 
-            cardHuevos.BackColor = Color.White;
-            cardHuevos.Controls.Add(lblHuevosHoy);
-            cardHuevos.Controls.Add(lblHuevosValor);
-            cardHuevos.Controls.Add(accHuevos);
-            cardHuevos.Location = new Point(0, 0);
-            cardHuevos.Margin = new Padding(0, 0, 23, 0);
-            cardHuevos.Name = "cardHuevos";
-            cardHuevos.Size = new Size(263, 160);
-            cardHuevos.TabIndex = 0;
-            // 
-            // lblHuevosHoy
-            // 
-            lblHuevosHoy.AutoSize = true;
-            lblHuevosHoy.Font = new Font("Segoe UI", 9F);
-            lblHuevosHoy.ForeColor = Color.Gray;
-            lblHuevosHoy.Location = new Point(17, 20);
-            lblHuevosHoy.Name = "lblHuevosHoy";
-            lblHuevosHoy.Size = new Size(86, 20);
-            lblHuevosHoy.TabIndex = 0;
-            lblHuevosHoy.Text = "Huevos hoy";
-            // 
-            // lblHuevosValor
-            // 
-            lblHuevosValor.AutoSize = true;
-            lblHuevosValor.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
-            lblHuevosValor.Location = new Point(17, 60);
-            lblHuevosValor.Name = "lblHuevosValor";
-            lblHuevosValor.Size = new Size(40, 46);
-            lblHuevosValor.TabIndex = 1;
-            lblHuevosValor.Text = "0";
-            // 
-            // accHuevos
-            // 
-            accHuevos.BackColor = Color.FromArgb(0, 123, 255);
-            accHuevos.Dock = DockStyle.Left;
-            accHuevos.Location = new Point(0, 0);
-            accHuevos.Margin = new Padding(3, 4, 3, 4);
-            accHuevos.Name = "accHuevos";
-            accHuevos.Size = new Size(5, 160);
-            accHuevos.TabIndex = 2;
-            // 
             // cardStock
             // 
             cardStock.BackColor = Color.White;
             cardStock.Controls.Add(lblStock);
             cardStock.Controls.Add(lblStockValor);
             cardStock.Controls.Add(accStock);
-            cardStock.Location = new Point(286, 0);
+            cardStock.Location = new Point(0, 0);
             cardStock.Margin = new Padding(0, 0, 23, 0);
             cardStock.Name = "cardStock";
             cardStock.Size = new Size(263, 160);
@@ -425,7 +335,7 @@ namespace Granja
             cardVentas.Controls.Add(lblVentasHoy);
             cardVentas.Controls.Add(lblVentasValor);
             cardVentas.Controls.Add(accVentas);
-            cardVentas.Location = new Point(572, 0);
+            cardVentas.Location = new Point(286, 0);
             cardVentas.Margin = new Padding(0, 0, 23, 0);
             cardVentas.Name = "cardVentas";
             cardVentas.Size = new Size(263, 160);
@@ -468,7 +378,7 @@ namespace Granja
             cardAlimentoStock.Controls.Add(lblAlimentoStock);
             cardAlimentoStock.Controls.Add(lblAlimentoValor);
             cardAlimentoStock.Controls.Add(accAlimento);
-            cardAlimentoStock.Location = new Point(858, 0);
+            cardAlimentoStock.Location = new Point(572, 0);
             cardAlimentoStock.Margin = new Padding(0, 0, 23, 0);
             cardAlimentoStock.Name = "cardAlimentoStock";
             cardAlimentoStock.Size = new Size(263, 160);
@@ -536,16 +446,11 @@ namespace Granja
             panelInsumos.ResumeLayout(false);
             panelInsumos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvInsumos).EndInit();
-            panelProduction.ResumeLayout(false);
-            panelProduction.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvProduccion).EndInit();
             panelAlerts.ResumeLayout(false);
             panelAlerts.PerformLayout();
             panelAlertBox.ResumeLayout(false);
             panelAlertBox.PerformLayout();
             panelCardsContainer.ResumeLayout(false);
-            cardHuevos.ResumeLayout(false);
-            cardHuevos.PerformLayout();
             cardStock.ResumeLayout(false);
             cardStock.PerformLayout();
             cardVentas.ResumeLayout(false);
@@ -573,12 +478,6 @@ namespace Granja
         private System.Windows.Forms.Label lblAlertas;
         private System.Windows.Forms.Panel panelAlertBox;
         private System.Windows.Forms.Label lblAlerta;
-        private System.Windows.Forms.Panel panelProduction;
-        private System.Windows.Forms.Label lblProductionReciente;
-        private System.Windows.Forms.DataGridView dgvProduccion;
-        private System.Windows.Forms.Label lblHuevosHoy;
-        private System.Windows.Forms.Label lblHuevosValor;
-        private System.Windows.Forms.Panel accHuevos;
         private System.Windows.Forms.Label lblStock;
         private System.Windows.Forms.Label lblStockValor;
         private System.Windows.Forms.Panel accStock;
@@ -588,7 +487,6 @@ namespace Granja
         private System.Windows.Forms.Label lblAlimentoStock;
         private System.Windows.Forms.Label lblAlimentoValor;
         private System.Windows.Forms.Panel accAlimento;
-        private System.Windows.Forms.Panel cardHuevos;
         private System.Windows.Forms.Panel cardStock;
         private System.Windows.Forms.Panel cardVentas;
         private System.Windows.Forms.Panel cardAlimentoStock;

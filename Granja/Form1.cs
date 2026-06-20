@@ -12,15 +12,6 @@ namespace Granja
 
         private void PopulateData()
         {
-            dgvProduccion.Columns.Add("Galpon", "Galpón");
-            dgvProduccion.Columns.Add("Fecha", "Fecha");
-            dgvProduccion.Columns.Add("Huevos", "Huevos");
-
-            dgvProduccion.Rows.Add("A", "8/4/2026", "300");
-            dgvProduccion.Rows.Add("B", "8/4/2026", "250");
-            dgvProduccion.Rows.Add("C", "7/4/2026", "280");
-            dgvProduccion.Rows.Add("A", "7/4/2026", "290");
-
             dgvInsumos.Columns.Add("Insumo", "Insumo");
             dgvInsumos.Columns.Add("StockActual", "Stock Actual");
             dgvInsumos.Columns.Add("StockMinimo", "Stock Mínimo");
