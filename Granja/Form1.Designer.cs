@@ -36,7 +36,6 @@ namespace Granja
             btnInsumos = new Button();
             btnAlimento = new Button();
             btnVentas = new Button();
-            btnAlmacen = new Button();
             btnDashboard = new Button();
             panelMain = new Panel();
             panelInsumos = new Panel();
@@ -113,7 +112,6 @@ namespace Granja
             panelNav.Controls.Add(btnInsumos);
             panelNav.Controls.Add(btnAlimento);
             panelNav.Controls.Add(btnVentas);
-            panelNav.Controls.Add(btnAlmacen);
             panelNav.Controls.Add(btnDashboard);
             panelNav.Dock = DockStyle.Top;
             panelNav.Location = new Point(0, 80);
@@ -127,7 +125,7 @@ namespace Granja
             btnReportes.FlatAppearance.BorderSize = 0;
             btnReportes.FlatStyle = FlatStyle.Flat;
             btnReportes.Font = new Font("Segoe UI", 10F);
-            btnReportes.Location = new Point(830, 2);
+            btnReportes.Location = new Point(699, 2);
             btnReportes.Margin = new Padding(3, 4, 3, 4);
             btnReportes.Name = "btnReportes";
             btnReportes.Size = new Size(137, 67);
@@ -141,7 +139,7 @@ namespace Granja
             btnMolino.FlatAppearance.BorderSize = 0;
             btnMolino.FlatStyle = FlatStyle.Flat;
             btnMolino.Font = new Font("Segoe UI", 10F);
-            btnMolino.Location = new Point(693, 2);
+            btnMolino.Location = new Point(562, 2);
             btnMolino.Margin = new Padding(3, 4, 3, 4);
             btnMolino.Name = "btnMolino";
             btnMolino.Size = new Size(137, 67);
@@ -155,7 +153,7 @@ namespace Granja
             btnInsumos.FlatAppearance.BorderSize = 0;
             btnInsumos.FlatStyle = FlatStyle.Flat;
             btnInsumos.Font = new Font("Segoe UI", 10F);
-            btnInsumos.Location = new Point(556, 2);
+            btnInsumos.Location = new Point(425, 2);
             btnInsumos.Margin = new Padding(3, 4, 3, 4);
             btnInsumos.Name = "btnInsumos";
             btnInsumos.Size = new Size(137, 67);
@@ -169,7 +167,7 @@ namespace Granja
             btnAlimento.FlatAppearance.BorderSize = 0;
             btnAlimento.FlatStyle = FlatStyle.Flat;
             btnAlimento.Font = new Font("Segoe UI", 10F);
-            btnAlimento.Location = new Point(419, 2);
+            btnAlimento.Location = new Point(288, 2);
             btnAlimento.Margin = new Padding(3, 4, 3, 4);
             btnAlimento.Name = "btnAlimento";
             btnAlimento.Size = new Size(137, 67);
@@ -183,7 +181,7 @@ namespace Granja
             btnVentas.FlatAppearance.BorderSize = 0;
             btnVentas.FlatStyle = FlatStyle.Flat;
             btnVentas.Font = new Font("Segoe UI", 10F);
-            btnVentas.Location = new Point(282, 2);
+            btnVentas.Location = new Point(151, 2);
             btnVentas.Margin = new Padding(3, 4, 3, 4);
             btnVentas.Name = "btnVentas";
             btnVentas.Size = new Size(137, 67);
@@ -191,20 +189,6 @@ namespace Granja
             btnVentas.Text = " Ventas";
             btnVentas.UseVisualStyleBackColor = true;
             btnVentas.Click += btnVentas_Click;
-            // 
-            // btnAlmacen
-            // 
-            btnAlmacen.FlatAppearance.BorderSize = 0;
-            btnAlmacen.FlatStyle = FlatStyle.Flat;
-            btnAlmacen.Font = new Font("Segoe UI", 10F);
-            btnAlmacen.Location = new Point(145, 2);
-            btnAlmacen.Margin = new Padding(3, 4, 3, 4);
-            btnAlmacen.Name = "btnAlmacen";
-            btnAlmacen.Size = new Size(137, 67);
-            btnAlmacen.TabIndex = 2;
-            btnAlmacen.Text = " Almacén";
-            btnAlmacen.UseVisualStyleBackColor = true;
-            btnAlmacen.Click += btnAlmacen_Click;
             // 
             // btnDashboard
             // 
@@ -594,7 +578,6 @@ namespace Granja
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Panel panelNav;
         private System.Windows.Forms.Button btnDashboard;
-        private System.Windows.Forms.Button btnAlmacen;
         private System.Windows.Forms.Button btnVentas;
         private System.Windows.Forms.Button btnAlimento;
         private System.Windows.Forms.Button btnInsumos;

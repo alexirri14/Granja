@@ -2,14 +2,6 @@
 
 namespace Granja
 {
-    // Clase para representar un Movimiento de Huevos
-    public class MovimientoHuevo
-    {
-        public DateTime Fecha { get; set; }
-        public string Tipo { get; set; }
-        public string Detalle { get; set; }
-        public int Cantidad { get; set; }
-    }
 
     // Clase para representar una Venta
     public class Venta
@@ -69,10 +61,6 @@ namespace Granja
     {
         // Ventas
         public static List<Venta> Ventas { get; set; } = new List<Venta>();
-
-        // Huevos
-        public static int StockHuevos { get; set; } = 8500;
-        public static List<MovimientoHuevo> MovimientosHuevos { get; set; } = new List<MovimientoHuevo>();
 
         // Insumos
         public static List<Insumo> Insumos { get; set; } = new List<Insumo>

@@ -40,13 +40,6 @@ namespace Granja
             this.Hide();
         }
 
-        private void btnAlmacen_Click(object sender, EventArgs e)
-        {
-            Almacen alma = new Almacen();
-            alma.Show();
-            this.Hide();
-        }
-
         private void btnVentas_Click(object sender, EventArgs e)
         {
             Ventas formventa = new Ventas();

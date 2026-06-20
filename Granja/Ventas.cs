@@ -49,12 +49,6 @@ namespace Granja
                 return;
             }
 
-            if (GlobalData.StockHuevos < cantidad)
-            {
-                MessageBox.Show("No hay suficiente stock de huevos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
             // Registrar venta
             GlobalData.Ventas.Add(new Venta
             {
@@ -62,16 +56,6 @@ namespace Granja
                 Cliente = txtCliente.Text,
                 Cantidad = cantidad,
                 Precio = precio
-            });
-
-            // Actualizar stock de huevos
-            GlobalData.StockHuevos -= cantidad;
-            GlobalData.MovimientosHuevos.Add(new MovimientoHuevo
-            {
-                Fecha = DateTime.Now,
-                Tipo = "Venta",
-                Detalle = txtCliente.Text,
-                Cantidad = -cantidad
             });
 
             // Actualizar UI
@@ -130,13 +114,6 @@ namespace Granja
         {
             Form1 dashboard = new Form1();
             dashboard.Show();
-            this.Hide();
-        }
-
-        private void btnAlmacen_Click(object sender, EventArgs e)
-        {
-            Almacen alma = new Almacen();
-            alma.Show();
             this.Hide();
         }
 
