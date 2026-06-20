@@ -24,7 +24,6 @@ namespace Granja
             btnMolino = new Button();
             btnInsumos = new Button();
             btnAlimento = new Button();
-            btnVentas = new Button();
             btnDashboard = new Button();
             panelMain = new Panel();
             panelRecetas = new Panel();
@@ -125,7 +124,6 @@ namespace Granja
             panelNav.Controls.Add(btnMolino);
             panelNav.Controls.Add(btnInsumos);
             panelNav.Controls.Add(btnAlimento);
-            panelNav.Controls.Add(btnVentas);
             panelNav.Controls.Add(btnDashboard);
             panelNav.Dock = DockStyle.Top;
             panelNav.Location = new Point(0, 80);
@@ -138,7 +136,7 @@ namespace Granja
             btnReportes.FlatAppearance.BorderSize = 0;
             btnReportes.FlatStyle = FlatStyle.Flat;
             btnReportes.Font = new Font("Segoe UI", 10F);
-            btnReportes.Location = new Point(710, 2);
+            btnReportes.Location = new Point(572, 3);
             btnReportes.Name = "btnReportes";
             btnReportes.Size = new Size(137, 67);
             btnReportes.TabIndex = 7;
@@ -151,7 +149,7 @@ namespace Granja
             btnMolino.FlatAppearance.BorderSize = 0;
             btnMolino.FlatStyle = FlatStyle.Flat;
             btnMolino.Font = new Font("Segoe UI", 10F);
-            btnMolino.Location = new Point(557, 2);
+            btnMolino.Location = new Point(419, 3);
             btnMolino.Name = "btnMolino";
             btnMolino.Size = new Size(137, 67);
             btnMolino.TabIndex = 6;
@@ -165,7 +163,7 @@ namespace Granja
             btnInsumos.FlatStyle = FlatStyle.Flat;
             btnInsumos.Font = new Font("Segoe UI", 10F);
             btnInsumos.ForeColor = Color.FromArgb(0, 125, 62);
-            btnInsumos.Location = new Point(424, 2);
+            btnInsumos.Location = new Point(286, 3);
             btnInsumos.Name = "btnInsumos";
             btnInsumos.Size = new Size(137, 67);
             btnInsumos.TabIndex = 5;
@@ -177,26 +175,13 @@ namespace Granja
             btnAlimento.FlatAppearance.BorderSize = 0;
             btnAlimento.FlatStyle = FlatStyle.Flat;
             btnAlimento.Font = new Font("Segoe UI", 10F);
-            btnAlimento.Location = new Point(290, 2);
+            btnAlimento.Location = new Point(152, 3);
             btnAlimento.Name = "btnAlimento";
             btnAlimento.Size = new Size(137, 67);
             btnAlimento.TabIndex = 4;
             btnAlimento.Text = "Alimento";
             btnAlimento.UseVisualStyleBackColor = true;
             btnAlimento.Click += btnAlimento_Click;
-            // 
-            // btnVentas
-            // 
-            btnVentas.FlatAppearance.BorderSize = 0;
-            btnVentas.FlatStyle = FlatStyle.Flat;
-            btnVentas.Font = new Font("Segoe UI", 10F);
-            btnVentas.Location = new Point(157, 2);
-            btnVentas.Name = "btnVentas";
-            btnVentas.Size = new Size(137, 67);
-            btnVentas.TabIndex = 3;
-            btnVentas.Text = "Ventas";
-            btnVentas.UseVisualStyleBackColor = true;
-            btnVentas.Click += btnVentas_Click;
             // 
             // btnDashboard
             // 
@@ -839,7 +824,6 @@ namespace Granja
         private System.Windows.Forms.Panel panelNav;
         private System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.Button btnProduccion;
-        private System.Windows.Forms.Button btnVentas;
         private System.Windows.Forms.Button btnAlimento;
         private System.Windows.Forms.Button btnMolino;
         private System.Windows.Forms.Button btnReportes;

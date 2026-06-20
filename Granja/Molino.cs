@@ -147,13 +147,6 @@ namespace Granja
             this.Hide();
         }
 
-        private void btnVentas_Click(object sender, EventArgs e)
-        {
-            Ventas formventa = new Ventas();
-            formventa.Show();
-            this.Hide();
-        }
-
         private void btnAlimento_Click(object sender, EventArgs e)
         {
             Alimento formAlimento = new Alimento();

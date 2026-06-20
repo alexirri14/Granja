@@ -2,17 +2,6 @@
 
 namespace Granja
 {
-
-    // Clase para representar una Venta
-    public class Venta
-    {
-        public DateTime Fecha { get; set; }
-        public string Cliente { get; set; }
-        public int Cantidad { get; set; }
-        public decimal Precio { get; set; }
-        public decimal Total => Cantidad * Precio;
-    }
-
     // Clase para representar un Insumo
     public class Insumo
     {
@@ -59,9 +48,6 @@ namespace Granja
     // Clase principal para datos globales
     public static class GlobalData
     {
-        // Ventas
-        public static List<Venta> Ventas { get; set; } = new List<Venta>();
-
         // Insumos
         public static List<Insumo> Insumos { get; set; } = new List<Insumo>
         {
