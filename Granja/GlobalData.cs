@@ -1,5 +1,4 @@
-using System;
-using System.Collections.Generic;
+// Elimine using innecesarios para mantener el código limpio
 
 namespace Granja
 {

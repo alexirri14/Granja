@@ -1,3 +1,5 @@
+// Elimine using innecesarios para mantener el código limpio
+
 namespace Granja
 {
     public partial class Form1 : Form
