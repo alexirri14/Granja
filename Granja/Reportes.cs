@@ -88,8 +88,10 @@ namespace Granja
             };
             dgvDatos.Columns.Add("Producto", "Producto");
             dgvDatos.Columns.Add("Cantidad", "Cantidad");
-            dgvDatos.Rows.Add("Huevos", "8500");
-            dgvDatos.Rows.Add("Alimento", "300");
+            dgvDatos.Rows.Add("Alimento 1", "300");
+            dgvDatos.Rows.Add("Alimento 2", "500");
+            dgvDatos.Rows.Add("Alimento 3", "350");
+            dgvDatos.Rows.Add("Alimento 4", "480");
 
             panelDatos.Controls.Add(lblTituloDatos);
             panelDatos.Controls.Add(dgvDatos);
