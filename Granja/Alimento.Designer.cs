@@ -24,9 +24,6 @@ namespace Granja
             btnMolino = new Button();
             btnInsumos = new Button();
             btnAlimento = new Button();
-            btnVentas = new Button();
-            btnAlmacen = new Button();
-            btnProduccion = new Button();
             btnDashboard = new Button();
             panelMain = new Panel();
             lblStockTotal = new Label();
@@ -81,9 +78,6 @@ namespace Granja
             panelNav.Controls.Add(btnMolino);
             panelNav.Controls.Add(btnInsumos);
             panelNav.Controls.Add(btnAlimento);
-            panelNav.Controls.Add(btnVentas);
-            panelNav.Controls.Add(btnAlmacen);
-            panelNav.Controls.Add(btnProduccion);
             panelNav.Controls.Add(btnDashboard);
             panelNav.Dock = DockStyle.Top;
             panelNav.Location = new Point(0, 80);
@@ -438,9 +432,6 @@ namespace Granja
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Panel panelNav;
         private System.Windows.Forms.Button btnDashboard;
-        private System.Windows.Forms.Button btnProduccion;
-        private System.Windows.Forms.Button btnAlmacen;
-        private System.Windows.Forms.Button btnVentas;
         private System.Windows.Forms.Button btnAlimento;
         private System.Windows.Forms.Button btnInsumos;
         private System.Windows.Forms.Button btnMolino;

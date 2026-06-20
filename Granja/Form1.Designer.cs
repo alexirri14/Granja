@@ -35,34 +35,20 @@ namespace Granja
             btnMolino = new Button();
             btnInsumos = new Button();
             btnAlimento = new Button();
-            btnVentas = new Button();
-            btnAlmacen = new Button();
-            btnProduccion = new Button();
             btnDashboard = new Button();
             panelMain = new Panel();
             panelInsumos = new Panel();
             dgvInsumos = new DataGridView();
             lblInsumosTitle = new Label();
-            panelProduction = new Panel();
-            dgvProduccion = new DataGridView();
-            lblProductionReciente = new Label();
             panelAlerts = new Panel();
             panelAlertBox = new Panel();
             lblAlerta = new Label();
             lblAlertas = new Label();
             panelCardsContainer = new FlowLayoutPanel();
-            cardHuevos = new Panel();
-            lblHuevosHoy = new Label();
-            lblHuevosValor = new Label();
-            accHuevos = new Panel();
             cardStock = new Panel();
             lblStock = new Label();
             lblStockValor = new Label();
             accStock = new Panel();
-            cardVentas = new Panel();
-            lblVentasHoy = new Label();
-            lblVentasValor = new Label();
-            accVentas = new Panel();
             cardAlimentoStock = new Panel();
             lblAlimentoStock = new Label();
             lblAlimentoValor = new Label();
@@ -73,14 +59,10 @@ namespace Granja
             panelMain.SuspendLayout();
             panelInsumos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvInsumos).BeginInit();
-            panelProduction.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvProduccion).BeginInit();
             panelAlerts.SuspendLayout();
             panelAlertBox.SuspendLayout();
             panelCardsContainer.SuspendLayout();
-            cardHuevos.SuspendLayout();
             cardStock.SuspendLayout();
-            cardVentas.SuspendLayout();
             cardAlimentoStock.SuspendLayout();
             SuspendLayout();
             // 
@@ -113,9 +95,6 @@ namespace Granja
             panelNav.Controls.Add(btnMolino);
             panelNav.Controls.Add(btnInsumos);
             panelNav.Controls.Add(btnAlimento);
-            panelNav.Controls.Add(btnVentas);
-            panelNav.Controls.Add(btnAlmacen);
-            panelNav.Controls.Add(btnProduccion);
             panelNav.Controls.Add(btnDashboard);
             panelNav.Dock = DockStyle.Top;
             panelNav.Location = new Point(0, 80);
@@ -129,7 +108,7 @@ namespace Granja
             btnReportes.FlatAppearance.BorderSize = 0;
             btnReportes.FlatStyle = FlatStyle.Flat;
             btnReportes.Font = new Font("Segoe UI", 10F);
-            btnReportes.Location = new Point(971, 0);
+            btnReportes.Location = new Point(556, 2);
             btnReportes.Margin = new Padding(3, 4, 3, 4);
             btnReportes.Name = "btnReportes";
             btnReportes.Size = new Size(137, 67);
@@ -143,7 +122,7 @@ namespace Granja
             btnMolino.FlatAppearance.BorderSize = 0;
             btnMolino.FlatStyle = FlatStyle.Flat;
             btnMolino.Font = new Font("Segoe UI", 10F);
-            btnMolino.Location = new Point(834, 0);
+            btnMolino.Location = new Point(419, 2);
             btnMolino.Margin = new Padding(3, 4, 3, 4);
             btnMolino.Name = "btnMolino";
             btnMolino.Size = new Size(137, 67);
@@ -157,7 +136,7 @@ namespace Granja
             btnInsumos.FlatAppearance.BorderSize = 0;
             btnInsumos.FlatStyle = FlatStyle.Flat;
             btnInsumos.Font = new Font("Segoe UI", 10F);
-            btnInsumos.Location = new Point(697, 0);
+            btnInsumos.Location = new Point(282, 2);
             btnInsumos.Margin = new Padding(3, 4, 3, 4);
             btnInsumos.Name = "btnInsumos";
             btnInsumos.Size = new Size(137, 67);
@@ -171,7 +150,7 @@ namespace Granja
             btnAlimento.FlatAppearance.BorderSize = 0;
             btnAlimento.FlatStyle = FlatStyle.Flat;
             btnAlimento.Font = new Font("Segoe UI", 10F);
-            btnAlimento.Location = new Point(560, 0);
+            btnAlimento.Location = new Point(145, 2);
             btnAlimento.Margin = new Padding(3, 4, 3, 4);
             btnAlimento.Name = "btnAlimento";
             btnAlimento.Size = new Size(137, 67);
@@ -242,7 +221,6 @@ namespace Granja
             panelMain.AutoScroll = true;
             panelMain.BackColor = Color.FromArgb(248, 249, 250);
             panelMain.Controls.Add(panelInsumos);
-            panelMain.Controls.Add(panelProduction);
             panelMain.Controls.Add(panelAlerts);
             panelMain.Controls.Add(panelCardsContainer);
             panelMain.Controls.Add(lblResumenTitle);
@@ -259,7 +237,7 @@ namespace Granja
             panelInsumos.BackColor = Color.White;
             panelInsumos.Controls.Add(dgvInsumos);
             panelInsumos.Controls.Add(lblInsumosTitle);
-            panelInsumos.Location = new Point(34, 793);
+            panelInsumos.Location = new Point(33, 457);
             panelInsumos.Margin = new Padding(3, 4, 3, 4);
             panelInsumos.Name = "panelInsumos";
             panelInsumos.Padding = new Padding(30);
@@ -291,41 +269,6 @@ namespace Granja
             lblInsumosTitle.Size = new Size(307, 32);
             lblInsumosTitle.TabIndex = 0;
             lblInsumosTitle.Text = "Stock de Insumos Críticos";
-            // 
-            // panelProduction
-            // 
-            panelProduction.Controls.Add(dgvProduccion);
-            panelProduction.Controls.Add(lblProductionReciente);
-            panelProduction.Location = new Point(34, 453);
-            panelProduction.Margin = new Padding(3, 4, 3, 4);
-            panelProduction.Name = "panelProduction";
-            panelProduction.Size = new Size(1189, 320);
-            panelProduction.TabIndex = 3;
-            // 
-            // dgvProduccion
-            // 
-            dgvProduccion.AllowUserToAddRows = false;
-            dgvProduccion.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvProduccion.BackgroundColor = Color.White;
-            dgvProduccion.BorderStyle = BorderStyle.None;
-            dgvProduccion.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvProduccion.Location = new Point(0, 53);
-            dgvProduccion.Margin = new Padding(3, 4, 3, 4);
-            dgvProduccion.Name = "dgvProduccion";
-            dgvProduccion.RowHeadersVisible = false;
-            dgvProduccion.RowHeadersWidth = 51;
-            dgvProduccion.Size = new Size(1189, 240);
-            dgvProduccion.TabIndex = 1;
-            // 
-            // lblProductionReciente
-            // 
-            lblProductionReciente.AutoSize = true;
-            lblProductionReciente.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            lblProductionReciente.Location = new Point(0, 13);
-            lblProductionReciente.Name = "lblProductionReciente";
-            lblProductionReciente.Size = new Size(206, 28);
-            lblProductionReciente.TabIndex = 0;
-            lblProductionReciente.Text = "Producción Reciente";
             // 
             // panelAlerts
             // 
@@ -365,15 +308,13 @@ namespace Granja
             lblAlertas.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             lblAlertas.Location = new Point(0, 13);
             lblAlertas.Name = "lblAlertas";
-            lblAlertas.Size = new Size(128, 28);
+            lblAlertas.Size = new Size(130, 28);
             lblAlertas.TabIndex = 0;
             lblAlertas.Text = "🔔 ALERTAS";
             // 
             // panelCardsContainer
             // 
-            panelCardsContainer.Controls.Add(cardHuevos);
             panelCardsContainer.Controls.Add(cardStock);
-            panelCardsContainer.Controls.Add(cardVentas);
             panelCardsContainer.Controls.Add(cardAlimentoStock);
             panelCardsContainer.Location = new Point(34, 80);
             panelCardsContainer.Margin = new Padding(3, 4, 3, 4);
@@ -430,7 +371,7 @@ namespace Granja
             cardStock.Controls.Add(lblStock);
             cardStock.Controls.Add(lblStockValor);
             cardStock.Controls.Add(accStock);
-            cardStock.Location = new Point(286, 0);
+            cardStock.Location = new Point(0, 0);
             cardStock.Margin = new Padding(0, 0, 23, 0);
             cardStock.Name = "cardStock";
             cardStock.Size = new Size(263, 160);
@@ -516,7 +457,7 @@ namespace Granja
             cardAlimentoStock.Controls.Add(lblAlimentoStock);
             cardAlimentoStock.Controls.Add(lblAlimentoValor);
             cardAlimentoStock.Controls.Add(accAlimento);
-            cardAlimentoStock.Location = new Point(858, 0);
+            cardAlimentoStock.Location = new Point(286, 0);
             cardAlimentoStock.Margin = new Padding(0, 0, 23, 0);
             cardAlimentoStock.Name = "cardAlimentoStock";
             cardAlimentoStock.Size = new Size(263, 160);
@@ -560,7 +501,7 @@ namespace Granja
             lblResumenTitle.ForeColor = Color.FromArgb(44, 62, 80);
             lblResumenTitle.Location = new Point(34, 27);
             lblResumenTitle.Name = "lblResumenTitle";
-            lblResumenTitle.Size = new Size(281, 32);
+            lblResumenTitle.Size = new Size(283, 32);
             lblResumenTitle.TabIndex = 0;
             lblResumenTitle.Text = "📊 RESUMEN GENERAL";
             // 
@@ -584,20 +525,13 @@ namespace Granja
             panelInsumos.ResumeLayout(false);
             panelInsumos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvInsumos).EndInit();
-            panelProduction.ResumeLayout(false);
-            panelProduction.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvProduccion).EndInit();
             panelAlerts.ResumeLayout(false);
             panelAlerts.PerformLayout();
             panelAlertBox.ResumeLayout(false);
             panelAlertBox.PerformLayout();
             panelCardsContainer.ResumeLayout(false);
-            cardHuevos.ResumeLayout(false);
-            cardHuevos.PerformLayout();
             cardStock.ResumeLayout(false);
             cardStock.PerformLayout();
-            cardVentas.ResumeLayout(false);
-            cardVentas.PerformLayout();
             cardAlimentoStock.ResumeLayout(false);
             cardAlimentoStock.PerformLayout();
             ResumeLayout(false);
@@ -610,9 +544,6 @@ namespace Granja
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Panel panelNav;
         private System.Windows.Forms.Button btnDashboard;
-        private System.Windows.Forms.Button btnProduccion;
-        private System.Windows.Forms.Button btnAlmacen;
-        private System.Windows.Forms.Button btnVentas;
         private System.Windows.Forms.Button btnAlimento;
         private System.Windows.Forms.Button btnInsumos;
         private System.Windows.Forms.Button btnMolino;
@@ -624,24 +555,13 @@ namespace Granja
         private System.Windows.Forms.Label lblAlertas;
         private System.Windows.Forms.Panel panelAlertBox;
         private System.Windows.Forms.Label lblAlerta;
-        private System.Windows.Forms.Panel panelProduction;
-        private System.Windows.Forms.Label lblProductionReciente;
-        private System.Windows.Forms.DataGridView dgvProduccion;
-        private System.Windows.Forms.Label lblHuevosHoy;
-        private System.Windows.Forms.Label lblHuevosValor;
-        private System.Windows.Forms.Panel accHuevos;
         private System.Windows.Forms.Label lblStock;
         private System.Windows.Forms.Label lblStockValor;
         private System.Windows.Forms.Panel accStock;
-        private System.Windows.Forms.Label lblVentasHoy;
-        private System.Windows.Forms.Label lblVentasValor;
-        private System.Windows.Forms.Panel accVentas;
         private System.Windows.Forms.Label lblAlimentoStock;
         private System.Windows.Forms.Label lblAlimentoValor;
         private System.Windows.Forms.Panel accAlimento;
-        private System.Windows.Forms.Panel cardHuevos;
         private System.Windows.Forms.Panel cardStock;
-        private System.Windows.Forms.Panel cardVentas;
         private System.Windows.Forms.Panel cardAlimentoStock;
         private System.Windows.Forms.Panel panelInsumos;
         private System.Windows.Forms.Label lblInsumosTitle;

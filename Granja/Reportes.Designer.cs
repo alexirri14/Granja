@@ -24,16 +24,11 @@ namespace Granja
             btnMolino = new Button();
             btnInsumos = new Button();
             btnAlimento = new Button();
-            btnVentas = new Button();
-            btnAlmacen = new Button();
-            btnProduccion = new Button();
             btnDashboard = new Button();
             panelMain = new Panel();
             lblReportesTitle = new Label();
             panelTabs = new Panel();
             btnStockActual = new Button();
-            btnVentasDiarias = new Button();
-            btnFlujoHuevos = new Button();
             btnProduccionGalpon = new Button();
             panelContenido = new Panel();
             panelHeader.SuspendLayout();
@@ -71,9 +66,6 @@ namespace Granja
             panelNav.Controls.Add(btnMolino);
             panelNav.Controls.Add(btnInsumos);
             panelNav.Controls.Add(btnAlimento);
-            panelNav.Controls.Add(btnVentas);
-            panelNav.Controls.Add(btnAlmacen);
-            panelNav.Controls.Add(btnProduccion);
             panelNav.Controls.Add(btnDashboard);
             panelNav.Dock = DockStyle.Top;
             panelNav.Location = new Point(0, 80);
@@ -88,7 +80,7 @@ namespace Granja
             btnReportes.FlatStyle = FlatStyle.Flat;
             btnReportes.Font = new Font("Segoe UI", 10F);
             btnReportes.ForeColor = Color.FromArgb(0, 125, 62);
-            btnReportes.Location = new Point(943, 2);
+            btnReportes.Location = new Point(551, 1);
             btnReportes.Margin = new Padding(3, 4, 3, 4);
             btnReportes.Name = "btnReportes";
             btnReportes.Size = new Size(137, 67);
@@ -102,7 +94,7 @@ namespace Granja
             btnMolino.FlatAppearance.BorderSize = 0;
             btnMolino.FlatStyle = FlatStyle.Flat;
             btnMolino.Font = new Font("Segoe UI", 10F);
-            btnMolino.Location = new Point(806, 4);
+            btnMolino.Location = new Point(414, 3);
             btnMolino.Margin = new Padding(3, 4, 3, 4);
             btnMolino.Name = "btnMolino";
             btnMolino.Size = new Size(137, 67);
@@ -116,7 +108,7 @@ namespace Granja
             btnInsumos.FlatAppearance.BorderSize = 0;
             btnInsumos.FlatStyle = FlatStyle.Flat;
             btnInsumos.Font = new Font("Segoe UI", 10F);
-            btnInsumos.Location = new Point(681, 4);
+            btnInsumos.Location = new Point(289, 3);
             btnInsumos.Margin = new Padding(3, 4, 3, 4);
             btnInsumos.Name = "btnInsumos";
             btnInsumos.Size = new Size(137, 67);
@@ -130,7 +122,7 @@ namespace Granja
             btnAlimento.FlatAppearance.BorderSize = 0;
             btnAlimento.FlatStyle = FlatStyle.Flat;
             btnAlimento.Font = new Font("Segoe UI", 10F);
-            btnAlimento.Location = new Point(538, 4);
+            btnAlimento.Location = new Point(146, 3);
             btnAlimento.Margin = new Padding(3, 4, 3, 4);
             btnAlimento.Name = "btnAlimento";
             btnAlimento.Size = new Size(137, 67);
@@ -186,10 +178,10 @@ namespace Granja
             btnDashboard.FlatAppearance.BorderSize = 0;
             btnDashboard.FlatStyle = FlatStyle.Flat;
             btnDashboard.Font = new Font("Segoe UI", 10F);
-            btnDashboard.Location = new Point(3, 2);
+            btnDashboard.Location = new Point(12, 3);
             btnDashboard.Margin = new Padding(3, 4, 3, 4);
             btnDashboard.Name = "btnDashboard";
-            btnDashboard.Size = new Size(137, 67);
+            btnDashboard.Size = new Size(128, 67);
             btnDashboard.TabIndex = 0;
             btnDashboard.Text = "Dashboard";
             btnDashboard.UseVisualStyleBackColor = true;
@@ -225,8 +217,6 @@ namespace Granja
             // 
             panelTabs.BackColor = Color.White;
             panelTabs.Controls.Add(btnStockActual);
-            panelTabs.Controls.Add(btnVentasDiarias);
-            panelTabs.Controls.Add(btnFlujoHuevos);
             panelTabs.Controls.Add(btnProduccionGalpon);
             panelTabs.Location = new Point(34, 100);
             panelTabs.Margin = new Padding(3, 4, 3, 4);
@@ -242,7 +232,7 @@ namespace Granja
             btnStockActual.FlatStyle = FlatStyle.Flat;
             btnStockActual.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             btnStockActual.ForeColor = Color.FromArgb(44, 62, 80);
-            btnStockActual.Location = new Point(880, 20);
+            btnStockActual.Location = new Point(306, 20);
             btnStockActual.Name = "btnStockActual";
             btnStockActual.Size = new Size(280, 50);
             btnStockActual.TabIndex = 3;
@@ -288,7 +278,7 @@ namespace Granja
             btnProduccionGalpon.Name = "btnProduccionGalpon";
             btnProduccionGalpon.Size = new Size(280, 50);
             btnProduccionGalpon.TabIndex = 0;
-            btnProduccionGalpon.Text = "Producción por galpón";
+            btnProduccionGalpon.Text = "[Cambiar de nombre]";
             btnProduccionGalpon.UseVisualStyleBackColor = false;
             // 
             // panelContenido
@@ -325,9 +315,6 @@ namespace Granja
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Panel panelNav;
         private System.Windows.Forms.Button btnDashboard;
-        private System.Windows.Forms.Button btnProduccion;
-        private System.Windows.Forms.Button btnAlmacen;
-        private System.Windows.Forms.Button btnVentas;
         private System.Windows.Forms.Button btnAlimento;
         private System.Windows.Forms.Button btnInsumos;
         private System.Windows.Forms.Button btnMolino;
@@ -335,11 +322,9 @@ namespace Granja
         private System.Windows.Forms.Panel panelMain;
         private System.Windows.Forms.Label lblReportesTitle;
         private System.Windows.Forms.Panel panelTabs;
-        private System.Windows.Forms.Button btnProduccionGalpon;
-        private System.Windows.Forms.Button btnFlujoHuevos;
-        private System.Windows.Forms.Button btnVentasDiarias;
         private System.Windows.Forms.Button btnStockActual;
         private System.Windows.Forms.Panel panelContenido;
+        private Button btnProduccionGalpon;
     }
 }
 
