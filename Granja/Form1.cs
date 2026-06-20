@@ -1,3 +1,7 @@
+using System;
+using System.Linq;
+using System.Windows.Forms;
+
 namespace Granja
 {
     public partial class Form1 : Form
@@ -5,30 +9,65 @@ namespace Granja
         public Form1()
         {
             InitializeComponent();
-            PopulateData();
+            ConfigurarVista();
+            CargarDashboard();
         }
 
-        private void PopulateData()
+        private void ConfigurarVista()
         {
-            dgvProduccion.Columns.Add("Galpon", "Galpón");
+            UiHelper.ConfigurarTituloGeneral(lblTitle);
+            UiHelper.ConfigurarNavegacion(btnDashboard, btnProduccion, btnAlmacen, btnVentas, btnAlimento, btnInsumos, btnMolino, btnReportes);
+
+            lblResumenTitle.Text = "Panel Principal";
+            lblAlertas.Text = "ALERTAS";
+            lblProductionReciente.Text = "Órdenes de producción";
+            lblInsumosTitle.Text = "Insumos con stock mínimo";
+
+            lblHuevosHoy.Text = "Insumos críticos";
+            lblStock.Text = "Alimento disponible";
+            lblVentasHoy.Text = "Órdenes pendientes";
+            lblAlimentoStock.Text = "Solicitudes pendientes";
+        }
+
+        private void CargarDashboard()
+        {
+            lblHuevosValor.Text = GlobalData.ObtenerInsumosCriticos().Count().ToString();
+            lblStockValor.Text = GlobalData.StockAlimentos.Sum(s => s.StockDisponible).ToString("F0");
+            lblVentasValor.Text = GlobalData.OrdenesProduccion.Count(o => o.Estado != "Completada").ToString();
+            lblAlimentoValor.Text = GlobalData.SolicitudesAlimentoGalpones.Count(s => s.Estado == "Pendiente").ToString();
+            lblAlerta.Text = GlobalData.ObtenerResumenAlertas();
+
+            dgvProduccion.Columns.Clear();
+            dgvProduccion.Columns.Add("Numero", "Orden");
             dgvProduccion.Columns.Add("Fecha", "Fecha");
-            dgvProduccion.Columns.Add("Huevos", "Huevos");
+            dgvProduccion.Columns.Add("Formula", "Fórmula");
+            dgvProduccion.Columns.Add("Cantidad", "Objetivo");
+            dgvProduccion.Columns.Add("Estado", "Estado");
 
-            dgvProduccion.Rows.Add("A", "8/4/2026", "300");
-            dgvProduccion.Rows.Add("B", "8/4/2026", "250");
-            dgvProduccion.Rows.Add("C", "7/4/2026", "280");
-            dgvProduccion.Rows.Add("A", "7/4/2026", "290");
+            foreach (var orden in GlobalData.OrdenesProduccion.OrderByDescending(o => o.Fecha))
+            {
+                dgvProduccion.Rows.Add(
+                    orden.Numero,
+                    orden.Fecha.ToString("dd/MM/yyyy"),
+                    orden.Formula,
+                    orden.CantidadObjetivo.ToString("F2"),
+                    orden.Estado);
+            }
 
+            dgvInsumos.Columns.Clear();
             dgvInsumos.Columns.Add("Insumo", "Insumo");
-            dgvInsumos.Columns.Add("StockActual", "Stock Actual");
-            dgvInsumos.Columns.Add("StockMinimo", "Stock Mínimo");
+            dgvInsumos.Columns.Add("Disponible", "Disponible");
+            dgvInsumos.Columns.Add("Minimo", "Stock mínimo");
             dgvInsumos.Columns.Add("Estado", "Estado");
 
-            dgvInsumos.Rows.Add("Maíz", "2500.00 KG", "500.00 KG", "Normal");
-            dgvInsumos.Rows.Add("Torta de Soya", "1200.00 KG", "300.00 KG", "Normal");
-            dgvInsumos.Rows.Add("Soya Integral", "800.00 KG", "200.00 KG", "Normal");
-            dgvInsumos.Rows.Add("Afrechillo", "600.00 KG", "150.00 KG", "Normal");
-            dgvInsumos.Rows.Add("Sal Industrial", "400.00 KG", "100.00 KG", "Normal");
+            foreach (var insumo in GlobalData.ObtenerInsumosCriticos())
+            {
+                dgvInsumos.Rows.Add(
+                    insumo.Nombre,
+                    $"{insumo.StockDisponible:F2} {insumo.Unidad}",
+                    $"{insumo.StockMinimo:F2} {insumo.Unidad}",
+                    insumo.Estado);
+            }
         }
 
         private void btnDashboard_Click(object sender, EventArgs e)
@@ -54,8 +93,8 @@ namespace Granja
 
         private void btnVentas_Click(object sender, EventArgs e)
         {
-            Ventas formventa = new Ventas();
-            formventa.Show();
+            Ventas maestros = new Ventas();
+            maestros.Show();
             this.Hide();
         }
 
@@ -86,8 +125,5 @@ namespace Granja
             ins.Show();
             this.Hide();
         }
-
-
-
     }
 }

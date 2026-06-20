@@ -160,7 +160,7 @@ namespace Granja
             btnVentas.Name = "btnVentas";
             btnVentas.Size = new Size(137, 67);
             btnVentas.TabIndex = 3;
-            btnVentas.Text = " Ventas";
+            btnVentas.Text = " Administrador";
             btnVentas.UseVisualStyleBackColor = true;
             btnVentas.Click += btnVentas_Click;
             // 
@@ -232,9 +232,9 @@ namespace Granja
             lblStockTotal.ForeColor = Color.FromArgb(0, 125, 62);
             lblStockTotal.Location = new Point(1023, 40);
             lblStockTotal.Name = "lblStockTotal";
-            lblStockTotal.Size = new Size(222, 46);
+            lblStockTotal.Size = new Size(40, 46);
             lblStockTotal.TabIndex = 4;
-            lblStockTotal.Text = "8500 huevos";
+            lblStockTotal.Text = "0";
             // 
             // lblStockLabel
             // 
@@ -258,7 +258,7 @@ namespace Granja
             btnRegistrarMovimiento.Name = "btnRegistrarMovimiento";
             btnRegistrarMovimiento.Size = new Size(230, 55);
             btnRegistrarMovimiento.TabIndex = 2;
-            btnRegistrarMovimiento.Text = "+ Registrar movimiento";
+            btnRegistrarMovimiento.Text = "Nueva distribución";
             btnRegistrarMovimiento.UseVisualStyleBackColor = false;
             btnRegistrarMovimiento.Click += btnRegistrarMovimiento_Click;
             // 
@@ -269,9 +269,9 @@ namespace Granja
             lblAlmacenTitle.ForeColor = Color.FromArgb(26, 32, 44);
             lblAlmacenTitle.Location = new Point(34, 20);
             lblAlmacenTitle.Name = "lblAlmacenTitle";
-            lblAlmacenTitle.Size = new Size(294, 41);
+            lblAlmacenTitle.Size = new Size(353, 41);
             lblAlmacenTitle.TabIndex = 1;
-            lblAlmacenTitle.Text = "Almacén de Huevos";
+            lblAlmacenTitle.Text = "Distribución a Galpones";
             // 
             // panelNuevoMovimiento
             // 
@@ -327,7 +327,7 @@ namespace Granja
             txtCantidad.Font = new Font("Segoe UI", 12F);
             txtCantidad.Location = new Point(30, 259);
             txtCantidad.Name = "txtCantidad";
-            txtCantidad.PlaceholderText = "Número de huevos";
+            txtCantidad.PlaceholderText = "Cantidad solicitada / distribuida";
             txtCantidad.Size = new Size(1129, 34);
             txtCantidad.TabIndex = 6;
             // 
@@ -367,18 +367,18 @@ namespace Granja
             lblNuevoMovimientoTitle.AutoSize = true;
             lblNuevoMovimientoTitle.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
             lblNuevoMovimientoTitle.ForeColor = Color.FromArgb(26, 32, 44);
-            lblNuevoMovimientoTitle.Location = new Point(27, 28);
+            lblNuevoMovimientoTitle.Location = new Point(27, 15);
             lblNuevoMovimientoTitle.Name = "lblNuevoMovimientoTitle";
-            lblNuevoMovimientoTitle.Size = new Size(235, 32);
+            lblNuevoMovimientoTitle.Size = new Size(279, 32);
             lblNuevoMovimientoTitle.TabIndex = 0;
-            lblNuevoMovimientoTitle.Text = "Nuevo Movimiento";
+            lblNuevoMovimientoTitle.Text = "Solicitud y distribución";
             // 
             // cmbTipo
             // 
             cmbTipo.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbTipo.Font = new Font("Segoe UI", 12F);
             cmbTipo.FormattingEnabled = true;
-            cmbTipo.Items.AddRange(new object[] { "Pérdida" });
+            cmbTipo.Items.AddRange(new object[] { "Solicitud de alimento", "Distribución" });
             cmbTipo.Location = new Point(30, 100);
             cmbTipo.Name = "cmbTipo";
             cmbTipo.Size = new Size(1129, 36);
@@ -391,9 +391,9 @@ namespace Granja
             lblTipo.ForeColor = Color.FromArgb(44, 62, 80);
             lblTipo.Location = new Point(27, 67);
             lblTipo.Name = "lblTipo";
-            lblTipo.Size = new Size(173, 23);
+            lblTipo.Size = new Size(139, 23);
             lblTipo.TabIndex = 1;
-            lblTipo.Text = "Tipo de movimiento";
+            lblTipo.Text = "Tipo de registro";
             // 
             // panelMovimientos
             // 
@@ -490,3 +490,4 @@ namespace Granja
         private System.Windows.Forms.Label lblMovimientosTitle;
     }
 }
+

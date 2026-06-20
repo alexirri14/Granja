@@ -190,7 +190,7 @@ namespace Granja
             btnVentas.Name = "btnVentas";
             btnVentas.Size = new Size(137, 67);
             btnVentas.TabIndex = 3;
-            btnVentas.Text = " Ventas";
+            btnVentas.Text = " Administrador";
             btnVentas.UseVisualStyleBackColor = true;
             btnVentas.Click += btnVentas_Click;
             // 
@@ -402,7 +402,7 @@ namespace Granja
             lblHuevosHoy.Name = "lblHuevosHoy";
             lblHuevosHoy.Size = new Size(86, 20);
             lblHuevosHoy.TabIndex = 0;
-            lblHuevosHoy.Text = "Huevos hoy";
+            lblHuevosHoy.Text = "Insumos críticos";
             // 
             // lblHuevosValor
             // 
@@ -488,7 +488,7 @@ namespace Granja
             lblVentasHoy.Name = "lblVentasHoy";
             lblVentasHoy.Size = new Size(80, 20);
             lblVentasHoy.TabIndex = 0;
-            lblVentasHoy.Text = "Ventas hoy";
+            lblVentasHoy.Text = "Órdenes pendientes";
             // 
             // lblVentasValor
             // 
@@ -650,4 +650,5 @@ namespace Granja
         #endregion
     }
 }
+
 

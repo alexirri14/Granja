@@ -149,7 +149,7 @@ namespace Granja
             btnVentas.Name = "btnVentas";
             btnVentas.Size = new Size(137, 67);
             btnVentas.TabIndex = 3;
-            btnVentas.Text = "Ventas";
+            btnVentas.Text = "Administrador";
             btnVentas.UseVisualStyleBackColor = true;
             btnVentas.Click += btnVentas_Click;
             // 
@@ -260,7 +260,7 @@ namespace Granja
             btnVentasDiarias.Name = "btnVentasDiarias";
             btnVentasDiarias.Size = new Size(280, 50);
             btnVentasDiarias.TabIndex = 2;
-            btnVentasDiarias.Text = "Ventas diarias";
+            btnVentasDiarias.Text = "Producción";
             btnVentasDiarias.UseVisualStyleBackColor = false;
             // 
             // btnFlujoHuevos
@@ -274,7 +274,7 @@ namespace Granja
             btnFlujoHuevos.Name = "btnFlujoHuevos";
             btnFlujoHuevos.Size = new Size(280, 50);
             btnFlujoHuevos.TabIndex = 1;
-            btnFlujoHuevos.Text = "Flujo de Huevos";
+            btnFlujoHuevos.Text = "Órdenes";
             btnFlujoHuevos.UseVisualStyleBackColor = false;
             // 
             // btnProduccionGalpon
@@ -293,9 +293,9 @@ namespace Granja
             // 
             // panelContenido
             // 
-            panelContenido.Location = new Point(34, 220);
+            panelContenido.Location = new Point(34, 197);
             panelContenido.Name = "panelContenido";
-            panelContenido.Size = new Size(1189, 530);
+            panelContenido.Size = new Size(1189, 553);
             panelContenido.TabIndex = 2;
             // 
             // Reportes
@@ -342,3 +342,4 @@ namespace Granja
         private System.Windows.Forms.Panel panelContenido;
     }
 }
+

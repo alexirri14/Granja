@@ -162,7 +162,7 @@ namespace Granja
             btnVentas.Name = "btnVentas";
             btnVentas.Size = new Size(137, 67);
             btnVentas.TabIndex = 3;
-            btnVentas.Text = " Ventas";
+            btnVentas.Text = " Administrador";
             btnVentas.UseVisualStyleBackColor = true;
             btnVentas.Click += btnVentas_Click;
             // 
@@ -243,9 +243,9 @@ namespace Granja
             lblTotalVentas.ForeColor = Color.FromArgb(0, 125, 62);
             lblTotalVentas.Location = new Point(850, 330);
             lblTotalVentas.Name = "lblTotalVentas";
-            lblTotalVentas.Size = new Size(192, 46);
+            lblTotalVentas.Size = new Size(40, 46);
             lblTotalVentas.TabIndex = 3;
-            lblTotalVentas.Text = "S/ 5625.00";
+            lblTotalVentas.Text = "0";
             // 
             // lblTotalVentasLabel
             // 
@@ -254,9 +254,9 @@ namespace Granja
             lblTotalVentasLabel.ForeColor = Color.Gray;
             lblTotalVentasLabel.Location = new Point(850, 300);
             lblTotalVentasLabel.Name = "lblTotalVentasLabel";
-            lblTotalVentasLabel.Size = new Size(100, 23);
+            lblTotalVentasLabel.Size = new Size(116, 23);
             lblTotalVentasLabel.TabIndex = 2;
-            lblTotalVentasLabel.Text = "Total ventas";
+            lblTotalVentasLabel.Text = "Total registros";
             // 
             // dgvVentas
             // 
@@ -279,9 +279,9 @@ namespace Granja
             lblHistorialTitle.ForeColor = Color.FromArgb(26, 32, 44);
             lblHistorialTitle.Location = new Point(0, 0);
             lblHistorialTitle.Name = "lblHistorialTitle";
-            lblHistorialTitle.Size = new Size(258, 37);
+            lblHistorialTitle.Size = new Size(301, 37);
             lblHistorialTitle.TabIndex = 0;
-            lblHistorialTitle.Text = "Historial de ventas";
+            lblHistorialTitle.Text = "Listado administrador";
             // 
             // panelRegistro
             // 
@@ -309,11 +309,11 @@ namespace Granja
             btnRegistrarVenta.FlatStyle = FlatStyle.Flat;
             btnRegistrarVenta.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             btnRegistrarVenta.ForeColor = Color.White;
-            btnRegistrarVenta.Location = new Point(30, 260);
+            btnRegistrarVenta.Location = new Point(33, 267);
             btnRegistrarVenta.Name = "btnRegistrarVenta";
-            btnRegistrarVenta.Size = new Size(1129, 55);
+            btnRegistrarVenta.Size = new Size(1108, 43);
             btnRegistrarVenta.TabIndex = 8;
-            btnRegistrarVenta.Text = "Registrar venta";
+            btnRegistrarVenta.Text = "Guardar registro";
             btnRegistrarVenta.UseVisualStyleBackColor = false;
             // 
             // panelTotal
@@ -321,7 +321,7 @@ namespace Granja
             panelTotal.BackColor = Color.FromArgb(240, 255, 240);
             panelTotal.Controls.Add(lblTotal);
             panelTotal.Controls.Add(lblTotalLabel);
-            panelTotal.Location = new Point(30, 190);
+            panelTotal.Location = new Point(30, 201);
             panelTotal.Name = "panelTotal";
             panelTotal.Size = new Size(1129, 60);
             panelTotal.TabIndex = 7;
@@ -331,11 +331,11 @@ namespace Granja
             lblTotal.AutoSize = true;
             lblTotal.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
             lblTotal.ForeColor = Color.FromArgb(0, 125, 62);
-            lblTotal.Location = new Point(1000, 10);
+            lblTotal.Location = new Point(1003, 9);
             lblTotal.Name = "lblTotal";
-            lblTotal.Size = new Size(140, 41);
+            lblTotal.Size = new Size(108, 41);
             lblTotal.TabIndex = 1;
-            lblTotal.Text = "$ S/ 0.00";
+            lblTotal.Text = "Activo";
             // 
             // lblTotalLabel
             // 
@@ -344,37 +344,36 @@ namespace Granja
             lblTotalLabel.ForeColor = Color.FromArgb(44, 62, 80);
             lblTotalLabel.Location = new Point(20, 15);
             lblTotalLabel.Name = "lblTotalLabel";
-            lblTotalLabel.Size = new Size(64, 28);
+            lblTotalLabel.Size = new Size(168, 28);
             lblTotalLabel.TabIndex = 0;
-            lblTotalLabel.Text = "Total:";
+            lblTotalLabel.Text = "Estado sugerido:";
             // 
             // txtPrecio
             // 
             txtPrecio.Font = new Font("Segoe UI", 12F);
-            txtPrecio.Location = new Point(600, 110);
+            txtPrecio.Location = new Point(600, 152);
             txtPrecio.Name = "txtPrecio";
-            txtPrecio.PlaceholderText = "7.5";
+            txtPrecio.PlaceholderText = "Observaciones o detalle";
             txtPrecio.Size = new Size(559, 34);
             txtPrecio.TabIndex = 6;
-            txtPrecio.Text = "7.5";
             // 
             // lblPrecio
             // 
             lblPrecio.AutoSize = true;
             lblPrecio.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             lblPrecio.ForeColor = Color.FromArgb(44, 62, 80);
-            lblPrecio.Location = new Point(600, 80);
+            lblPrecio.Location = new Point(600, 126);
             lblPrecio.Name = "lblPrecio";
-            lblPrecio.Size = new Size(180, 23);
+            lblPrecio.Size = new Size(67, 23);
             lblPrecio.TabIndex = 5;
-            lblPrecio.Text = "Precio por huevo (S/)";
+            lblPrecio.Text = "Detalle";
             // 
             // txtCantidad
             // 
             txtCantidad.Font = new Font("Segoe UI", 12F);
-            txtCantidad.Location = new Point(30, 110);
+            txtCantidad.Location = new Point(30, 152);
             txtCantidad.Name = "txtCantidad";
-            txtCantidad.PlaceholderText = "Número de huevos";
+            txtCantidad.PlaceholderText = "Activo / Inhabilitado";
             txtCantidad.Size = new Size(559, 34);
             txtCantidad.TabIndex = 4;
             // 
@@ -383,18 +382,18 @@ namespace Granja
             lblCantidad.AutoSize = true;
             lblCantidad.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             lblCantidad.ForeColor = Color.FromArgb(44, 62, 80);
-            lblCantidad.Location = new Point(30, 80);
+            lblCantidad.Location = new Point(30, 126);
             lblCantidad.Name = "lblCantidad";
-            lblCantidad.Size = new Size(155, 23);
+            lblCantidad.Size = new Size(63, 23);
             lblCantidad.TabIndex = 3;
-            lblCantidad.Text = "Cantidad (huevos)";
+            lblCantidad.Text = "Estado";
             // 
             // txtCliente
             // 
             txtCliente.Font = new Font("Segoe UI", 12F);
-            txtCliente.Location = new Point(30, 45);
+            txtCliente.Location = new Point(27, 89);
             txtCliente.Name = "txtCliente";
-            txtCliente.PlaceholderText = "Nombre del cliente";
+            txtCliente.PlaceholderText = "Nombre del galpón o fórmula";
             txtCliente.Size = new Size(1129, 34);
             txtCliente.TabIndex = 2;
             // 
@@ -403,22 +402,22 @@ namespace Granja
             lblCliente.AutoSize = true;
             lblCliente.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             lblCliente.ForeColor = Color.FromArgb(44, 62, 80);
-            lblCliente.Location = new Point(0, 15);
+            lblCliente.Location = new Point(33, 63);
             lblCliente.Name = "lblCliente";
-            lblCliente.Size = new Size(66, 23);
+            lblCliente.Size = new Size(76, 23);
             lblCliente.TabIndex = 1;
-            lblCliente.Text = "Cliente";
+            lblCliente.Text = "Nombre";
             // 
             // lblRegistroTitle
             // 
             lblRegistroTitle.AutoSize = true;
             lblRegistroTitle.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
             lblRegistroTitle.ForeColor = Color.FromArgb(26, 32, 44);
-            lblRegistroTitle.Location = new Point(0, 0);
+            lblRegistroTitle.Location = new Point(3, 11);
             lblRegistroTitle.Name = "lblRegistroTitle";
-            lblRegistroTitle.Size = new Size(280, 41);
+            lblRegistroTitle.Size = new Size(342, 41);
             lblRegistroTitle.TabIndex = 0;
-            lblRegistroTitle.Text = "Registro de Ventas";
+            lblRegistroTitle.Text = "Módulo Administrador";
             // 
             // Ventas
             // 
@@ -431,7 +430,7 @@ namespace Granja
             Margin = new Padding(3, 4, 3, 4);
             Name = "Ventas";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Ventas - Rancho del Buen Pastor";
+            Text = "Administrador - Rancho del Buen Pastor";
             panelHeader.ResumeLayout(false);
             panelHeader.PerformLayout();
             panelNav.ResumeLayout(false);
@@ -479,3 +478,4 @@ namespace Granja
         private System.Windows.Forms.Label lblTotalVentasLabel;
     }
 }
+

@@ -156,7 +156,7 @@ namespace Granja
             btnVentas.Name = "btnVentas";
             btnVentas.Size = new Size(137, 67);
             btnVentas.TabIndex = 3;
-            btnVentas.Text = " Ventas";
+            btnVentas.Text = " Administrador";
             btnVentas.UseVisualStyleBackColor = true;
             btnVentas.Click += btnVentas_Click;
             // 
@@ -241,7 +241,7 @@ namespace Granja
             btnRegistrarProduccion.FlatStyle = FlatStyle.Flat;
             btnRegistrarProduccion.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             btnRegistrarProduccion.ForeColor = Color.White;
-            btnRegistrarProduccion.Location = new Point(30, 310);
+            btnRegistrarProduccion.Location = new Point(258, 323);
             btnRegistrarProduccion.Name = "btnRegistrarProduccion";
             btnRegistrarProduccion.Size = new Size(200, 45);
             btnRegistrarProduccion.TabIndex = 6;
@@ -251,9 +251,9 @@ namespace Granja
             // txtCantidadSacos
             // 
             txtCantidadSacos.Font = new Font("Segoe UI", 12F);
-            txtCantidadSacos.Location = new Point(600, 250);
+            txtCantidadSacos.Location = new Point(600, 271);
             txtCantidadSacos.Name = "txtCantidadSacos";
-            txtCantidadSacos.PlaceholderText = "Número de sacos";
+            txtCantidadSacos.PlaceholderText = "Cantidad a producir";
             txtCantidadSacos.Size = new Size(559, 34);
             txtCantidadSacos.TabIndex = 5;
             // 
@@ -262,18 +262,18 @@ namespace Granja
             lblCantidadSacos.AutoSize = true;
             lblCantidadSacos.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             lblCantidadSacos.ForeColor = Color.FromArgb(44, 62, 80);
-            lblCantidadSacos.Location = new Point(600, 220);
+            lblCantidadSacos.Location = new Point(600, 245);
             lblCantidadSacos.Name = "lblCantidadSacos";
-            lblCantidadSacos.Size = new Size(228, 23);
+            lblCantidadSacos.Size = new Size(170, 23);
             lblCantidadSacos.TabIndex = 4;
-            lblCantidadSacos.Text = "Cantidad producida (sacos)";
+            lblCantidadSacos.Text = "Cantidad a procesar";
             // 
             // txtNombreLote
             // 
             txtNombreLote.Font = new Font("Segoe UI", 12F);
-            txtNombreLote.Location = new Point(30, 250);
+            txtNombreLote.Location = new Point(30, 271);
             txtNombreLote.Name = "txtNombreLote";
-            txtNombreLote.PlaceholderText = "Ej: Lote 1";
+            txtNombreLote.PlaceholderText = "Observación del proceso";
             txtNombreLote.Size = new Size(559, 34);
             txtNombreLote.TabIndex = 3;
             // 
@@ -282,29 +282,29 @@ namespace Granja
             lblNombreLote.AutoSize = true;
             lblNombreLote.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             lblNombreLote.ForeColor = Color.FromArgb(44, 62, 80);
-            lblNombreLote.Location = new Point(30, 220);
+            lblNombreLote.Location = new Point(30, 245);
             lblNombreLote.Name = "lblNombreLote";
-            lblNombreLote.Size = new Size(142, 23);
+            lblNombreLote.Size = new Size(67, 23);
             lblNombreLote.TabIndex = 2;
-            lblNombreLote.Text = "Nombre del lote";
+            lblNombreLote.Text = "Detalle";
             // 
             // linkAgregarInsumo
             // 
             linkAgregarInsumo.AutoSize = true;
             linkAgregarInsumo.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             linkAgregarInsumo.LinkColor = Color.FromArgb(0, 125, 62);
-            linkAgregarInsumo.Location = new Point(30, 170);
+            linkAgregarInsumo.Location = new Point(23, 335);
             linkAgregarInsumo.Name = "linkAgregarInsumo";
-            linkAgregarInsumo.Size = new Size(156, 23);
+            linkAgregarInsumo.Size = new Size(229, 23);
             linkAgregarInsumo.TabIndex = 1;
             linkAgregarInsumo.TabStop = true;
-            linkAgregarInsumo.Text = "+ Agregar insumo";
+            linkAgregarInsumo.Text = "Registrar salida de insumos";
             // 
             // panelInsumos
             // 
-            panelInsumos.Location = new Point(30, 50);
+            panelInsumos.Location = new Point(30, 12);
             panelInsumos.Name = "panelInsumos";
-            panelInsumos.Size = new Size(1129, 110);
+            panelInsumos.Size = new Size(1129, 171);
             panelInsumos.TabIndex = 0;
             // 
             // panelHistorial
@@ -338,11 +338,12 @@ namespace Granja
             lblHistorialTitle.AutoSize = true;
             lblHistorialTitle.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
             lblHistorialTitle.ForeColor = Color.FromArgb(26, 32, 44);
-            lblHistorialTitle.Location = new Point(0, 0);
+            lblHistorialTitle.Location = new Point(13, 10);
             lblHistorialTitle.Name = "lblHistorialTitle";
-            lblHistorialTitle.Size = new Size(111, 32);
+            lblHistorialTitle.Size = new Size(268, 32);
             lblHistorialTitle.TabIndex = 0;
-            lblHistorialTitle.Text = "Historial";
+            lblHistorialTitle.Text = "Producción registrada";
+            lblHistorialTitle.Click += lblHistorialTitle_Click;
             // 
             // lblMolinoTitle
             // 
@@ -351,9 +352,9 @@ namespace Granja
             lblMolinoTitle.ForeColor = Color.FromArgb(26, 32, 44);
             lblMolinoTitle.Location = new Point(34, 20);
             lblMolinoTitle.Name = "lblMolinoTitle";
-            lblMolinoTitle.Size = new Size(357, 41);
+            lblMolinoTitle.Size = new Size(281, 41);
             lblMolinoTitle.TabIndex = 1;
-            lblMolinoTitle.Text = "Producción de Alimento";
+            lblMolinoTitle.Text = "Módulo de Molino";
             // 
             // Molino
             // 
@@ -408,3 +409,4 @@ namespace Granja
         private System.Windows.Forms.Button btnRegistrarProduccion;
     }
 }
+

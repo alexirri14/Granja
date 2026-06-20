@@ -156,7 +156,7 @@ namespace Granja
             btnVentas.Name = "btnVentas";
             btnVentas.Size = new Size(137, 67);
             btnVentas.TabIndex = 3;
-            btnVentas.Text = " Ventas";
+            btnVentas.Text = " Administrador";
             btnVentas.UseVisualStyleBackColor = true;
             btnVentas.Click += btnVentas_Click;
             // 
@@ -247,7 +247,7 @@ namespace Granja
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(150, 45);
             btnCancelar.TabIndex = 8;
-            btnCancelar.Text = "✕ Cancelar";
+            btnCancelar.Text = "Actualizar estado";
             btnCancelar.UseVisualStyleBackColor = false;
             // 
             // btnGuardar
@@ -261,7 +261,7 @@ namespace Granja
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(150, 45);
             btnGuardar.TabIndex = 7;
-            btnGuardar.Text = "💾 Guardar";
+            btnGuardar.Text = "Registrar orden";
             btnGuardar.UseVisualStyleBackColor = false;
             // 
             // txtCantidad
@@ -269,7 +269,7 @@ namespace Granja
             txtCantidad.Font = new Font("Segoe UI", 12F);
             txtCantidad.Location = new Point(27, 201);
             txtCantidad.Name = "txtCantidad";
-            txtCantidad.PlaceholderText = "Número de javas";
+            txtCantidad.PlaceholderText = "Cantidad de alimento balanceado";
             txtCantidad.Size = new Size(1129, 34);
             txtCantidad.TabIndex = 6;
             // 
@@ -309,7 +309,7 @@ namespace Granja
             cmbGalpon.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbGalpon.Font = new Font("Segoe UI", 12F);
             cmbGalpon.FormattingEnabled = true;
-            cmbGalpon.Items.AddRange(new object[] { "A", "B", "C", "D" });
+            cmbGalpon.Items.AddRange(new object[] { "Postura 1", "Postura 2", "Postura 3" });
             cmbGalpon.Location = new Point(27, 46);
             cmbGalpon.Name = "cmbGalpon";
             cmbGalpon.Size = new Size(1129, 36);
@@ -324,7 +324,7 @@ namespace Granja
             lblGalpon.Name = "lblGalpon";
             lblGalpon.Size = new Size(67, 23);
             lblGalpon.TabIndex = 1;
-            lblGalpon.Text = "Galpón";
+            lblGalpon.Text = "Fórmula";
             // 
             // panelList
             // 
@@ -361,7 +361,7 @@ namespace Granja
             lblListTitle.Name = "lblListTitle";
             lblListTitle.Size = new Size(229, 32);
             lblListTitle.TabIndex = 0;
-            lblListTitle.Text = "Producción del día";
+            lblListTitle.Text = "Historial de órdenes";
             // 
             // lblFormTitle
             // 
@@ -372,7 +372,7 @@ namespace Granja
             lblFormTitle.Name = "lblFormTitle";
             lblFormTitle.Size = new Size(316, 37);
             lblFormTitle.TabIndex = 0;
-            lblFormTitle.Text = "Registro de Producción";
+            lblFormTitle.Text = "Orden de Producción";
             // 
             // Produccion
             // 
@@ -428,3 +428,4 @@ namespace Granja
         private System.Windows.Forms.DataGridView dgvProduccionList;
     }
 }
+

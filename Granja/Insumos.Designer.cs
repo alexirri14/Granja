@@ -198,7 +198,7 @@ namespace Granja
             this.btnVentas.Name = "btnVentas";
             this.btnVentas.Size = new System.Drawing.Size(137, 67);
             this.btnVentas.TabIndex = 3;
-            this.btnVentas.Text = "Ventas";
+            this.btnVentas.Text = "Administrador";
             this.btnVentas.UseVisualStyleBackColor = true;
             this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
             // 
@@ -925,3 +925,4 @@ namespace Granja
         private System.Windows.Forms.Label lblRecetasTitulo;
     }
 }
+
