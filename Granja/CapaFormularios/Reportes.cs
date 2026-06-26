@@ -42,103 +42,93 @@ namespace Granja
         private Button btnActivo = null!;
         private TipoReporte reporteActual = TipoReporte.MovimientosInsumos;
         private bool actualizandoFiltros;
-        private readonly Panel panelReporte = new();
-        private readonly Panel panelFiltros = new();
-        private readonly Label lblTituloReporte = new();
-        private readonly Label lblDescripcionReporte = new();
-        private readonly Label lblFiltroDesde = new();
-        private readonly Label lblFiltroHasta = new();
-        private readonly Label lblFiltroCategoria = new();
-        private readonly Label lblResumen = new();
-        private readonly DateTimePicker dtpDesde = new();
-        private readonly DateTimePicker dtpHasta = new();
-        private readonly ComboBox cmbCategoria = new();
-        private readonly Button btnLimpiarFiltros = new();
-        private readonly Button btnExportarExcel = new();
-        private readonly Button btnExportarPdf = new();
-        private readonly SplitContainer splitReporte = new();
-        private readonly PictureBox picGrafico = new();
-        private readonly DataGridView dgvReporte = new();
         private DatosReporte? datosActuales;
 
         public Reportes()
         {
             InitializeComponent();
             ConfigurarVista();
-            btnActivo = btnProduccionGalpon;
+            btnActivo = btnReporteMovimientosInsumos;
             InicializarPanelReporte();
             CargarReporte(true);
 
-            btnProduccionGalpon.Click += (s, e) => CambiarReporte(btnProduccionGalpon, TipoReporte.MovimientosInsumos);
-            btnFlujoHuevos.Click += (s, e) => CambiarReporte(btnFlujoHuevos, TipoReporte.Ordenes);
-            btnVentasDiarias.Click += (s, e) => CambiarReporte(btnVentasDiarias, TipoReporte.Produccion);
-            btnStockActual.Click += (s, e) => CambiarReporte(btnStockActual, TipoReporte.Distribucion);
+            btnReporteMovimientosInsumos.Click += (s, e) => CambiarReporte(btnReporteMovimientosInsumos, TipoReporte.MovimientosInsumos);
+            btnReporteOrdenes.Click += (s, e) => CambiarReporte(btnReporteOrdenes, TipoReporte.Ordenes);
+            btnReporteProduccion.Click += (s, e) => CambiarReporte(btnReporteProduccion, TipoReporte.Produccion);
+            btnReporteDistribucion.Click += (s, e) => CambiarReporte(btnReporteDistribucion, TipoReporte.Distribucion);
         }
 
         private void ConfigurarVista()
         {
             UiHelper.ConfigurarTituloGeneral(lblTitle);
-            UiHelper.ConfigurarNavegacion(btnDashboard, btnProduccion, btnAlmacen, btnVentas, btnAlimento, btnInsumos, btnMolino, btnReportes);
+            UiHelper.ConfigurarNavegacion(panelNav, btnDashboard, btnProduccion, btnAlmacen, btnVentas, btnAlimento, btnInsumos, btnMolino, btnReportes, btnReportes);
 
             lblReportesTitle.Text = "Centro de Reportes";
-            btnProduccionGalpon.Text = "Mov. insumos";
-            btnFlujoHuevos.Text = "Órdenes";
-            btnVentasDiarias.Text = "Producción";
-            btnStockActual.Text = "Distribución";
+            btnReporteMovimientosInsumos.Text = "Mov. insumos";
+            btnReporteOrdenes.Text = "Órdenes";
+            btnReporteProduccion.Text = "Producción";
+            btnReporteDistribucion.Text = "Distribución";
+
+            panelMain.AutoScroll = false;
+            panelTabs.Location = new Point(34, 100);
+            panelTabs.Size = new Size(1189, 76);
+            panelTabs.Padding = new Padding(18);
+
+            btnReporteMovimientosInsumos.Location = new Point(18, 18);
+            btnReporteMovimientosInsumos.Size = new Size(175, 40);
+            btnReporteOrdenes.Location = new Point(205, 18);
+            btnReporteOrdenes.Size = new Size(175, 40);
+            btnReporteProduccion.Location = new Point(392, 18);
+            btnReporteProduccion.Size = new Size(175, 40);
+            btnReporteDistribucion.Location = new Point(579, 18);
+            btnReporteDistribucion.Size = new Size(175, 40);
+
+            panelContenido.Location = new Point(34, 190);
+            panelContenido.Size = new Size(1189, 560);
+            panelContenido.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
         }
 
         private void InicializarPanelReporte()
         {
-            panelContenido.Controls.Clear();
-            panelReporte.Dock = DockStyle.Fill;
             panelReporte.BackColor = Color.White;
-            panelReporte.Padding = new Padding(18);
-            panelContenido.Controls.Add(panelReporte);
+            panelReporte.Padding = new Padding(16);
 
             panelFiltros.Dock = DockStyle.Top;
-            panelFiltros.Height = 110;
+            panelFiltros.Height = 122;
             panelFiltros.BackColor = Color.WhiteSmoke;
-            panelReporte.Controls.Add(panelFiltros);
 
             lblTituloReporte.AutoSize = true;
             lblTituloReporte.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
             lblTituloReporte.ForeColor = Color.FromArgb(26, 32, 44);
             lblTituloReporte.Location = new Point(16, 12);
-            panelFiltros.Controls.Add(lblTituloReporte);
 
             lblDescripcionReporte.AutoSize = true;
             lblDescripcionReporte.ForeColor = Color.FromArgb(90, 104, 119);
             lblDescripcionReporte.Location = new Point(18, 48);
-            panelFiltros.Controls.Add(lblDescripcionReporte);
 
             lblFiltroDesde.AutoSize = true;
             lblFiltroDesde.Text = "Desde";
             lblFiltroDesde.Location = new Point(18, 78);
-            panelFiltros.Controls.Add(lblFiltroDesde);
 
             dtpDesde.Format = DateTimePickerFormat.Short;
             dtpDesde.Location = new Point(70, 74);
             dtpDesde.Width = 120;
             dtpDesde.Value = DateTime.Today.AddMonths(-1);
             dtpDesde.ValueChanged += (_, _) => CargarReporte();
-            panelFiltros.Controls.Add(dtpDesde);
 
             lblFiltroHasta.AutoSize = true;
             lblFiltroHasta.Text = "Hasta";
             lblFiltroHasta.Location = new Point(208, 78);
-            panelFiltros.Controls.Add(lblFiltroHasta);
 
             dtpHasta.Format = DateTimePickerFormat.Short;
             dtpHasta.Location = new Point(258, 74);
             dtpHasta.Width = 120;
             dtpHasta.Value = DateTime.Today;
             dtpHasta.ValueChanged += (_, _) => CargarReporte();
-            panelFiltros.Controls.Add(dtpHasta);
 
             lblFiltroCategoria.AutoSize = true;
             lblFiltroCategoria.Text = "Categoría";
             lblFiltroCategoria.Location = new Point(400, 78);
-            panelFiltros.Controls.Add(lblFiltroCategoria);
 
             cmbCategoria.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbCategoria.Location = new Point(475, 74);
@@ -150,7 +140,6 @@ namespace Granja
                     CargarReporte();
                 }
             };
-            panelFiltros.Controls.Add(cmbCategoria);
 
             btnLimpiarFiltros.Text = "Limpiar filtros";
             btnLimpiarFiltros.Location = new Point(705, 70);
@@ -165,40 +154,37 @@ namespace Granja
                 }
                 CargarReporte();
             };
-            panelFiltros.Controls.Add(btnLimpiarFiltros);
 
             btnExportarExcel.Text = "Exportar Excel";
             btnExportarExcel.Location = new Point(856, 70);
             btnExportarExcel.Size = new Size(140, 34);
             btnExportarExcel.Click += (_, _) => ExportarExcel();
-            panelFiltros.Controls.Add(btnExportarExcel);
 
             btnExportarPdf.Text = "Exportar PDF";
             btnExportarPdf.Location = new Point(1010, 70);
             btnExportarPdf.Size = new Size(140, 34);
             btnExportarPdf.Click += (_, _) => ExportarPdf();
-            panelFiltros.Controls.Add(btnExportarPdf);
+            panelFiltros.Resize += (_, _) => AcomodarFiltros();
 
             splitReporte.Dock = DockStyle.Fill;
             splitReporte.Orientation = Orientation.Horizontal;
-            splitReporte.SplitterDistance = 220;
+            splitReporte.SplitterDistance = 250;
             splitReporte.Panel1.BackColor = Color.White;
             splitReporte.Panel2.BackColor = Color.White;
-            splitReporte.Location = new Point(18, 128);
-            panelReporte.Controls.Add(splitReporte);
+            splitReporte.Location = new Point(16, 138);
 
-            lblResumen.AutoSize = true;
+            splitReporte.Panel1.Padding = new Padding(12, 8, 12, 12);
+            splitReporte.Panel2.Padding = new Padding(12, 8, 12, 12);
+
+            picGrafico.BackColor = Color.White;
+            picGrafico.Dock = DockStyle.Fill;
+            picGrafico.SizeMode = PictureBoxSizeMode.Zoom;
+
+            lblResumen.AutoSize = false;
             lblResumen.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             lblResumen.ForeColor = Color.FromArgb(0, 125, 62);
-            lblResumen.Location = new Point(12, 10);
-            splitReporte.Panel1.Controls.Add(lblResumen);
-
-            picGrafico.Location = new Point(12, 42);
-            picGrafico.Size = new Size(1125, 160);
-            picGrafico.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            picGrafico.BackColor = Color.White;
-            picGrafico.SizeMode = PictureBoxSizeMode.StretchImage;
-            splitReporte.Panel1.Controls.Add(picGrafico);
+            lblResumen.Dock = DockStyle.Top;
+            lblResumen.Height = 28;
 
             dgvReporte.Dock = DockStyle.Fill;
             dgvReporte.BackgroundColor = Color.White;
@@ -208,7 +194,43 @@ namespace Granja
             dgvReporte.AllowUserToDeleteRows = false;
             dgvReporte.ReadOnly = true;
             dgvReporte.RowHeadersVisible = false;
-            splitReporte.Panel2.Controls.Add(dgvReporte);
+            picGrafico.Resize += (_, _) =>
+            {
+                if (datosActuales != null && picGrafico.Width > 0 && picGrafico.Height > 0)
+                {
+                    CargarGrafico(datosActuales);
+                }
+            };
+            splitReporte.Resize += (_, _) =>
+            {
+                if (datosActuales != null)
+                {
+                    CargarGrafico(datosActuales);
+                }
+            };
+
+            AcomodarFiltros();
+        }
+
+        private void AcomodarFiltros()
+        {
+            int y = 74;
+            int ancho = panelFiltros.ClientSize.Width;
+            int derecha = Math.Max(ancho - 18, 900);
+
+            btnExportarPdf.Location = new Point(derecha - btnExportarPdf.Width, 70);
+            btnExportarExcel.Location = new Point(btnExportarPdf.Left - btnExportarExcel.Width - 10, 70);
+            btnLimpiarFiltros.Location = new Point(btnExportarExcel.Left - btnLimpiarFiltros.Width - 14, 70);
+
+            lblFiltroDesde.Location = new Point(18, y + 4);
+            dtpDesde.Location = new Point(70, y);
+            lblFiltroHasta.Location = new Point(208, y + 4);
+            dtpHasta.Location = new Point(258, y);
+            lblFiltroCategoria.Location = new Point(400, y + 4);
+
+            int anchoCategoria = Math.Max(180, btnLimpiarFiltros.Left - 490);
+            cmbCategoria.Location = new Point(475, y);
+            cmbCategoria.Width = anchoCategoria;
         }
 
         private void CambiarReporte(Button btnSeleccionado, TipoReporte tipoReporte)
@@ -794,58 +816,42 @@ namespace Granja
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            Form1 dashboard = new Form1();
-            dashboard.Show();
-            this.Hide();
+            UiHelper.AbrirFormulario<Dashboard>(this);
         }
 
         private void btnProduccion_Click(object sender, EventArgs e)
         {
-            Produccion produ = new Produccion();
-            produ.Show();
-            this.Hide();
+            UiHelper.AbrirFormulario<Ordenes>(this);
         }
 
         private void btnAlmacen_Click(object sender, EventArgs e)
         {
-            Almacen alma = new Almacen();
-            alma.Show();
-            this.Hide();
+            UiHelper.AbrirFormulario<Distribucion>(this);
         }
 
         private void btnVentas_Click(object sender, EventArgs e)
         {
-            Ventas maestros = new Ventas();
-            maestros.Show();
-            this.Hide();
+            UiHelper.AbrirFormulario<Administrador>(this);
         }
 
         private void btnAlimento_Click(object sender, EventArgs e)
         {
-            Alimento formAlimento = new Alimento();
-            formAlimento.Show();
-            this.Hide();
+            UiHelper.AbrirFormulario<AlmacenAB>(this);
         }
 
         private void btnMolino_Click(object sender, EventArgs e)
         {
-            Molino mol = new Molino();
-            mol.Show();
-            this.Hide();
+            UiHelper.AbrirFormulario<Molino>(this);
         }
 
         private void btnReportes_Click(object sender, EventArgs e)
         {
-            Reportes repor = new Reportes();
-            repor.Show();
-            this.Hide();
+            UiHelper.AbrirFormulario<Reportes>(this);
         }
 
         private void btnInsumos_Click(object sender, EventArgs e)
         {
-            Insumos ins = new Insumos();
-            ins.Show();
-            this.Hide();
+            UiHelper.AbrirFormulario<Insumos>(this);
         }
     }
 }

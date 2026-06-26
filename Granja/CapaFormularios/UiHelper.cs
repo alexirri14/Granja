@@ -1,3 +1,4 @@
+﻿using System;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -22,14 +23,77 @@ namespace Granja
             Button btnMolino,
             Button btnReportes)
         {
-            btnDashboard.Text = " Panel";
-            btnProduccion.Text = " Órdenes";
-            btnAlmacen.Text = " Distribución";
-            btnVentas.Text = " Administrador";
-            btnAlimento.Text = " Almacén AB";
-            btnInsumos.Text = " Insumos";
-            btnMolino.Text = " Molino";
-            btnReportes.Text = " Reportes";
+            btnDashboard.Text = "Dashboard";
+            btnProduccion.Text = "Órdenes";
+            btnAlmacen.Text = "Distribución";
+            btnVentas.Text = "Administrador";
+            btnAlimento.Text = "Almacén AB";
+            btnInsumos.Text = "Insumos";
+            btnMolino.Text = "Molino";
+            btnReportes.Text = "Reportes";
+        }
+
+        public static void ConfigurarNavegacion(
+            Panel panelNav,
+            Button btnDashboard,
+            Button btnProduccion,
+            Button btnAlmacen,
+            Button btnVentas,
+            Button btnAlimento,
+            Button btnInsumos,
+            Button btnMolino,
+            Button btnReportes,
+            Button botonActivo)
+        {
+            ConfigurarNavegacion(btnDashboard, btnProduccion, btnAlmacen, btnVentas, btnAlimento, btnInsumos, btnMolino, btnReportes);
+
+            Button[] botones =
+            {
+                btnDashboard,
+                btnProduccion,
+                btnAlmacen,
+                btnVentas,
+                btnAlimento,
+                btnInsumos,
+                btnMolino,
+                btnReportes
+            };
+
+            for (int i = 0; i < botones.Length; i++)
+            {
+                var boton = botones[i];
+                boton.FlatAppearance.BorderSize = 0;
+                boton.FlatStyle = FlatStyle.Flat;
+                boton.Font = new Font("Segoe UI", 10F);
+                boton.UseVisualStyleBackColor = true;
+                boton.ForeColor = ReferenceEquals(boton, botonActivo)
+                    ? Color.FromArgb(0, 125, 62)
+                    : Color.FromArgb(26, 32, 44);
+                boton.TextAlign = ContentAlignment.MiddleCenter;
+            }
+            panelNav.Height = 62;
+            panelNav.BackColor = Color.White;
+        }
+
+        public static void AbrirFormulario<TForm>(Form actual) where TForm : Form, new()
+        {
+            if (actual is TForm)
+            {
+                return;
+            }
+
+            TForm? abierto = Application.OpenForms.OfType<TForm>().FirstOrDefault();
+            if (abierto != null)
+            {
+                abierto.Show();
+                abierto.BringToFront();
+                actual.Hide();
+                return;
+            }
+
+            TForm form = new TForm();
+            form.Show();
+            actual.Hide();
         }
 
         public static Button CrearBotonPestana(string texto, Point location, Size size, bool activo = false)
@@ -104,4 +168,3 @@ namespace Granja
         }
     }
 }
-

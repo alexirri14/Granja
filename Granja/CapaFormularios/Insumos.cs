@@ -8,23 +8,6 @@ namespace Granja
 {
     public partial class Insumos : Form
     {
-        private readonly ComboBox cmbSolicitudIngreso = new();
-        private readonly Label lblSolicitudIngreso = new();
-        private readonly Label lblFechaDoc = new();
-        private readonly DateTimePicker dtpFechaDoc = new();
-        private readonly Label lblReferencia = new();
-        private readonly TextBox txtReferencia = new();
-        private readonly RadioButton rdbInsumoExistente = new();
-        private readonly RadioButton rdbInsumoNuevo = new();
-        private readonly TextBox txtNuevoInsumo = new();
-        private readonly TextBox txtNuevaUnidad = new();
-        private readonly TextBox txtNuevoStockMinimo = new();
-        private readonly Label lblNuevoInsumo = new();
-        private readonly Label lblNuevaUnidad = new();
-        private readonly Label lblNuevoStockMinimo = new();
-        private readonly Button btnAgregarDetalle = new();
-        private readonly DataGridView dgvDetalleDocumento = new();
-
         public Insumos()
         {
             InitializeComponent();
@@ -38,7 +21,7 @@ namespace Granja
         private void ConfigurarVista()
         {
             UiHelper.ConfigurarTituloGeneral(lblTitle);
-            UiHelper.ConfigurarNavegacion(btnDashboard, btnProduccion, btnAlmacen, btnVentas, btnAlimento, btnInsumos, btnMolino, btnReportes);
+            UiHelper.ConfigurarNavegacion(panelNav, btnDashboard, btnProduccion, btnAlmacen, btnVentas, btnAlimento, btnInsumos, btnMolino, btnReportes, btnInsumos);
 
             lblInsumosTitle.Text = "Módulo de Insumos";
             lblEntradasTitulo.Text = "Solicitudes";
@@ -46,11 +29,11 @@ namespace Granja
             lblInventarioTitulo.Text = "Disponibilidad de insumos";
             lblHistorialTitulo.Text = "Notas y órdenes";
             btnRegistrarMovimiento.Text = "Nueva nota de ingreso";
-            btnVerRecetas.Text = "Ver pedidos";
             btnRegistrarMovimientoConfirmar.Text = "Registrar nota";
             btnCerrarRecetas.Text = "Cerrar";
             btnVerRecetas.Text = "Ver solicitudes";
 
+            panelMain.AutoScroll = true;
             panelNuevoMovimiento.Visible = false;
             panelRecetas.Visible = false;
             ConfigurarPanelOperacion();
@@ -168,126 +151,36 @@ namespace Granja
 
         private void ConfigurarPanelOperacion()
         {
-            panelNuevoMovimiento.Controls.Clear();
-            panelNuevoMovimiento.Size = new Size(1189, 620);
-
-            lblNuevoMovimientoTitulo.Location = new Point(30, 20);
             lblNuevoMovimientoTitulo.Text = "Nota de ingreso por pedido";
-            panelNuevoMovimiento.Controls.Add(lblNuevoMovimientoTitulo);
-
-            lblSolicitudIngreso.AutoSize = true;
             lblSolicitudIngreso.Text = "Solicitud de abastecimiento";
-            lblSolicitudIngreso.Location = new Point(30, 80);
-            panelNuevoMovimiento.Controls.Add(lblSolicitudIngreso);
-
             cmbSolicitudIngreso.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbSolicitudIngreso.Location = new Point(30, 110);
-            cmbSolicitudIngreso.Size = new Size(529, 36);
             cmbSolicitudIngreso.SelectedIndexChanged += (_, _) => CargarSolicitudSeleccionada();
-            panelNuevoMovimiento.Controls.Add(cmbSolicitudIngreso);
-
-            lblFechaDoc.AutoSize = true;
             lblFechaDoc.Text = "Fecha";
-            lblFechaDoc.Location = new Point(630, 80);
-            panelNuevoMovimiento.Controls.Add(lblFechaDoc);
-
-            dtpFechaDoc.Location = new Point(630, 110);
-            dtpFechaDoc.Size = new Size(529, 34);
-            panelNuevoMovimiento.Controls.Add(dtpFechaDoc);
-
-            lblReferencia.AutoSize = true;
             lblReferencia.Text = "Proveedor";
-            lblReferencia.Location = new Point(30, 160);
-            panelNuevoMovimiento.Controls.Add(lblReferencia);
-
-            txtReferencia.Location = new Point(30, 190);
-            txtReferencia.Size = new Size(529, 34);
             txtReferencia.PlaceholderText = "Nombre del proveedor";
-            panelNuevoMovimiento.Controls.Add(txtReferencia);
-
             lblInsumoMovimiento.Text = "Insumo";
-            lblInsumoMovimiento.Location = new Point(630, 160);
-            panelNuevoMovimiento.Controls.Add(lblInsumoMovimiento);
-
             cmbInsumoMovimiento.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbInsumoMovimiento.Location = new Point(630, 190);
-            cmbInsumoMovimiento.Size = new Size(529, 36);
-            panelNuevoMovimiento.Controls.Add(cmbInsumoMovimiento);
-
-            rdbInsumoExistente.AutoSize = true;
             rdbInsumoExistente.Text = "Usar insumo existente";
-            rdbInsumoExistente.Location = new Point(30, 245);
             rdbInsumoExistente.Checked = true;
             rdbInsumoExistente.CheckedChanged += (_, _) => ActualizarModoInsumo();
-            panelNuevoMovimiento.Controls.Add(rdbInsumoExistente);
-
-            rdbInsumoNuevo.AutoSize = true;
             rdbInsumoNuevo.Text = "Registrar insumo nuevo";
-            rdbInsumoNuevo.Location = new Point(260, 245);
             rdbInsumoNuevo.CheckedChanged += (_, _) => ActualizarModoInsumo();
-            panelNuevoMovimiento.Controls.Add(rdbInsumoNuevo);
-
-            lblNuevoInsumo.AutoSize = true;
             lblNuevoInsumo.Text = "Nuevo insumo";
-            lblNuevoInsumo.Location = new Point(30, 280);
-            panelNuevoMovimiento.Controls.Add(lblNuevoInsumo);
-
-            txtNuevoInsumo.Location = new Point(30, 310);
-            txtNuevoInsumo.Size = new Size(360, 34);
             txtNuevoInsumo.PlaceholderText = "Nombre del nuevo insumo";
-            panelNuevoMovimiento.Controls.Add(txtNuevoInsumo);
-
-            lblNuevaUnidad.AutoSize = true;
             lblNuevaUnidad.Text = "Unidad";
-            lblNuevaUnidad.Location = new Point(410, 280);
-            panelNuevoMovimiento.Controls.Add(lblNuevaUnidad);
-
-            txtNuevaUnidad.Location = new Point(410, 310);
-            txtNuevaUnidad.Size = new Size(170, 34);
             txtNuevaUnidad.PlaceholderText = "KG o L";
-            panelNuevoMovimiento.Controls.Add(txtNuevaUnidad);
-
-            lblNuevoStockMinimo.AutoSize = true;
             lblNuevoStockMinimo.Text = "Stock mínimo";
-            lblNuevoStockMinimo.Location = new Point(600, 280);
-            panelNuevoMovimiento.Controls.Add(lblNuevoStockMinimo);
-
-            txtNuevoStockMinimo.Location = new Point(600, 310);
-            txtNuevoStockMinimo.Size = new Size(170, 34);
             txtNuevoStockMinimo.PlaceholderText = "0";
-            panelNuevoMovimiento.Controls.Add(txtNuevoStockMinimo);
-
             lblCantidadMovimiento.Text = "Cantidad";
-            lblCantidadMovimiento.Location = new Point(30, 360);
-            panelNuevoMovimiento.Controls.Add(lblCantidadMovimiento);
-
-            txtCantidadMovimiento.Location = new Point(30, 390);
-            txtCantidadMovimiento.Size = new Size(529, 34);
             txtCantidadMovimiento.PlaceholderText = "Cantidad solicitada";
-            panelNuevoMovimiento.Controls.Add(txtCantidadMovimiento);
-
             lblObservaciones.Text = "Detalle";
-            lblObservaciones.Location = new Point(630, 360);
-            panelNuevoMovimiento.Controls.Add(lblObservaciones);
-
-            txtObservaciones.Location = new Point(630, 390);
-            txtObservaciones.Size = new Size(529, 34);
-            txtObservaciones.Multiline = false;
             txtObservaciones.PlaceholderText = "Detalle del ingreso";
-            panelNuevoMovimiento.Controls.Add(txtObservaciones);
-
             btnAgregarDetalle.Text = "Cargar detalle";
-            btnAgregarDetalle.Location = new Point(30, 445);
-            btnAgregarDetalle.Size = new Size(170, 40);
             btnAgregarDetalle.BackColor = Color.FromArgb(0, 125, 62);
             btnAgregarDetalle.ForeColor = Color.White;
             btnAgregarDetalle.FlatStyle = FlatStyle.Flat;
             btnAgregarDetalle.FlatAppearance.BorderSize = 0;
             btnAgregarDetalle.Click += (_, _) => AgregarDetalleDocumento();
-            panelNuevoMovimiento.Controls.Add(btnAgregarDetalle);
-
-            dgvDetalleDocumento.Location = new Point(30, 500);
-            dgvDetalleDocumento.Size = new Size(1129, 90);
             dgvDetalleDocumento.AllowUserToAddRows = false;
             dgvDetalleDocumento.AllowUserToDeleteRows = true;
             dgvDetalleDocumento.BackgroundColor = Color.White;
@@ -297,12 +190,11 @@ namespace Granja
             dgvDetalleDocumento.Columns.Add("Item", "Insumo");
             dgvDetalleDocumento.Columns.Add("Cantidad", "Cantidad");
             dgvDetalleDocumento.Columns.Add("Unidad", "Unidad");
-            panelNuevoMovimiento.Controls.Add(dgvDetalleDocumento);
 
-            btnRegistrarMovimientoConfirmar.Location = new Point(30, 600);
-            btnCancelarMovimiento.Location = new Point(180, 600);
-            panelNuevoMovimiento.Controls.Add(btnRegistrarMovimientoConfirmar);
-            panelNuevoMovimiento.Controls.Add(btnCancelarMovimiento);
+            // Estos controles quedaron visibles en el Designer y ya no se usan para
+            // reconstruir la interfaz en runtime.
+            cmbTipoMovimiento.Visible = false;
+            lblTipoMovimiento.Visible = false;
 
             dtpFechaDoc.Value = DateTime.Today;
             ActualizarSolicitudesIngreso();
@@ -554,51 +446,37 @@ namespace Granja
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            Form1 dashboard = new Form1();
-            dashboard.Show();
-            this.Hide();
+            UiHelper.AbrirFormulario<Dashboard>(this);
         }
 
         private void btnProduccion_Click(object sender, EventArgs e)
         {
-            Produccion produ = new Produccion();
-            produ.Show();
-            this.Hide();
+            UiHelper.AbrirFormulario<Ordenes>(this);
         }
 
         private void btnAlmacen_Click(object sender, EventArgs e)
         {
-            Almacen alma = new Almacen();
-            alma.Show();
-            this.Hide();
+            UiHelper.AbrirFormulario<Distribucion>(this);
         }
 
         private void btnVentas_Click(object sender, EventArgs e)
         {
-            Ventas maestros = new Ventas();
-            maestros.Show();
-            this.Hide();
+            UiHelper.AbrirFormulario<Administrador>(this);
         }
 
         private void btnAlimento_Click(object sender, EventArgs e)
         {
-            Alimento alimento = new Alimento();
-            alimento.Show();
-            this.Hide();
+            UiHelper.AbrirFormulario<AlmacenAB>(this);
         }
 
         private void btnMolino_Click(object sender, EventArgs e)
         {
-            Molino molino = new Molino();
-            molino.Show();
-            this.Hide();
+            UiHelper.AbrirFormulario<Molino>(this);
         }
 
         private void btnReportes_Click(object sender, EventArgs e)
         {
-            Reportes reportes = new Reportes();
-            reportes.Show();
-            this.Hide();
+            UiHelper.AbrirFormulario<Reportes>(this);
         }
     }
 }

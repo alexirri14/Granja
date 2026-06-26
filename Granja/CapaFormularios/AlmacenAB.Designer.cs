@@ -1,6 +1,6 @@
 namespace Granja
 {
-    partial class Alimento
+    partial class AlmacenAB
     {
         private System.ComponentModel.IContainer components = null;
 
@@ -20,6 +20,9 @@ namespace Granja
             panelHeader = new Panel();
             lblTitle = new Label();
             panelNav = new Panel();
+            btnProduccion = new Button();
+            btnAlmacen = new Button();
+            btnVentas = new Button();
             btnReportes = new Button();
             btnMolino = new Button();
             btnInsumos = new Button();
@@ -28,23 +31,23 @@ namespace Granja
             panelMain = new Panel();
             lblStockTotal = new Label();
             lblStockLabel = new Label();
-            btnRegistrarPerdida = new Button();
+            btnMostrarOrdenStock = new Button();
             lblAlimentoTitle = new Label();
-            panelNuevoPerdida = new Panel();
-            btnCancelarPerdida = new Button();
-            btnRegistrarPerdida2 = new Button();
-            txtCantidadPerdida = new TextBox();
-            lblCantidadPerdida = new Label();
-            dtpFechaPerdida = new DateTimePicker();
-            lblFechaPerdida = new Label();
-            lblNuevoPerdidaTitle = new Label();
+            panelOrdenStock = new Panel();
+            btnCancelarOrdenStock = new Button();
+            btnRegistrarOrdenStock = new Button();
+            txtCantidadOrdenStock = new TextBox();
+            lblCantidadOrdenStock = new Label();
+            dtpFechaOrdenStock = new DateTimePicker();
+            lblFechaOrdenStock = new Label();
+            lblOrdenStockTitle = new Label();
             panelMovimientos = new Panel();
             dgvMovimientos = new DataGridView();
             lblMovimientosTitle = new Label();
             panelHeader.SuspendLayout();
             panelNav.SuspendLayout();
             panelMain.SuspendLayout();
-            panelNuevoPerdida.SuspendLayout();
+            panelOrdenStock.SuspendLayout();
             panelMovimientos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvMovimientos).BeginInit();
             SuspendLayout();
@@ -67,13 +70,16 @@ namespace Granja
             lblTitle.ForeColor = Color.White;
             lblTitle.Location = new Point(23, 20);
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(575, 37);
+            lblTitle.Size = new Size(547, 37);
             lblTitle.TabIndex = 0;
-            lblTitle.Text = "Sistema Avícola - El Rancho del Buen Pastor";
+            lblTitle.Text = "Sistema de Alimento Balanceado - Granja";
             // 
             // panelNav
             // 
             panelNav.BackColor = Color.White;
+            panelNav.Controls.Add(btnProduccion);
+            panelNav.Controls.Add(btnAlmacen);
+            panelNav.Controls.Add(btnVentas);
             panelNav.Controls.Add(btnReportes);
             panelNav.Controls.Add(btnMolino);
             panelNav.Controls.Add(btnInsumos);
@@ -86,6 +92,49 @@ namespace Granja
             panelNav.Size = new Size(1257, 73);
             panelNav.TabIndex = 1;
             // 
+            // btnProduccion
+            // 
+            btnProduccion.FlatAppearance.BorderSize = 0;
+            btnProduccion.FlatStyle = FlatStyle.Flat;
+            btnProduccion.Font = new Font("Segoe UI", 10F);
+            btnProduccion.Location = new Point(149, 0);
+            btnProduccion.Margin = new Padding(3, 4, 3, 4);
+            btnProduccion.Name = "btnProduccion";
+            btnProduccion.Size = new Size(137, 67);
+            btnProduccion.TabIndex = 10;
+            btnProduccion.Text = "Órdenes";
+            btnProduccion.UseVisualStyleBackColor = true;
+            btnProduccion.Click += btnProduccion_Click_1;
+            // 
+            // btnAlmacen
+            // 
+            btnAlmacen.FlatAppearance.BorderSize = 0;
+            btnAlmacen.FlatStyle = FlatStyle.Flat;
+            btnAlmacen.Font = new Font("Segoe UI", 10F);
+            btnAlmacen.Location = new Point(286, 0);
+            btnAlmacen.Margin = new Padding(3, 4, 3, 4);
+            btnAlmacen.Name = "btnAlmacen";
+            btnAlmacen.Size = new Size(137, 67);
+            btnAlmacen.TabIndex = 9;
+            btnAlmacen.Text = "Distribución";
+            btnAlmacen.UseVisualStyleBackColor = true;
+            btnAlmacen.Click += btnAlmacen_Click_1;
+            // 
+            // btnVentas
+            // 
+            btnVentas.FlatAppearance.BorderSize = 0;
+            btnVentas.FlatStyle = FlatStyle.Flat;
+            btnVentas.Font = new Font("Segoe UI", 10F);
+            btnVentas.ForeColor = Color.FromArgb(26, 32, 44);
+            btnVentas.Location = new Point(423, 0);
+            btnVentas.Margin = new Padding(3, 4, 3, 4);
+            btnVentas.Name = "btnVentas";
+            btnVentas.Size = new Size(137, 67);
+            btnVentas.TabIndex = 8;
+            btnVentas.Text = "Administrador";
+            btnVentas.UseVisualStyleBackColor = true;
+            btnVentas.Click += btnVentas_Click;
+            // 
             // btnReportes
             // 
             btnReportes.FlatAppearance.BorderSize = 0;
@@ -96,7 +145,7 @@ namespace Granja
             btnReportes.Name = "btnReportes";
             btnReportes.Size = new Size(137, 67);
             btnReportes.TabIndex = 7;
-            btnReportes.Text = " Reportes";
+            btnReportes.Text = "Reportes";
             btnReportes.UseVisualStyleBackColor = true;
             btnReportes.Click += btnReportes_Click;
             // 
@@ -110,7 +159,7 @@ namespace Granja
             btnMolino.Name = "btnMolino";
             btnMolino.Size = new Size(137, 67);
             btnMolino.TabIndex = 6;
-            btnMolino.Text = " Molino";
+            btnMolino.Text = "Molino";
             btnMolino.UseVisualStyleBackColor = true;
             btnMolino.Click += btnMolino_Click;
             // 
@@ -124,7 +173,7 @@ namespace Granja
             btnInsumos.Name = "btnInsumos";
             btnInsumos.Size = new Size(137, 67);
             btnInsumos.TabIndex = 5;
-            btnInsumos.Text = " Insumos";
+            btnInsumos.Text = "Insumos";
             btnInsumos.UseVisualStyleBackColor = true;
             btnInsumos.Click += btnInsumos_Click;
             // 
@@ -139,51 +188,9 @@ namespace Granja
             btnAlimento.Name = "btnAlimento";
             btnAlimento.Size = new Size(137, 67);
             btnAlimento.TabIndex = 4;
-            btnAlimento.Text = " Alimento";
+            btnAlimento.Text = "Almacén AB";
             btnAlimento.UseVisualStyleBackColor = true;
             btnAlimento.Click += btnAlimento_Click;
-            // 
-            // btnVentas
-            // 
-            btnVentas.FlatAppearance.BorderSize = 0;
-            btnVentas.FlatStyle = FlatStyle.Flat;
-            btnVentas.Font = new Font("Segoe UI", 10F);
-            btnVentas.Location = new Point(423, 0);
-            btnVentas.Margin = new Padding(3, 4, 3, 4);
-            btnVentas.Name = "btnVentas";
-            btnVentas.Size = new Size(137, 67);
-            btnVentas.TabIndex = 3;
-            btnVentas.Text = " Administrador";
-            btnVentas.UseVisualStyleBackColor = true;
-            btnVentas.Click += btnVentas_Click;
-            // 
-            // btnAlmacen
-            // 
-            btnAlmacen.FlatAppearance.BorderSize = 0;
-            btnAlmacen.FlatStyle = FlatStyle.Flat;
-            btnAlmacen.Font = new Font("Segoe UI", 10F);
-            btnAlmacen.Location = new Point(286, 0);
-            btnAlmacen.Margin = new Padding(3, 4, 3, 4);
-            btnAlmacen.Name = "btnAlmacen";
-            btnAlmacen.Size = new Size(137, 67);
-            btnAlmacen.TabIndex = 2;
-            btnAlmacen.Text = " Almacén";
-            btnAlmacen.UseVisualStyleBackColor = true;
-            btnAlmacen.Click += btnAlmacen_Click;
-            // 
-            // btnProduccion
-            // 
-            btnProduccion.FlatAppearance.BorderSize = 0;
-            btnProduccion.FlatStyle = FlatStyle.Flat;
-            btnProduccion.Font = new Font("Segoe UI", 10F);
-            btnProduccion.Location = new Point(149, 0);
-            btnProduccion.Margin = new Padding(3, 4, 3, 4);
-            btnProduccion.Name = "btnProduccion";
-            btnProduccion.Size = new Size(137, 67);
-            btnProduccion.TabIndex = 1;
-            btnProduccion.Text = " Producción";
-            btnProduccion.UseVisualStyleBackColor = true;
-            btnProduccion.Click += btnProduccion_Click;
             // 
             // btnDashboard
             // 
@@ -195,7 +202,7 @@ namespace Granja
             btnDashboard.Name = "btnDashboard";
             btnDashboard.Size = new Size(149, 67);
             btnDashboard.TabIndex = 0;
-            btnDashboard.Text = " Dashboard";
+            btnDashboard.Text = "Dashboard";
             btnDashboard.UseVisualStyleBackColor = true;
             btnDashboard.Click += btnDashboard_Click;
             // 
@@ -205,9 +212,9 @@ namespace Granja
             panelMain.BackColor = Color.FromArgb(248, 249, 250);
             panelMain.Controls.Add(lblStockTotal);
             panelMain.Controls.Add(lblStockLabel);
-            panelMain.Controls.Add(btnRegistrarPerdida);
+            panelMain.Controls.Add(btnMostrarOrdenStock);
             panelMain.Controls.Add(lblAlimentoTitle);
-            panelMain.Controls.Add(panelNuevoPerdida);
+            panelMain.Controls.Add(panelOrdenStock);
             panelMain.Controls.Add(panelMovimientos);
             panelMain.Dock = DockStyle.Fill;
             panelMain.Location = new Point(0, 153);
@@ -233,26 +240,26 @@ namespace Granja
             lblStockLabel.AutoSize = true;
             lblStockLabel.Font = new Font("Segoe UI", 10F);
             lblStockLabel.ForeColor = Color.Gray;
-            lblStockLabel.Location = new Point(1132, 4);
+            lblStockLabel.Location = new Point(1068, 4);
             lblStockLabel.Name = "lblStockLabel";
-            lblStockLabel.Size = new Size(101, 23);
+            lblStockLabel.Size = new Size(90, 23);
             lblStockLabel.TabIndex = 5;
-            lblStockLabel.Text = "Stock actual";
+            lblStockLabel.Text = "Stock total";
             // 
-            // btnRegistrarPerdida
+            // btnMostrarOrdenStock
             // 
-            btnRegistrarPerdida.BackColor = Color.FromArgb(0, 125, 62);
-            btnRegistrarPerdida.FlatAppearance.BorderSize = 0;
-            btnRegistrarPerdida.FlatStyle = FlatStyle.Flat;
-            btnRegistrarPerdida.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            btnRegistrarPerdida.ForeColor = Color.White;
-            btnRegistrarPerdida.Location = new Point(34, 90);
-            btnRegistrarPerdida.Name = "btnRegistrarPerdida";
-            btnRegistrarPerdida.Size = new Size(230, 55);
-            btnRegistrarPerdida.TabIndex = 3;
-            btnRegistrarPerdida.Text = "Generar orden";
-            btnRegistrarPerdida.UseVisualStyleBackColor = false;
-            btnRegistrarPerdida.Click += btnRegistrarPerdida_Click;
+            btnMostrarOrdenStock.BackColor = Color.FromArgb(0, 125, 62);
+            btnMostrarOrdenStock.FlatAppearance.BorderSize = 0;
+            btnMostrarOrdenStock.FlatStyle = FlatStyle.Flat;
+            btnMostrarOrdenStock.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            btnMostrarOrdenStock.ForeColor = Color.White;
+            btnMostrarOrdenStock.Location = new Point(34, 90);
+            btnMostrarOrdenStock.Name = "btnMostrarOrdenStock";
+            btnMostrarOrdenStock.Size = new Size(230, 55);
+            btnMostrarOrdenStock.TabIndex = 3;
+            btnMostrarOrdenStock.Text = "Generar orden";
+            btnMostrarOrdenStock.UseVisualStyleBackColor = false;
+            btnMostrarOrdenStock.Click += btnRegistrarPerdida_Click;
             // 
             // lblAlimentoTitle
             // 
@@ -265,104 +272,104 @@ namespace Granja
             lblAlimentoTitle.TabIndex = 2;
             lblAlimentoTitle.Text = "Almacén de Alimento Balanceado";
             // 
-            // panelNuevoPerdida
+            // panelOrdenStock
             // 
-            panelNuevoPerdida.BackColor = Color.White;
-            panelNuevoPerdida.Controls.Add(btnCancelarPerdida);
-            panelNuevoPerdida.Controls.Add(btnRegistrarPerdida2);
-            panelNuevoPerdida.Controls.Add(txtCantidadPerdida);
-            panelNuevoPerdida.Controls.Add(lblCantidadPerdida);
-            panelNuevoPerdida.Controls.Add(dtpFechaPerdida);
-            panelNuevoPerdida.Controls.Add(lblFechaPerdida);
-            panelNuevoPerdida.Controls.Add(lblNuevoPerdidaTitle);
-            panelNuevoPerdida.Location = new Point(34, 180);
-            panelNuevoPerdida.Margin = new Padding(3, 4, 3, 4);
-            panelNuevoPerdida.Name = "panelNuevoPerdida";
-            panelNuevoPerdida.Padding = new Padding(30);
-            panelNuevoPerdida.Size = new Size(1189, 280);
-            panelNuevoPerdida.TabIndex = 0;
-            panelNuevoPerdida.Visible = false;
+            panelOrdenStock.BackColor = Color.White;
+            panelOrdenStock.Controls.Add(btnCancelarOrdenStock);
+            panelOrdenStock.Controls.Add(btnRegistrarOrdenStock);
+            panelOrdenStock.Controls.Add(txtCantidadOrdenStock);
+            panelOrdenStock.Controls.Add(lblCantidadOrdenStock);
+            panelOrdenStock.Controls.Add(dtpFechaOrdenStock);
+            panelOrdenStock.Controls.Add(lblFechaOrdenStock);
+            panelOrdenStock.Controls.Add(lblOrdenStockTitle);
+            panelOrdenStock.Location = new Point(34, 180);
+            panelOrdenStock.Margin = new Padding(3, 4, 3, 4);
+            panelOrdenStock.Name = "panelOrdenStock";
+            panelOrdenStock.Padding = new Padding(30);
+            panelOrdenStock.Size = new Size(1189, 280);
+            panelOrdenStock.TabIndex = 0;
+            panelOrdenStock.Visible = false;
             // 
-            // btnCancelarPerdida
+            // btnCancelarOrdenStock
             // 
-            btnCancelarPerdida.BackColor = Color.FromArgb(108, 117, 125);
-            btnCancelarPerdida.FlatAppearance.BorderSize = 0;
-            btnCancelarPerdida.FlatStyle = FlatStyle.Flat;
-            btnCancelarPerdida.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            btnCancelarPerdida.ForeColor = Color.White;
-            btnCancelarPerdida.Location = new Point(166, 214);
-            btnCancelarPerdida.Name = "btnCancelarPerdida";
-            btnCancelarPerdida.Size = new Size(130, 45);
-            btnCancelarPerdida.TabIndex = 6;
-            btnCancelarPerdida.Text = "Cancelar";
-            btnCancelarPerdida.UseVisualStyleBackColor = false;
-            btnCancelarPerdida.Click += btnCancelarPerdida_Click;
+            btnCancelarOrdenStock.BackColor = Color.FromArgb(108, 117, 125);
+            btnCancelarOrdenStock.FlatAppearance.BorderSize = 0;
+            btnCancelarOrdenStock.FlatStyle = FlatStyle.Flat;
+            btnCancelarOrdenStock.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            btnCancelarOrdenStock.ForeColor = Color.White;
+            btnCancelarOrdenStock.Location = new Point(166, 214);
+            btnCancelarOrdenStock.Name = "btnCancelarOrdenStock";
+            btnCancelarOrdenStock.Size = new Size(130, 45);
+            btnCancelarOrdenStock.TabIndex = 6;
+            btnCancelarOrdenStock.Text = "Cancelar";
+            btnCancelarOrdenStock.UseVisualStyleBackColor = false;
+            btnCancelarOrdenStock.Click += btnCancelarPerdida_Click;
             // 
-            // btnRegistrarPerdida2
+            // btnRegistrarOrdenStock
             // 
-            btnRegistrarPerdida2.BackColor = Color.FromArgb(0, 125, 62);
-            btnRegistrarPerdida2.FlatAppearance.BorderSize = 0;
-            btnRegistrarPerdida2.FlatStyle = FlatStyle.Flat;
-            btnRegistrarPerdida2.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            btnRegistrarPerdida2.ForeColor = Color.White;
-            btnRegistrarPerdida2.Location = new Point(30, 214);
-            btnRegistrarPerdida2.Name = "btnRegistrarPerdida2";
-            btnRegistrarPerdida2.Size = new Size(130, 45);
-            btnRegistrarPerdida2.TabIndex = 5;
-            btnRegistrarPerdida2.Text = "Registrar";
-            btnRegistrarPerdida2.UseVisualStyleBackColor = false;
-            btnRegistrarPerdida2.Click += btnRegistrarPerdida2_Click;
+            btnRegistrarOrdenStock.BackColor = Color.FromArgb(0, 125, 62);
+            btnRegistrarOrdenStock.FlatAppearance.BorderSize = 0;
+            btnRegistrarOrdenStock.FlatStyle = FlatStyle.Flat;
+            btnRegistrarOrdenStock.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            btnRegistrarOrdenStock.ForeColor = Color.White;
+            btnRegistrarOrdenStock.Location = new Point(30, 214);
+            btnRegistrarOrdenStock.Name = "btnRegistrarOrdenStock";
+            btnRegistrarOrdenStock.Size = new Size(130, 45);
+            btnRegistrarOrdenStock.TabIndex = 5;
+            btnRegistrarOrdenStock.Text = "Registrar orden";
+            btnRegistrarOrdenStock.UseVisualStyleBackColor = false;
+            btnRegistrarOrdenStock.Click += btnRegistrarPerdida2_Click;
             // 
-            // txtCantidadPerdida
+            // txtCantidadOrdenStock
             // 
-            txtCantidadPerdida.Font = new Font("Segoe UI", 12F);
-            txtCantidadPerdida.Location = new Point(30, 162);
-            txtCantidadPerdida.Name = "txtCantidadPerdida";
-            txtCantidadPerdida.PlaceholderText = "Cantidad sugerida";
-            txtCantidadPerdida.Size = new Size(1129, 34);
-            txtCantidadPerdida.TabIndex = 4;
+            txtCantidadOrdenStock.Font = new Font("Segoe UI", 12F);
+            txtCantidadOrdenStock.Location = new Point(30, 162);
+            txtCantidadOrdenStock.Name = "txtCantidadOrdenStock";
+            txtCantidadOrdenStock.PlaceholderText = "Cantidad sugerida";
+            txtCantidadOrdenStock.Size = new Size(1129, 34);
+            txtCantidadOrdenStock.TabIndex = 4;
             // 
-            // lblCantidadPerdida
+            // lblCantidadOrdenStock
             // 
-            lblCantidadPerdida.AutoSize = true;
-            lblCantidadPerdida.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            lblCantidadPerdida.ForeColor = Color.FromArgb(44, 62, 80);
-            lblCantidadPerdida.Location = new Point(30, 127);
-            lblCantidadPerdida.Name = "lblCantidadPerdida";
-            lblCantidadPerdida.Size = new Size(83, 23);
-            lblCantidadPerdida.TabIndex = 3;
-            lblCantidadPerdida.Text = "Cantidad";
+            lblCantidadOrdenStock.AutoSize = true;
+            lblCantidadOrdenStock.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblCantidadOrdenStock.ForeColor = Color.FromArgb(44, 62, 80);
+            lblCantidadOrdenStock.Location = new Point(30, 127);
+            lblCantidadOrdenStock.Name = "lblCantidadOrdenStock";
+            lblCantidadOrdenStock.Size = new Size(83, 23);
+            lblCantidadOrdenStock.TabIndex = 3;
+            lblCantidadOrdenStock.Text = "Cantidad";
             // 
-            // dtpFechaPerdida
+            // dtpFechaOrdenStock
             // 
-            dtpFechaPerdida.Font = new Font("Segoe UI", 12F);
-            dtpFechaPerdida.Format = DateTimePickerFormat.Short;
-            dtpFechaPerdida.Location = new Point(30, 90);
-            dtpFechaPerdida.Name = "dtpFechaPerdida";
-            dtpFechaPerdida.Size = new Size(1129, 34);
-            dtpFechaPerdida.TabIndex = 2;
+            dtpFechaOrdenStock.Font = new Font("Segoe UI", 12F);
+            dtpFechaOrdenStock.Format = DateTimePickerFormat.Short;
+            dtpFechaOrdenStock.Location = new Point(30, 90);
+            dtpFechaOrdenStock.Name = "dtpFechaOrdenStock";
+            dtpFechaOrdenStock.Size = new Size(1129, 34);
+            dtpFechaOrdenStock.TabIndex = 2;
             // 
-            // lblFechaPerdida
+            // lblFechaOrdenStock
             // 
-            lblFechaPerdida.AutoSize = true;
-            lblFechaPerdida.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            lblFechaPerdida.ForeColor = Color.FromArgb(44, 62, 80);
-            lblFechaPerdida.Location = new Point(30, 64);
-            lblFechaPerdida.Name = "lblFechaPerdida";
-            lblFechaPerdida.Size = new Size(55, 23);
-            lblFechaPerdida.TabIndex = 1;
-            lblFechaPerdida.Text = "Fecha";
+            lblFechaOrdenStock.AutoSize = true;
+            lblFechaOrdenStock.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblFechaOrdenStock.ForeColor = Color.FromArgb(44, 62, 80);
+            lblFechaOrdenStock.Location = new Point(30, 64);
+            lblFechaOrdenStock.Name = "lblFechaOrdenStock";
+            lblFechaOrdenStock.Size = new Size(55, 23);
+            lblFechaOrdenStock.TabIndex = 1;
+            lblFechaOrdenStock.Text = "Fecha";
             // 
-            // lblNuevoPerdidaTitle
+            // lblOrdenStockTitle
             // 
-            lblNuevoPerdidaTitle.AutoSize = true;
-            lblNuevoPerdidaTitle.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
-            lblNuevoPerdidaTitle.ForeColor = Color.FromArgb(26, 32, 44);
-            lblNuevoPerdidaTitle.Location = new Point(3, 13);
-            lblNuevoPerdidaTitle.Name = "lblNuevoPerdidaTitle";
-            lblNuevoPerdidaTitle.Size = new Size(434, 32);
-            lblNuevoPerdidaTitle.TabIndex = 0;
-            lblNuevoPerdidaTitle.Text = "Generar orden por stock insuficiente";
+            lblOrdenStockTitle.AutoSize = true;
+            lblOrdenStockTitle.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
+            lblOrdenStockTitle.ForeColor = Color.FromArgb(26, 32, 44);
+            lblOrdenStockTitle.Location = new Point(3, 13);
+            lblOrdenStockTitle.Name = "lblOrdenStockTitle";
+            lblOrdenStockTitle.Size = new Size(434, 32);
+            lblOrdenStockTitle.TabIndex = 0;
+            lblOrdenStockTitle.Text = "Generar orden por stock insuficiente";
             // 
             // panelMovimientos
             // 
@@ -397,11 +404,11 @@ namespace Granja
             lblMovimientosTitle.ForeColor = Color.FromArgb(26, 32, 44);
             lblMovimientosTitle.Location = new Point(0, 0);
             lblMovimientosTitle.Name = "lblMovimientosTitle";
-            lblMovimientosTitle.Size = new Size(164, 32);
+            lblMovimientosTitle.Size = new Size(301, 32);
             lblMovimientosTitle.TabIndex = 0;
-            lblMovimientosTitle.Text = "Movimientos";
+            lblMovimientosTitle.Text = "Movimientos de almacén";
             // 
-            // Alimento
+            // AlmacenAB
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -410,16 +417,16 @@ namespace Granja
             Controls.Add(panelNav);
             Controls.Add(panelHeader);
             Margin = new Padding(3, 4, 3, 4);
-            Name = "Alimento";
+            Name = "AlmacenAB";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Alimento - Rancho del Buen Pastor";
+            Text = "Almacén AB";
             panelHeader.ResumeLayout(false);
             panelHeader.PerformLayout();
             panelNav.ResumeLayout(false);
             panelMain.ResumeLayout(false);
             panelMain.PerformLayout();
-            panelNuevoPerdida.ResumeLayout(false);
-            panelNuevoPerdida.PerformLayout();
+            panelOrdenStock.ResumeLayout(false);
+            panelOrdenStock.PerformLayout();
             panelMovimientos.ResumeLayout(false);
             panelMovimientos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvMovimientos).EndInit();
@@ -432,9 +439,9 @@ namespace Granja
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Panel panelNav;
         private System.Windows.Forms.Button btnDashboard;
-        private System.Windows.Forms.Button btnProduccion = new();
-        private System.Windows.Forms.Button btnAlmacen = new();
-        private System.Windows.Forms.Button btnVentas = new();
+        private System.Windows.Forms.Button btnProduccion;
+        private System.Windows.Forms.Button btnAlmacen;
+        private System.Windows.Forms.Button btnVentas;
         private System.Windows.Forms.Button btnAlimento;
         private System.Windows.Forms.Button btnInsumos;
         private System.Windows.Forms.Button btnMolino;
@@ -442,19 +449,29 @@ namespace Granja
         private System.Windows.Forms.Panel panelMain;
         private System.Windows.Forms.Label lblStockTotal;
         private System.Windows.Forms.Label lblStockLabel;
-        private System.Windows.Forms.Button btnRegistrarPerdida;
+        private System.Windows.Forms.Button btnMostrarOrdenStock;
         private System.Windows.Forms.Label lblAlimentoTitle;
-        private System.Windows.Forms.Panel panelNuevoPerdida;
-        private System.Windows.Forms.Button btnCancelarPerdida;
-        private System.Windows.Forms.Button btnRegistrarPerdida2;
-        private System.Windows.Forms.TextBox txtCantidadPerdida;
-        private System.Windows.Forms.Label lblCantidadPerdida;
-        private System.Windows.Forms.DateTimePicker dtpFechaPerdida;
-        private System.Windows.Forms.Label lblFechaPerdida;
-        private System.Windows.Forms.Label lblNuevoPerdidaTitle;
+        private System.Windows.Forms.Panel panelOrdenStock;
+        private System.Windows.Forms.Button btnCancelarOrdenStock;
+        private System.Windows.Forms.Button btnRegistrarOrdenStock;
+        private System.Windows.Forms.TextBox txtCantidadOrdenStock;
+        private System.Windows.Forms.Label lblCantidadOrdenStock;
+        private System.Windows.Forms.DateTimePicker dtpFechaOrdenStock;
+        private System.Windows.Forms.Label lblFechaOrdenStock;
+        private System.Windows.Forms.Label lblOrdenStockTitle;
+        private System.Windows.Forms.Label lblFormulaOrden = new();
+        private System.Windows.Forms.ComboBox cmbFormulaOrden = new();
+        private System.Windows.Forms.Label lblDetalleOrden = new();
+        private System.Windows.Forms.TextBox txtDetalleOrden = new();
         private System.Windows.Forms.Panel panelMovimientos;
         private System.Windows.Forms.DataGridView dgvMovimientos;
         private System.Windows.Forms.Label lblMovimientosTitle;
+        private System.Windows.Forms.Label lblFiltroDesde = new();
+        private System.Windows.Forms.DateTimePicker dtpFiltroDesde = new();
+        private System.Windows.Forms.Label lblFiltroHasta = new();
+        private System.Windows.Forms.DateTimePicker dtpFiltroHasta = new();
+        private System.Windows.Forms.Button btnLimpiarFiltros = new();
     }
 }
+
 
